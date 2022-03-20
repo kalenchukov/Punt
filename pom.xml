@@ -5,12 +5,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>dev.kalenchukov</groupId>
-	<artifactId>Rand</artifactId>
+	<artifactId>rand</artifactId>
+	<version>1.1.0</version>
 
 	<name>Rand</name>
 	<description>Генератор строк случайных символов</description>
-	<version>1.1.0</version>
 	<url>https://github.com/kalenchukov/Rand</url>
+
 	<licenses>
 		<license>
 			<name>MIT License</name>
@@ -23,10 +24,9 @@
 			<id>kalenchukov</id>
 			<name>Алексей Каленчуков</name>
 			<email>aleksey.kalenchukov@yandex.ru</email>
+			<url>https://github.com/kalenchukov</url>
 		</developer>
 	</developers>
-
-	<packaging>jar</packaging>
 
 	<properties>
 		<maven.compiler.source>16</maven.compiler.source>
