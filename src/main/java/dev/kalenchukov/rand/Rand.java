@@ -7,6 +7,7 @@
 package dev.kalenchukov.rand;
 
 import org.apache.commons.lang3.ArrayUtils;
+import org.jetbrains.annotations.NotNull;
 
 public final class Rand
 {
@@ -37,6 +38,7 @@ public final class Rand
 	/**
 	 * Возвращает строку из символов [0-9]
 	 */
+	@NotNull
 	public static String digit(int length)
 	{
 		return generate(length, DIGIT);
@@ -45,6 +47,7 @@ public final class Rand
 	/**
 	 * Возвращает строку из символов [a-z]
 	 */
+	@NotNull
 	public static String lower(int length)
 	{
 		return generate(length, LOWER);
@@ -53,6 +56,7 @@ public final class Rand
 	/**
 	 * Возвращает строку из символов [A-Z]
 	 */
+	@NotNull
 	public static String upper(int length)
 	{
 		return generate(length, UPPER);
@@ -61,6 +65,7 @@ public final class Rand
 	/**
 	 * Возвращает строку из символов [A-Za-z]
 	 */
+	@NotNull
 	public static String alpha(int length)
 	{
 		return generate(length, ArrayUtils.addAll(UPPER, LOWER));
@@ -69,6 +74,7 @@ public final class Rand
 	/**
 	 * Возвращает строку из символов [A-Za-z0-9]
 	 */
+	@NotNull
 	public static String alnum(int length)
 	{
 		return generate(
@@ -82,6 +88,7 @@ public final class Rand
 	/**
 	 * Возвращает строку из символов [a-zA-Z0-9!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]
 	 */
+	@NotNull
 	public static String graph(int length)
 	{
 		return generate(length, ArrayUtils.addAll(
@@ -91,12 +98,12 @@ public final class Rand
 		);
 	}
 
+	@NotNull
 	private static String generate(int length, char[] symbols)
 	{
 		StringBuilder randStr = new StringBuilder();
 
-		for (int l = 0; l < length; l++)
-		{
+		for (int l = 0; l < length; l++) {
 			randStr.append(symbols[(int)(Math.random() * symbols.length)]);
 		}
 
