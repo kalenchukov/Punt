@@ -56,7 +56,7 @@ public final class Rand
 	@NotNull
 	public static String digit(int length)
 	{
-		return generate(length, DIGIT);
+		return Rand.generate(length, DIGIT);
 	}
 
 	/**
@@ -68,7 +68,7 @@ public final class Rand
 	@NotNull
 	public static String lower(int length)
 	{
-		return generate(length, LOWER);
+		return Rand.generate(length, LOWER);
 	}
 
 	/**
@@ -80,7 +80,7 @@ public final class Rand
 	@NotNull
 	public static String upper(int length)
 	{
-		return generate(length, UPPER);
+		return Rand.generate(length, UPPER);
 	}
 
 	/**
@@ -92,7 +92,7 @@ public final class Rand
 	@NotNull
 	public static String alpha(int length)
 	{
-		return generate(length, ArrayUtils.addAll(UPPER, LOWER));
+		return Rand.generate(length, ArrayUtils.addAll(UPPER, LOWER));
 	}
 
 	/**
@@ -104,7 +104,7 @@ public final class Rand
 	@NotNull
 	public static String alnum(int length)
 	{
-		return generate(
+		return Rand.generate(
 			length,
 			ArrayUtils.addAll(
 				ArrayUtils.addAll(UPPER, LOWER),
@@ -121,7 +121,7 @@ public final class Rand
 	@NotNull
 	public static String graph(int length)
 	{
-		return generate(length, ArrayUtils.addAll(
+		return Rand.generate(length, ArrayUtils.addAll(
 				ArrayUtils.addAll(UPPER, LOWER),
 				ArrayUtils.addAll(DIGIT, GRAPH)
 			)
