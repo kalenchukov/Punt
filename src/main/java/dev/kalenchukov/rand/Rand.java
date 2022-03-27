@@ -138,12 +138,12 @@ public final class Rand
 	@NotNull
 	private static String generate(int length, char[] symbols)
 	{
-		StringBuilder randStr = new StringBuilder();
+		StringBuilder string = new StringBuilder();
 
 		for (int l = 0; l < length; l++) {
-			randStr.append(symbols[(int)(Math.random() * symbols.length)]);
+			string.append(symbols[(int)(Math.random() * symbols.length)]);
 		}
 
-		return randStr.toString();
+		return string.toString();
 	}
 }
