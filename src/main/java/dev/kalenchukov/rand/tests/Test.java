@@ -23,5 +23,7 @@ public final class Test
 		System.out.println(Rand.alnum(40));
 
 		System.out.println(Rand.graph(48));
+
+		System.out.println(Rand.logic(20));
 	}
 }

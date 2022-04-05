@@ -15,6 +15,13 @@ import org.jetbrains.annotations.NotNull;
 public final class Rand
 {
 	/**
+	 * Набор логических значений.
+	 */
+	private static final char[] LOGIC = {
+		'0', '1'
+	};
+
+	/**
 	 * Набор десятичных цифр.
 	 */
 	private static final char[] DIGIT = {
@@ -129,6 +136,15 @@ public final class Rand
 				ArrayUtils.addAll(DIGIT, GRAPH)
 			)
 		);
+	}
+
+	/**
+	 * Возвращает строку из символов [0, 1].
+	 */
+	@NotNull
+	public static String logic(int length)
+	{
+		return Rand.generate(length, LOGIC);
 	}
 
 	/**

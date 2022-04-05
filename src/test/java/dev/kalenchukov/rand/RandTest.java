@@ -71,4 +71,17 @@ public class RandTest
 
 		assertTrue(has);
 	}
+
+	/**
+	 * Проверка на строку из символов [0, 1].
+	 */
+	@Test
+	public void testLogic()
+	{
+		String string = Rand.logic(10);
+
+		boolean has = string.matches("[0-1]{10}");
+
+		assertTrue(has);
+	}
 }
