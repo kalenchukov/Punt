@@ -153,6 +153,9 @@ public final class Rand
 
 	/**
 	 * Возвращает строку из символов [0, 1].
+	 *
+	 * @param length Количество символов в возвращаемой строке.
+	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String binary(int length)
@@ -162,6 +165,9 @@ public final class Rand
 
 	/**
 	 * Возвращает строку из символов [0-9A-F].
+	 *
+	 * @param length Количество символов в возвращаемой строке.
+	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String hex(int length)
@@ -171,6 +177,9 @@ public final class Rand
 
 	/**
 	 * Возвращает строку из символов [0-7].
+	 *
+	 * @param length Количество символов в возвращаемой строке.
+	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String octal(int length)
