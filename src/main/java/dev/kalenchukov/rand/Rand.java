@@ -24,7 +24,7 @@ public final class Rand
 	/**
 	 * Набор десятеричной системы счисления.
 	 */
-	private static final char[] DIGIT = {
+	private static final char[] DECIMAL = {
 		'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
 	};
 
@@ -78,9 +78,9 @@ public final class Rand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String digit(int length)
+	public static String decimal(int length)
 	{
-		return Rand.generate(length, DIGIT);
+		return Rand.generate(length, DECIMAL);
 	}
 
 	/**
@@ -131,8 +131,7 @@ public final class Rand
 		return Rand.generate(
 			length,
 			ArrayUtils.addAll(
-				ArrayUtils.addAll(UPPER, LOWER),
-				DIGIT)
+				ArrayUtils.addAll(UPPER, LOWER), DECIMAL)
 		);
 	}
 
@@ -147,7 +146,7 @@ public final class Rand
 	{
 		return Rand.generate(length, ArrayUtils.addAll(
 				ArrayUtils.addAll(UPPER, LOWER),
-				ArrayUtils.addAll(DIGIT, GRAPH)
+				ArrayUtils.addAll(DECIMAL, GRAPH)
 			)
 		);
 	}

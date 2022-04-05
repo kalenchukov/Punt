@@ -13,9 +13,9 @@ import static org.junit.Assert.*;
 public class RandTest
 {
 	@Test
-	public void testDigit()
+	public void testDecimal()
 	{
-		String string = Rand.digit(100);
+		String string = Rand.decimal(100);
 
 		boolean has = string.matches("[0-9]{100}");
 
