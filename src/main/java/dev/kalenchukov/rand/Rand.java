@@ -15,9 +15,9 @@ import org.jetbrains.annotations.NotNull;
 public final class Rand
 {
 	/**
-	 * Набор логических значений.
+	 * Набор двоичной системы счисления.
 	 */
-	private static final char[] LOGIC = {
+	private static final char[] BIN = {
 		'0', '1'
 	};
 
@@ -156,9 +156,9 @@ public final class Rand
 	 * Возвращает строку из символов [0, 1].
 	 */
 	@NotNull
-	public static String logic(int length)
+	public static String bin(int length)
 	{
-		return Rand.generate(length, LOGIC);
+		return Rand.generate(length, BIN);
 	}
 
 	/**
