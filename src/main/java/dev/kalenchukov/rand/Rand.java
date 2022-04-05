@@ -29,6 +29,13 @@ public final class Rand
 	};
 
 	/**
+	 * Набор восьмеричной системы счисления.
+	 */
+	private static final char[] OCTAL = {
+		'0', '1', '2', '3', '4', '5', '6', '7'
+	};
+
+	/**
 	 * Набор шестнадцатеричной системы счисления.
 	 */
 	private static final char[] HEX = {
@@ -161,6 +168,15 @@ public final class Rand
 	public static String hex(int length)
 	{
 		return Rand.generate(length, HEX);
+	}
+
+	/**
+	 * Возвращает строку из символов [0-7].
+	 */
+	@NotNull
+	public static String octal(int length)
+	{
+		return Rand.generate(length, OCTAL);
 	}
 
 	/**

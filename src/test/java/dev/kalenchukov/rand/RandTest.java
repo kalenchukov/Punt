@@ -92,8 +92,21 @@ public class RandTest
 	public void testHex()
 	{
 		String string = Rand.hex(6);
-		System.out.println(string);
+
 		boolean has = string.matches("[0-9A-F]{6}");
+
+		assertTrue(has);
+	}
+
+	/**
+	 * Проверка на строку из символов [0-7].
+	 */
+	@Test
+	public void testOctal()
+	{
+		String string = Rand.octal(8);
+
+		boolean has = string.matches("[0-7]{8}");
 
 		assertTrue(has);
 	}
