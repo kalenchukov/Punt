@@ -17,7 +17,7 @@ public final class Rand
 	/**
 	 * Набор двоичной системы счисления.
 	 */
-	private static final char[] BIN = {
+	private static final char[] BINARY = {
 		'0', '1'
 	};
 
@@ -156,9 +156,9 @@ public final class Rand
 	 * Возвращает строку из символов [0, 1].
 	 */
 	@NotNull
-	public static String bin(int length)
+	public static String binary(int length)
 	{
-		return Rand.generate(length, BIN);
+		return Rand.generate(length, BINARY);
 	}
 
 	/**

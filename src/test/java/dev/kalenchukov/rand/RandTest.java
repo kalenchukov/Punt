@@ -76,9 +76,9 @@ public class RandTest
 	 * Проверка на строку из символов [0, 1].
 	 */
 	@Test
-	public void testBin()
+	public void testBinary()
 	{
-		String string = Rand.bin(10);
+		String string = Rand.binary(10);
 
 		boolean has = string.matches("[0-1]{10}");
 
