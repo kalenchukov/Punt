@@ -22,10 +22,17 @@ public final class Rand
 	};
 
 	/**
-	 * Набор десятичных цифр.
+	 * Набор десятеричной системы счисления.
 	 */
 	private static final char[] DIGIT = {
 		'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
+	};
+
+	/**
+	 * Набор шестнадцатеричной системы счисления.
+	 */
+	private static final char[] HEX = {
+		'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'
 	};
 
 	/**
@@ -145,6 +152,15 @@ public final class Rand
 	public static String logic(int length)
 	{
 		return Rand.generate(length, LOGIC);
+	}
+
+	/**
+	 * Возвращает строку из символов [0-9A-F].
+	 */
+	@NotNull
+	public static String hex(int length)
+	{
+		return Rand.generate(length, HEX);
 	}
 
 	/**

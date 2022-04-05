@@ -84,4 +84,17 @@ public class RandTest
 
 		assertTrue(has);
 	}
+
+	/**
+	 * Проверка на строку из символов [0-9A-F].
+	 */
+	@Test
+	public void testHex()
+	{
+		String string = Rand.hex(6);
+		System.out.println(string);
+		boolean has = string.matches("[0-9A-F]{6}");
+
+		assertTrue(has);
+	}
 }
