@@ -11,10 +11,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>dev.kalenchukov</groupId>
-	<artifactId>rand</artifactId>
+	<artifactId>string-rand</artifactId>
 	<version>1.3.0</version>
 
-	<name>Rand</name>
+	<name>StringRand</name>
 	<description>Генератор строк случайных символов</description>
 	<url>https://github.com/kalenchukov/Rand</url>
 

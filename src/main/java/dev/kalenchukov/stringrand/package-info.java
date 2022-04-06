@@ -4,4 +4,4 @@
  * E-mail: mailto:aleksey.kalenchukov@yandex.ru
  */
 
-package dev.kalenchukov.rand;
+package dev.kalenchukov.stringrand;

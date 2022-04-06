@@ -4,7 +4,7 @@
  * E-mail: mailto:aleksey.kalenchukov@yandex.ru
  */
 
-package dev.kalenchukov.rand;
+package dev.kalenchukov.stringrand;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.jetbrains.annotations.NotNull;
@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Класс содержит статические методы для получения строк случайных символов.
  */
-public final class Rand
+public final class StringRand
 {
 	/**
 	 * Набор двоичной системы счисления.
@@ -76,7 +76,7 @@ public final class Rand
 	/**
 	 * Конструктор для {@code Rand} запрещающий создавать объект класса.
 	 */
-	private Rand() {}
+	private StringRand() {}
 
 	/**
 	 * Возвращает строку из символов [0, 1].
@@ -87,7 +87,7 @@ public final class Rand
 	@NotNull
 	public static String binary(int length)
 	{
-		return Rand.generate(length, BINARY);
+		return StringRand.generate(length, BINARY);
 	}
 
 	/**
@@ -99,7 +99,7 @@ public final class Rand
 	@NotNull
 	public static String octal(int length)
 	{
-		return Rand.generate(length, OCTAL);
+		return StringRand.generate(length, OCTAL);
 	}
 
 	/**
@@ -111,7 +111,7 @@ public final class Rand
 	@NotNull
 	public static String decimal(int length)
 	{
-		return Rand.generate(length, DECIMAL);
+		return StringRand.generate(length, DECIMAL);
 	}
 
 	/**
@@ -123,7 +123,7 @@ public final class Rand
 	@NotNull
 	public static String duodecimal(int length)
 	{
-		return Rand.generate(length, DUODECIMAL);
+		return StringRand.generate(length, DUODECIMAL);
 	}
 
 	/**
@@ -135,7 +135,7 @@ public final class Rand
 	@NotNull
 	public static String hex(int length)
 	{
-		return Rand.generate(length, HEX);
+		return StringRand.generate(length, HEX);
 	}
 
 	/**
@@ -147,7 +147,7 @@ public final class Rand
 	@NotNull
 	public static String lower(int length)
 	{
-		return Rand.generate(length, LOWER);
+		return StringRand.generate(length, LOWER);
 	}
 
 	/**
@@ -159,7 +159,7 @@ public final class Rand
 	@NotNull
 	public static String upper(int length)
 	{
-		return Rand.generate(length, UPPER);
+		return StringRand.generate(length, UPPER);
 	}
 
 	/**
@@ -171,7 +171,7 @@ public final class Rand
 	@NotNull
 	public static String alpha(int length)
 	{
-		return Rand.generate(length, ArrayUtils.addAll(UPPER, LOWER));
+		return StringRand.generate(length, ArrayUtils.addAll(UPPER, LOWER));
 	}
 
 	/**
@@ -183,7 +183,7 @@ public final class Rand
 	@NotNull
 	public static String alnum(int length)
 	{
-		return Rand.generate(
+		return StringRand.generate(
 			length,
 			ArrayUtils.addAll(
 				ArrayUtils.addAll(UPPER, LOWER), DECIMAL)
@@ -199,7 +199,7 @@ public final class Rand
 	@NotNull
 	public static String graph(int length)
 	{
-		return Rand.generate(length, ArrayUtils.addAll(
+		return StringRand.generate(length, ArrayUtils.addAll(
 				ArrayUtils.addAll(UPPER, LOWER),
 				ArrayUtils.addAll(DECIMAL, GRAPH)
 			)

@@ -4,13 +4,13 @@
  * E-mail: mailto:aleksey.kalenchukov@yandex.ru
  */
 
-package dev.kalenchukov.rand;
+package dev.kalenchukov.stringrand;
 
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class RandTest
+public class StringRandTest
 {
 	/**
 	 * Проверка на строку из символов [0, 1].
@@ -18,7 +18,7 @@ public class RandTest
 	@Test
 	public void testBinary()
 	{
-		String string = Rand.binary(2);
+		String string = StringRand.binary(2);
 
 		boolean has = string.matches("[0-1]{2}");
 
@@ -31,7 +31,7 @@ public class RandTest
 	@Test
 	public void testOctal()
 	{
-		String string = Rand.octal(8);
+		String string = StringRand.octal(8);
 
 		boolean has = string.matches("[0-7]{8}");
 
@@ -41,7 +41,7 @@ public class RandTest
 	@Test
 	public void testDecimal()
 	{
-		String string = Rand.decimal(10);
+		String string = StringRand.decimal(10);
 
 		boolean has = string.matches("[0-9]{10}");
 
@@ -54,8 +54,8 @@ public class RandTest
 	@Test
 	public void testDuodecimal()
 	{
-		String string = Rand.duodecimal(12);
-		System.out.println(string);
+		String string = StringRand.duodecimal(12);
+
 		boolean has = string.matches("[0-9A-B]{12}");
 
 		assertTrue(has);
@@ -67,7 +67,7 @@ public class RandTest
 	@Test
 	public void testHex()
 	{
-		String string = Rand.hex(16);
+		String string = StringRand.hex(16);
 
 		boolean has = string.matches("[0-9A-F]{16}");
 
@@ -77,7 +77,7 @@ public class RandTest
 	@Test
 	public void testLower()
 	{
-		String string = Rand.lower(32);
+		String string = StringRand.lower(32);
 
 		boolean has = string.matches("[a-z]{32}");
 
@@ -87,7 +87,7 @@ public class RandTest
 	@Test
 	public void testUpper()
 	{
-		String string = Rand.upper(32);
+		String string = StringRand.upper(32);
 
 		boolean has = string.matches("[A-Z]{32}");
 
@@ -97,7 +97,7 @@ public class RandTest
 	@Test
 	public void testAlpha()
 	{
-		String string = Rand.alpha(32);
+		String string = StringRand.alpha(32);
 
 		boolean has = string.matches("[a-zA-Z]{32}");
 
@@ -107,7 +107,7 @@ public class RandTest
 	@Test
 	public void testAlnum()
 	{
-		String string = Rand.alnum(48);
+		String string = StringRand.alnum(48);
 
 		boolean has = string.matches("[A-Za-z0-9]{48}");
 
@@ -117,7 +117,7 @@ public class RandTest
 	@Test
 	public void testGraph()
 	{
-		String string = Rand.graph(64);
+		String string = StringRand.graph(64);
 
 		boolean has = string.matches("[\\a-zA-Z0-9!\"#$%&'()*+,-./:;<=>?@\\]\\[^_`{|}~]{64}");
 
