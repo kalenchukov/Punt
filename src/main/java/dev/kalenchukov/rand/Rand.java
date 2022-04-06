@@ -22,6 +22,13 @@ public final class Rand
 	};
 
 	/**
+	 * Набор восьмеричной системы счисления.
+	 */
+	private static final char[] OCTAL = {
+		'0', '1', '2', '3', '4', '5', '6', '7'
+	};
+
+	/**
 	 * Набор десятеричной системы счисления.
 	 */
 	private static final char[] DECIMAL = {
@@ -29,10 +36,10 @@ public final class Rand
 	};
 
 	/**
-	 * Набор восьмеричной системы счисления.
+	 * Набор двенадцатеричной системы счисления.
 	 */
-	private static final char[] OCTAL = {
-		'0', '1', '2', '3', '4', '5', '6', '7'
+	private static final char[] DUODECIMAL = {
+		'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B'
 	};
 
 	/**
@@ -72,6 +79,30 @@ public final class Rand
 	private Rand() {}
 
 	/**
+	 * Возвращает строку из символов [0, 1].
+	 *
+	 * @param length Количество символов в возвращаемой строке.
+	 * @return Строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String binary(int length)
+	{
+		return Rand.generate(length, BINARY);
+	}
+
+	/**
+	 * Возвращает строку из символов [0-7].
+	 *
+	 * @param length Количество символов в возвращаемой строке.
+	 * @return Строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String octal(int length)
+	{
+		return Rand.generate(length, OCTAL);
+	}
+
+	/**
 	 * Возвращает строку из символов [0-9].
 	 *
 	 * @param length Количество символов в возвращаемой строке.
@@ -81,6 +112,30 @@ public final class Rand
 	public static String decimal(int length)
 	{
 		return Rand.generate(length, DECIMAL);
+	}
+
+	/**
+	 * Возвращает строку из символов [0-9A-B].
+	 *
+	 * @param length Количество символов в возвращаемой строке.
+	 * @return Строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String duodecimal(int length)
+	{
+		return Rand.generate(length, DUODECIMAL);
+	}
+
+	/**
+	 * Возвращает строку из символов [0-9A-F].
+	 *
+	 * @param length Количество символов в возвращаемой строке.
+	 * @return Строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String hex(int length)
+	{
+		return Rand.generate(length, HEX);
 	}
 
 	/**
@@ -149,42 +204,6 @@ public final class Rand
 				ArrayUtils.addAll(DECIMAL, GRAPH)
 			)
 		);
-	}
-
-	/**
-	 * Возвращает строку из символов [0, 1].
-	 *
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
-	 */
-	@NotNull
-	public static String binary(int length)
-	{
-		return Rand.generate(length, BINARY);
-	}
-
-	/**
-	 * Возвращает строку из символов [0-9A-F].
-	 *
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
-	 */
-	@NotNull
-	public static String hex(int length)
-	{
-		return Rand.generate(length, HEX);
-	}
-
-	/**
-	 * Возвращает строку из символов [0-7].
-	 *
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
-	 */
-	@NotNull
-	public static String octal(int length)
-	{
-		return Rand.generate(length, OCTAL);
 	}
 
 	/**
