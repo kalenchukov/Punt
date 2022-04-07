@@ -65,27 +65,27 @@ public enum SymbolKit
 	});
 
 	/**
-	 * Набор символов.
+	 * Символы.
 	 */
-	private final char[] kit;
+	private final char[] symbols;
 
 	/**
 	 * Конструктор для {@code SymbolKit}.
 	 *
-	 * @param kit Набор символов.
+	 * @param symbols Символы.
 	 */
-	SymbolKit(final char[] kit)
+	SymbolKit(final char[] symbols)
 	{
-		this.kit = kit;
+		this.symbols = symbols;
 	}
 
 	/**
-	 * Возвращает набор символов.
+	 * Возвращает символы из набора.
 	 *
 	 * @return Массив символов.
 	 */
 	public char[] getSymbols()
 	{
-		return this.kit;
+		return this.symbols;
 	}
 }
