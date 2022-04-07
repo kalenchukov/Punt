@@ -27,7 +27,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String binary(int length)
+	public static String binary(final int length)
 	{
 		return StringRand.generate(length, new SymbolKit[]{
 			SymbolKit.BINARY
@@ -41,7 +41,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String octal(int length)
+	public static String octal(final int length)
 	{
 		return StringRand.generate(length, new SymbolKit[]{
 			SymbolKit.OCTAL
@@ -55,7 +55,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String decimal(int length)
+	public static String decimal(final int length)
 	{
 		return StringRand.generate(length, new SymbolKit[]{
 			SymbolKit.DECIMAL
@@ -69,7 +69,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String duodecimal(int length)
+	public static String duodecimal(final int length)
 	{
 		return StringRand.generate(length, new SymbolKit[]{
 			SymbolKit.DUODECIMAL
@@ -83,7 +83,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String hex(int length)
+	public static String hex(final int length)
 	{
 		return StringRand.generate(length, new SymbolKit[]{
 			SymbolKit.HEX
@@ -97,7 +97,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String lower(int length)
+	public static String lower(final int length)
 	{
 		return StringRand.generate(length, new SymbolKit[]{
 			SymbolKit.LOWER
@@ -111,7 +111,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String upper(int length)
+	public static String upper(final int length)
 	{
 		return StringRand.generate(length, new SymbolKit[]{
 			SymbolKit.UPPER
@@ -125,7 +125,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String alpha(int length)
+	public static String alpha(final int length)
 	{
 		return StringRand.generate(length, new SymbolKit[]{
 			SymbolKit.UPPER, SymbolKit.LOWER
@@ -139,7 +139,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String alnum(int length)
+	public static String alnum(final int length)
 	{
 		return StringRand.generate(length, new SymbolKit[]{
 			SymbolKit.UPPER, SymbolKit.LOWER, SymbolKit.DECIMAL
@@ -153,7 +153,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String graph(int length)
+	public static String graph(final int length)
 	{
 		return StringRand.generate(length, new SymbolKit[]{
 			SymbolKit.UPPER, SymbolKit.LOWER, SymbolKit.DECIMAL, SymbolKit.GRAPH
@@ -168,7 +168,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	private static String generate(int length, @NotNull SymbolKit @NotNull [] symbolKits)
+	private static String generate(final int length, @NotNull final SymbolKit @NotNull [] symbolKits)
 	{
 		char[] symbols = {};
 
