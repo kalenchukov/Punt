@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 public final class StringRand
 {
 	/**
-	 * Конструктор для {@code Rand} запрещающий создавать объект класса.
+	 * Конструктор для {@code StringRand} запрещающий создавать объект класса.
 	 */
 	private StringRand() {}
 
