@@ -12,11 +12,11 @@
 
 	<groupId>dev.kalenchukov</groupId>
 	<artifactId>string-rand</artifactId>
-	<version>1.4.0</version>
+	<version>1.5.0</version>
 
 	<name>StringRand</name>
 	<description>Генератор строк случайных символов</description>
-	<url>https://github.com/kalenchukov/Rand</url>
+	<url>https://github.com/kalenchukov/StringRand</url>
 
 	<licenses>
 		<license>
@@ -35,8 +35,8 @@
 	</developers>
 
 	<properties>
-		<maven.compiler.source>16</maven.compiler.source>
-		<maven.compiler.target>16</maven.compiler.target>
+		<maven.compiler.source>18</maven.compiler.source>
+		<maven.compiler.target>18</maven.compiler.target>
 		<encoding>UTF-8</encoding>
 	</properties>
 

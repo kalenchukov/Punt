@@ -4,9 +4,9 @@
  * E-mail: mailto:aleksey.kalenchukov@yandex.ru
  */
 
-package dev.kalenchukov.stringrand;
+package dev.kalenchukov.string.rand;
 
-import dev.kalenchukov.stringrand.resources.SymbolKit;
+import dev.kalenchukov.string.rand.resources.SymbolKit;
 import org.apache.commons.lang3.ArrayUtils;
 import org.jetbrains.annotations.NotNull;
 

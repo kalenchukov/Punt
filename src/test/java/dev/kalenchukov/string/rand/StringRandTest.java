@@ -4,7 +4,7 @@
  * E-mail: mailto:aleksey.kalenchukov@yandex.ru
  */
 
-package dev.kalenchukov.stringrand;
+package dev.kalenchukov.string.rand;
 
 import org.junit.Test;
 
