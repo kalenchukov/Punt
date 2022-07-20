@@ -57,6 +57,18 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>dev.kalenchukov</groupId>
+			<artifactId>alphabet</artifactId>
+			<version>1.1.0</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>dev.kalenchukov</groupId>
+			<artifactId>numeral-system</artifactId>
+			<version>1.0.0</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 
 </project>

@@ -1,7 +1,8 @@
 module dev.kalenchukov.string.rand
 {
 	requires org.jetbrains.annotations;
-	requires org.apache.commons.lang3;
+	requires dev.kalenchukov.alphabet;
+	requires dev.kalenchukov.numeralsystem;
 
 	exports dev.kalenchukov.string.rand;
 }

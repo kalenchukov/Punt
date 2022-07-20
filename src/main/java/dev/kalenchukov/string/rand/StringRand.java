@@ -6,9 +6,15 @@
 
 package dev.kalenchukov.string.rand;
 
-import dev.kalenchukov.string.rand.resources.SymbolKit;
-import org.apache.commons.lang3.ArrayUtils;
+import dev.kalenchukov.alphabet.EnglishAlphabet;
+import dev.kalenchukov.numeralsystem.*;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Range;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Random;
 
 /**
  * Класс содержит статические методы для получения строк случайных символов.
@@ -29,9 +35,7 @@ public final class StringRand
 	@NotNull
 	public static String binary(final int length)
 	{
-		return StringRand.generate(length, new SymbolKit[]{
-			SymbolKit.BINARY
-		});
+		return StringRand.generate(length, BinarySystem.DIGITS);
 	}
 
 	/**
@@ -43,9 +47,7 @@ public final class StringRand
 	@NotNull
 	public static String octal(final int length)
 	{
-		return StringRand.generate(length, new SymbolKit[]{
-			SymbolKit.OCTAL
-		});
+		return StringRand.generate(length, OctalSystem.DIGITS);
 	}
 
 	/**
@@ -57,9 +59,7 @@ public final class StringRand
 	@NotNull
 	public static String decimal(final int length)
 	{
-		return StringRand.generate(length, new SymbolKit[]{
-			SymbolKit.DECIMAL
-		});
+		return StringRand.generate(length, DecimalSystem.DIGITS);
 	}
 
 	/**
@@ -71,9 +71,7 @@ public final class StringRand
 	@NotNull
 	public static String duodecimal(final int length)
 	{
-		return StringRand.generate(length, new SymbolKit[]{
-			SymbolKit.DUODECIMAL
-		});
+		return StringRand.generate(length, DuodecimalSystem.DIGITS);
 	}
 
 	/**
@@ -85,9 +83,7 @@ public final class StringRand
 	@NotNull
 	public static String hex(final int length)
 	{
-		return StringRand.generate(length, new SymbolKit[]{
-			SymbolKit.HEX
-		});
+		return StringRand.generate(length, HexadecimalSystem.DIGITS);
 	}
 
 	/**
@@ -99,9 +95,7 @@ public final class StringRand
 	@NotNull
 	public static String lower(final int length)
 	{
-		return StringRand.generate(length, new SymbolKit[]{
-			SymbolKit.LOWER
-		});
+		return StringRand.generate(length, EnglishAlphabet.LETTERS_LOWER_CASE);
 	}
 
 	/**
@@ -113,9 +107,7 @@ public final class StringRand
 	@NotNull
 	public static String upper(final int length)
 	{
-		return StringRand.generate(length, new SymbolKit[]{
-			SymbolKit.UPPER
-		});
+		return StringRand.generate(length, EnglishAlphabet.LETTERS_UPPER_CASE);
 	}
 
 	/**
@@ -127,9 +119,7 @@ public final class StringRand
 	@NotNull
 	public static String alpha(final int length)
 	{
-		return StringRand.generate(length, new SymbolKit[]{
-			SymbolKit.UPPER, SymbolKit.LOWER
-		});
+		return StringRand.generate(length, EnglishAlphabet.LETTERS);
 	}
 
 	/**
@@ -141,9 +131,13 @@ public final class StringRand
 	@NotNull
 	public static String alnum(final int length)
 	{
-		return StringRand.generate(length, new SymbolKit[]{
-			SymbolKit.UPPER, SymbolKit.LOWER, SymbolKit.DECIMAL
-		});
+		List<Character> symbols = new ArrayList<>(
+			EnglishAlphabet.LETTERS.size() + DecimalSystem.DIGITS.size()
+		);
+		symbols.addAll(EnglishAlphabet.LETTERS);
+		symbols.addAll(DecimalSystem.DIGITS);
+
+		return StringRand.generate(length, symbols);
 	}
 
 	/**
@@ -155,31 +149,40 @@ public final class StringRand
 	@NotNull
 	public static String graph(final int length)
 	{
-		return StringRand.generate(length, new SymbolKit[]{
-			SymbolKit.UPPER, SymbolKit.LOWER, SymbolKit.DECIMAL, SymbolKit.GRAPH
-		});
+		List<Character> symbols = new ArrayList<>(
+			EnglishAlphabet.LETTERS.size() + DecimalSystem.DIGITS.size()
+		);
+		symbols.addAll(EnglishAlphabet.LETTERS);
+		symbols.addAll(DecimalSystem.DIGITS);
+		symbols.addAll(List.of(
+			'!', '"', '#', '$', '%', '&', '\'', '(', ')', '*', '+', ',', '-', '.', '/', ':',
+			';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~'
+		));
+
+		return StringRand.generate(length, symbols);
 	}
 
 	/**
 	 * Возвращает строку из указанных наборов символов.
 	 *
 	 * @param length Количество символов в возвращаемой строке.
-	 * @param symbolKits Наборы символов из которых должна состоять строка.
+	 * @param symbols Символы из которых должна состоять строка.
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	private static String generate(final int length, @NotNull final SymbolKit @NotNull [] symbolKits)
+	private static String generate(@NotNull final Integer length,
+								   @NotNull final List<@NotNull Character> symbols)
 	{
-		char[] symbols = {};
-
-		for (SymbolKit symbolKit : symbolKits) {
-			symbols = ArrayUtils.addAll(symbols, symbolKit.getSymbols());
-		}
+		Objects.requireNonNull(symbols);
 
 		StringBuilder string = new StringBuilder();
+		Random random = new Random();
 
-		for (int l = 0; l < length; l++) {
-			string.append(symbols[(int)(Math.random() * symbols.length)]);
+		for (int l = 0; l < length; l++)
+		{
+			int position = random.nextInt(symbols.size());
+
+			string.append(symbols.get(position));
 		}
 
 		return string.toString();
