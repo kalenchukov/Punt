@@ -33,8 +33,10 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String binary(final int length)
+	public static String binary(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
+		Objects.requireNonNull(length);
+
 		return StringRand.generate(length, BinarySystem.DIGITS);
 	}
 
@@ -45,8 +47,10 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String octal(final int length)
+	public static String octal(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
+		Objects.requireNonNull(length);
+
 		return StringRand.generate(length, OctalSystem.DIGITS);
 	}
 
@@ -57,8 +61,10 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String decimal(final int length)
+	public static String decimal(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
+		Objects.requireNonNull(length);
+
 		return StringRand.generate(length, DecimalSystem.DIGITS);
 	}
 
@@ -69,8 +75,10 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String duodecimal(final int length)
+	public static String duodecimal(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
+		Objects.requireNonNull(length);
+
 		return StringRand.generate(length, DuodecimalSystem.DIGITS);
 	}
 
@@ -81,8 +89,10 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String hex(final int length)
+	public static String hex(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
+		Objects.requireNonNull(length);
+
 		return StringRand.generate(length, HexadecimalSystem.DIGITS);
 	}
 
@@ -93,8 +103,10 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String lower(final int length)
+	public static String lower(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
+		Objects.requireNonNull(length);
+
 		return StringRand.generate(length, EnglishAlphabet.LETTERS_LOWER_CASE);
 	}
 
@@ -105,8 +117,10 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String upper(final int length)
+	public static String upper(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
+		Objects.requireNonNull(length);
+
 		return StringRand.generate(length, EnglishAlphabet.LETTERS_UPPER_CASE);
 	}
 
@@ -117,8 +131,10 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String alpha(final int length)
+	public static String alpha(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
+		Objects.requireNonNull(length);
+
 		return StringRand.generate(length, EnglishAlphabet.LETTERS);
 	}
 
@@ -129,8 +145,10 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String alnum(final int length)
+	public static String alnum(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
+		Objects.requireNonNull(length);
+
 		List<Character> symbols = new ArrayList<>(
 			EnglishAlphabet.LETTERS.size() + DecimalSystem.DIGITS.size()
 		);
@@ -147,8 +165,10 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String graph(final int length)
+	public static String graph(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
+		Objects.requireNonNull(length);
+
 		List<Character> symbols = new ArrayList<>(
 			EnglishAlphabet.LETTERS.size() + DecimalSystem.DIGITS.size()
 		);
@@ -170,9 +190,10 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	private static String generate(@NotNull final Integer length,
+	private static String generate(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length,
 								   @NotNull final List<@NotNull Character> symbols)
 	{
+		Objects.requireNonNull(length);
 		Objects.requireNonNull(symbols);
 
 		StringBuilder string = new StringBuilder();
