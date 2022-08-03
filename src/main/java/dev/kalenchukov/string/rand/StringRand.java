@@ -314,6 +314,33 @@ public final class StringRand
 	}
 
 	/**
+	 * Возвращает строку из букв, цифр и символов [!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~].
+	 *
+	 * @param alphabet Алфавит.
+	 * @param numeralSystem Система счисления.
+	 * @param length Количество символов в возвращаемой строке.
+	 * @return Строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String graph(@NotNull final Alphabetical alphabet,
+							   @NotNull final Numerable numeralSystem,
+							   @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	{
+		Objects.requireNonNull(alphabet);
+		Objects.requireNonNull(numeralSystem);
+		Objects.requireNonNull(length);
+
+		List<Character> symbols = new ArrayList<>(
+			alphabet.getLetters().size() + numeralSystem.getDigits().size() + GRAPH.size()
+		);
+		symbols.addAll(alphabet.getLetters());
+		symbols.addAll(numeralSystem.getDigits());
+		symbols.addAll(GRAPH);
+
+		return StringRand.generate(length, symbols);
+	}
+
+	/**
 	 * Возвращает строку из указанных наборов символов.
 	 *
 	 * @param length Количество символов в возвращаемой строке.
