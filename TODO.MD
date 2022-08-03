@@ -5,4 +5,4 @@
 
 # CORE
 * [?] Добавить проверку параметра length на > 0 и < MAX
-* 
+* Транзитивную зависимость от Alphabet и NumeralSystem
