@@ -22,6 +22,16 @@ import java.util.Random;
 public final class StringRand
 {
 	/**
+	 * Коллекция спецсимволов.
+	 */
+	private static final List<Character> GRAPH = List.of(
+		'!', '"', '#', '$', '%', '&', '\'', '(', ')', '*',
+		'+', ',', '-', '.', '/', ':', ';', '<', '=', '>',
+		'?', '@', '[', '\\', ']', '^', '_', '`', '{', '|',
+		'}', '~'
+	);
+
+	/**
 	 * Конструктор для {@code StringRand} запрещающий создавать объект класса.
 	 */
 	private StringRand() {}
@@ -270,14 +280,35 @@ public final class StringRand
 		Objects.requireNonNull(length);
 
 		List<Character> symbols = new ArrayList<>(
-			EnglishAlphabet.LETTERS.size() + DecimalSystem.DIGITS.size()
+			EnglishAlphabet.LETTERS.size() + DecimalSystem.DIGITS.size() + GRAPH.size()
 		);
 		symbols.addAll(EnglishAlphabet.LETTERS);
 		symbols.addAll(DecimalSystem.DIGITS);
-		symbols.addAll(List.of(
-			'!', '"', '#', '$', '%', '&', '\'', '(', ')', '*', '+', ',', '-', '.', '/', ':',
-			';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~'
-		));
+		symbols.addAll(GRAPH);
+
+		return StringRand.generate(length, symbols);
+	}
+
+	/**
+	 * Возвращает строку из букв и символов [0-9!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~].
+	 *
+	 * @param alphabet Алфавит.
+	 * @param length Количество символов в возвращаемой строке.
+	 * @return Строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String graph(@NotNull final Alphabetical alphabet,
+							   @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	{
+		Objects.requireNonNull(alphabet);
+		Objects.requireNonNull(length);
+
+		List<Character> symbols = new ArrayList<>(
+			alphabet.getLetters().size() + DecimalSystem.DIGITS.size() + GRAPH.size()
+		);
+		symbols.addAll(alphabet.getLetters());
+		symbols.addAll(DecimalSystem.DIGITS);
+		symbols.addAll(GRAPH);
 
 		return StringRand.generate(length, symbols);
 	}

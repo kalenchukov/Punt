@@ -172,7 +172,21 @@ public class StringRandTest
 	{
 		String string = StringRand.graph(64);
 
-		boolean has = string.matches("[\\a-zA-Z0-9!\"#$%&'()*+,-./:;<=>?@\\]\\[^_`{|}~]{64}");
+		System.out.println(string);
+
+		boolean has = string.matches("[\\\\0-9a-zA-Z!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{64}");
+
+		assertTrue(has);
+	}
+
+	@Test
+	public void testGraphAlphabet()
+	{
+		String string = StringRand.graph(new RussianAlphabet(), 64);
+
+		System.out.println(string);
+
+		boolean has = string.matches("[\\\\0-9а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{64}");
 
 		assertTrue(has);
 	}
