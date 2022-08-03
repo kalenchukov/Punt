@@ -107,7 +107,7 @@ public final class StringRand
 	{
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, EnglishAlphabet.LETTERS_LOWER_CASE);
+		return StringRand.generate(length, EnglishAlphabet.LowerCase.LETTERS);
 	}
 
 	/**
@@ -121,7 +121,7 @@ public final class StringRand
 	{
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, EnglishAlphabet.LETTERS_UPPER_CASE);
+		return StringRand.generate(length, EnglishAlphabet.UpperCase.LETTERS);
 	}
 
 	/**
