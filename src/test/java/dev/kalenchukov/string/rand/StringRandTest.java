@@ -7,6 +7,8 @@
 package dev.kalenchukov.string.rand;
 
 import dev.kalenchukov.alphabet.RussianAlphabet;
+import dev.kalenchukov.numeralsystem.BinarySystem;
+import dev.kalenchukov.numeralsystem.OctalSystem;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -151,6 +153,16 @@ public class StringRandTest
 		String string = StringRand.alnum(new RussianAlphabet(), 48);
 
 		boolean has = string.matches("[а-яёА-ЯЁ0-9]{48}");
+
+		assertTrue(has);
+	}
+
+	@Test
+	public void testAlnumAlphabetAndNumeralSystem()
+	{
+		String string = StringRand.alnum(new RussianAlphabet(), new BinarySystem(), 48);
+
+		boolean has = string.matches("[а-яёА-ЯЁ0-1]{48}");
 
 		assertTrue(has);
 	}

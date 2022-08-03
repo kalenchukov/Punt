@@ -233,6 +233,32 @@ public final class StringRand
 	}
 
 	/**
+	 * Возвращает строку из букв и цифр.
+	 *
+	 * @param alphabet Алфавит.
+	 * @param numeralSystem Система счисления.
+	 * @param length Количество символов в возвращаемой строке.
+	 * @return Строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String alnum(@NotNull final Alphabetical alphabet,
+							   @NotNull final Numerable numeralSystem,
+							   @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	{
+		Objects.requireNonNull(alphabet);
+		Objects.requireNonNull(numeralSystem);
+		Objects.requireNonNull(length);
+
+		List<Character> symbols = new ArrayList<>(
+			alphabet.getLetters().size() + numeralSystem.getDigits().size()
+		);
+		symbols.addAll(alphabet.getLetters());
+		symbols.addAll(numeralSystem.getDigits());
+
+		return StringRand.generate(length, symbols);
+	}
+
+	/**
 	 * Возвращает строку из символов [a-zA-Z0-9!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~].
 	 *
 	 * @param length Количество символов в возвращаемой строке.
