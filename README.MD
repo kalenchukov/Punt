@@ -51,6 +51,10 @@ StringRand.alpha(new RussianAlphabet(), 32);
 StringRand.alnum(48);
 // Результат выполнения: oYzqyxYx1Rg1ZwzmCmY4IODbTnClcMnoDHtpkfFxPtcIw9NC
 
+// Возвращает строку из букв алфавита и символов 0-9 указанной длинны 48
+StringRand.alnum(new RussianAlphabet(), 48);
+// Результат выполнения: 2пСэчъЙдКЛ4кВаЩНЮвщм2ыМХсцВъВОГЭ7л2ЪБ88ЯыбОЬЭ7зы
+
 // Возвращает строку символов из a-z, A-Z, 0-9 и символов !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ указанной длинны 64
 StringRand.graph(64);
 // Результат выполнения: kg;1#5KO>zE|V68B2*~hg\zGM*w3:BhI>J$rm;/Qj&,xB3}TVq}/7e}V;a`YO/f_

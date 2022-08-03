@@ -149,7 +149,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String upper(@NotNull AlphabeticalUpperCase alphabet,
+	public static String upper(@NotNull final AlphabeticalUpperCase alphabet,
 							   @NotNull@Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(alphabet);
@@ -180,7 +180,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String alpha(@NotNull Alphabetical alphabet,
+	public static String alpha(@NotNull final Alphabetical alphabet,
 							   @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(alphabet);
@@ -204,6 +204,29 @@ public final class StringRand
 			EnglishAlphabet.LETTERS.size() + DecimalSystem.DIGITS.size()
 		);
 		symbols.addAll(EnglishAlphabet.LETTERS);
+		symbols.addAll(DecimalSystem.DIGITS);
+
+		return StringRand.generate(length, symbols);
+	}
+
+	/**
+	 * Возвращает строку из букв и символов [0-9].
+	 *
+	 * @param alphabet Алфавит.
+	 * @param length Количество символов в возвращаемой строке.
+	 * @return Строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String alnum(@NotNull final Alphabetical alphabet,
+							   @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	{
+		Objects.requireNonNull(alphabet);
+		Objects.requireNonNull(length);
+
+		List<Character> symbols = new ArrayList<>(
+			alphabet.getLetters().size() + DecimalSystem.DIGITS.size()
+		);
+		symbols.addAll(alphabet.getLetters());
 		symbols.addAll(DecimalSystem.DIGITS);
 
 		return StringRand.generate(length, symbols);
