@@ -6,6 +6,7 @@
 
 package dev.kalenchukov.string.rand;
 
+import dev.kalenchukov.alphabet.RussianAlphabet;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -85,11 +86,31 @@ public class StringRandTest
 	}
 
 	@Test
+	public void testLowerAlphabet()
+	{
+		String string = StringRand.lower(new RussianAlphabet.LowerCase(), 32);
+
+		boolean has = string.matches("[а-яё]{32}");
+
+		assertTrue(has);
+	}
+
+	@Test
 	public void testUpper()
 	{
 		String string = StringRand.upper(32);
 
 		boolean has = string.matches("[A-Z]{32}");
+
+		assertTrue(has);
+	}
+
+	@Test
+	public void testUpperAlphabet()
+	{
+		String string = StringRand.upper(new RussianAlphabet.UpperCase(), 32);
+
+		boolean has = string.matches("[А-ЯЁ]{32}");
 
 		assertTrue(has);
 	}

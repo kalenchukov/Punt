@@ -6,6 +6,9 @@
 
 package dev.kalenchukov.string.rand;
 
+import dev.kalenchukov.alphabet.AlphabeticalCase;
+import dev.kalenchukov.alphabet.AlphabeticalLowerCase;
+import dev.kalenchukov.alphabet.AlphabeticalUpperCase;
 import dev.kalenchukov.alphabet.EnglishAlphabet;
 import dev.kalenchukov.numeralsystem.*;
 import org.jetbrains.annotations.NotNull;
@@ -111,6 +114,23 @@ public final class StringRand
 	}
 
 	/**
+	 * Возвращает строку из строчных букв.
+	 *
+	 * @param alphabet Алфавит строчных букв.
+	 * @param length Количество символов в возвращаемой строке.
+	 * @return Строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String lower(@NotNull final AlphabeticalLowerCase alphabet,
+							   @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	{
+		Objects.requireNonNull(alphabet);
+		Objects.requireNonNull(length);
+
+		return StringRand.generate(length, alphabet.getLetters());
+	}
+
+	/**
 	 * Возвращает строку из символов [A-Z].
 	 *
 	 * @param length Количество символов в возвращаемой строке.
@@ -122,6 +142,23 @@ public final class StringRand
 		Objects.requireNonNull(length);
 
 		return StringRand.generate(length, EnglishAlphabet.UpperCase.LETTERS);
+	}
+
+	/**
+	 * Возвращает строку из прописных букв.
+	 *
+	 * @param alphabet Алфавит строчных букв.
+	 * @param length Количество символов в возвращаемой строке.
+	 * @return Строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String upper(@NotNull AlphabeticalUpperCase alphabet,
+							   @NotNull@Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	{
+		Objects.requireNonNull(alphabet);
+		Objects.requireNonNull(length);
+
+		return StringRand.generate(length, alphabet.getLetters());
 	}
 
 	/**

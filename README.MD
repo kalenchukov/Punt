@@ -27,9 +27,17 @@ StringRand.hex(16);
 StringRand.lower(32);
 // Результат выполнения: wpcejmhmosiedsucgostqiknbkjowqxm
 
+// Возвращает строку из строчных букв алфавита указанной длинны 32
+StringRand.lower(new RussianAlphabet.LowerCase(), 32);
+// Результат выполнения: эвъзнзиылежкымйыыммльенпмюсдгрээ
+
 // Возвращает строку символов из диапазона A-Z указанной длинны 32
 StringRand.upper(32);
 // Результат выполнения: SDHSKGOLZDKJZEQZZZPVPIJAPYMQYGQU
+
+// Возвращает строку из прописных букв алфавита указанной длинны 32
+StringRand.upper(new RussianAlphabet.UpperCase(), 32);
+// Результат выполнения: ЛЫУВЖХРУЧТЪФШВНКЕЖЬУЙЫЯЭЮЩРЬХАОЗ
 
 // Возвращает строку символов из диапазонов A-Z и a-z указанной длинны 32
 StringRand.alpha(32);
