@@ -126,6 +126,16 @@ public class StringRandTest
 	}
 
 	@Test
+	public void testAlphaAlphabet()
+	{
+		String string = StringRand.alpha(new RussianAlphabet(), 32);
+
+		boolean has = string.matches("[а-яёА-ЯЁ]{32}");
+
+		assertTrue(has);
+	}
+
+	@Test
 	public void testAlnum()
 	{
 		String string = StringRand.alnum(48);

@@ -6,10 +6,7 @@
 
 package dev.kalenchukov.string.rand;
 
-import dev.kalenchukov.alphabet.AlphabeticalCase;
-import dev.kalenchukov.alphabet.AlphabeticalLowerCase;
-import dev.kalenchukov.alphabet.AlphabeticalUpperCase;
-import dev.kalenchukov.alphabet.EnglishAlphabet;
+import dev.kalenchukov.alphabet.*;
 import dev.kalenchukov.numeralsystem.*;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Range;
@@ -173,6 +170,23 @@ public final class StringRand
 		Objects.requireNonNull(length);
 
 		return StringRand.generate(length, EnglishAlphabet.LETTERS);
+	}
+
+	/**
+	 * Возвращает строку из букв.
+	 *
+	 * @param alphabet Алфавит.
+	 * @param length Количество символов в возвращаемой строке.
+	 * @return Строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String alpha(@NotNull Alphabetical alphabet,
+							   @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	{
+		Objects.requireNonNull(alphabet);
+		Objects.requireNonNull(length);
+
+		return StringRand.generate(length, alphabet.getLetters());
 	}
 
 	/**

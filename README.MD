@@ -43,6 +43,10 @@ StringRand.upper(new RussianAlphabet.UpperCase(), 32);
 StringRand.alpha(32);
 // Результат выполнения: meOnjOUUQwOuyrAnTRiXvmYRAHscrvNm
 
+// Возвращает строку букв алфавита указанной длинны 32
+StringRand.alpha(new RussianAlphabet(), 32);
+// Результат выполнения: ёъЧПЁПыФоХцИЁзЯЦХФМэШЛБМЫслщДМзР
+
 // Возвращает строку символов из A-Z, a-z и 0-9 указанной длинны 48
 StringRand.alnum(48);
 // Результат выполнения: oYzqyxYx1Rg1ZwzmCmY4IODbTnClcMnoDHtpkfFxPtcIw9NC
