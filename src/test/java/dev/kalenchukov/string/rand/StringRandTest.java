@@ -16,14 +16,27 @@ import static org.junit.Assert.*;
 public class StringRandTest
 {
 	/**
-	 * Проверка на строку из символов [0, 1].
+	 * Проверка на строку из символов [0-1].
 	 */
 	@Test
 	public void testBinary()
 	{
-		String string = StringRand.binary(2);
+		String string = StringRand.binary(10);
 
-		boolean has = string.matches("[0-1]{2}");
+		boolean has = string.matches("[0-1]{10}");
+
+		assertTrue(has);
+	}
+
+	/**
+	 * Проверка на строку из символов [0-2].
+	 */
+	@Test
+	public void testTernary()
+	{
+		String string = StringRand.ternary(10);
+
+		boolean has = string.matches("[0-2]{10}");
 
 		assertTrue(has);
 	}
@@ -34,9 +47,9 @@ public class StringRandTest
 	@Test
 	public void testOctal()
 	{
-		String string = StringRand.octal(8);
+		String string = StringRand.octal(10);
 
-		boolean has = string.matches("[0-7]{8}");
+		boolean has = string.matches("[0-7]{10}");
 
 		assertTrue(has);
 	}
@@ -57,9 +70,9 @@ public class StringRandTest
 	@Test
 	public void testDuodecimal()
 	{
-		String string = StringRand.duodecimal(12);
+		String string = StringRand.duodecimal(10);
 
-		boolean has = string.matches("[0-9A-B]{12}");
+		boolean has = string.matches("[0-9A-B]{10}");
 
 		assertTrue(has);
 	}
@@ -70,9 +83,9 @@ public class StringRandTest
 	@Test
 	public void testHex()
 	{
-		String string = StringRand.hex(16);
+		String string = StringRand.hex(10);
 
-		boolean has = string.matches("[0-9A-F]{16}");
+		boolean has = string.matches("[0-9A-F]{10}");
 
 		assertTrue(has);
 	}
@@ -80,9 +93,9 @@ public class StringRandTest
 	@Test
 	public void testLower()
 	{
-		String string = StringRand.lower(32);
+		String string = StringRand.lower(10);
 
-		boolean has = string.matches("[a-z]{32}");
+		boolean has = string.matches("[a-z]{10}");
 
 		assertTrue(has);
 	}
@@ -90,9 +103,9 @@ public class StringRandTest
 	@Test
 	public void testLowerAlphabet()
 	{
-		String string = StringRand.lower(new RussianAlphabet.LowerCase(), 32);
+		String string = StringRand.lower(new RussianAlphabet.LowerCase(), 10);
 
-		boolean has = string.matches("[а-яё]{32}");
+		boolean has = string.matches("[а-яё]{10}");
 
 		assertTrue(has);
 	}
@@ -100,9 +113,9 @@ public class StringRandTest
 	@Test
 	public void testUpper()
 	{
-		String string = StringRand.upper(32);
+		String string = StringRand.upper(10);
 
-		boolean has = string.matches("[A-Z]{32}");
+		boolean has = string.matches("[A-Z]{10}");
 
 		assertTrue(has);
 	}
@@ -110,9 +123,9 @@ public class StringRandTest
 	@Test
 	public void testUpperAlphabet()
 	{
-		String string = StringRand.upper(new RussianAlphabet.UpperCase(), 32);
+		String string = StringRand.upper(new RussianAlphabet.UpperCase(), 10);
 
-		boolean has = string.matches("[А-ЯЁ]{32}");
+		boolean has = string.matches("[А-ЯЁ]{10}");
 
 		assertTrue(has);
 	}
@@ -120,9 +133,9 @@ public class StringRandTest
 	@Test
 	public void testAlpha()
 	{
-		String string = StringRand.alpha(32);
+		String string = StringRand.alpha(10);
 
-		boolean has = string.matches("[a-zA-Z]{32}");
+		boolean has = string.matches("[a-zA-Z]{10}");
 
 		assertTrue(has);
 	}
@@ -130,9 +143,9 @@ public class StringRandTest
 	@Test
 	public void testAlphaAlphabet()
 	{
-		String string = StringRand.alpha(new RussianAlphabet(), 32);
+		String string = StringRand.alpha(new RussianAlphabet(), 10);
 
-		boolean has = string.matches("[а-яёА-ЯЁ]{32}");
+		boolean has = string.matches("[а-яёА-ЯЁ]{10}");
 
 		assertTrue(has);
 	}
@@ -140,9 +153,9 @@ public class StringRandTest
 	@Test
 	public void testAlnum()
 	{
-		String string = StringRand.alnum(48);
+		String string = StringRand.alnum(10);
 
-		boolean has = string.matches("[A-Za-z0-9]{48}");
+		boolean has = string.matches("[A-Za-z0-9]{10}");
 
 		assertTrue(has);
 	}
@@ -150,9 +163,9 @@ public class StringRandTest
 	@Test
 	public void testAlnumAlphabet()
 	{
-		String string = StringRand.alnum(new RussianAlphabet(), 48);
+		String string = StringRand.alnum(new RussianAlphabet(), 10);
 
-		boolean has = string.matches("[а-яёА-ЯЁ0-9]{48}");
+		boolean has = string.matches("[а-яёА-ЯЁ0-9]{10}");
 
 		assertTrue(has);
 	}
@@ -160,9 +173,9 @@ public class StringRandTest
 	@Test
 	public void testAlnumAlphabetAndNumeralSystem()
 	{
-		String string = StringRand.alnum(new RussianAlphabet(), new BinarySystem(), 48);
+		String string = StringRand.alnum(new RussianAlphabet(), new BinarySystem(), 10);
 
-		boolean has = string.matches("[а-яёА-ЯЁ0-1]{48}");
+		boolean has = string.matches("[а-яёА-ЯЁ0-1]{10}");
 
 		assertTrue(has);
 	}
@@ -170,9 +183,9 @@ public class StringRandTest
 	@Test
 	public void testGraph()
 	{
-		String string = StringRand.graph(64);
+		String string = StringRand.graph(10);
 
-		boolean has = string.matches("[\\\\0-9a-zA-Z!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{64}");
+		boolean has = string.matches("[\\\\0-9a-zA-Z!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
 		assertTrue(has);
 	}
@@ -180,9 +193,9 @@ public class StringRandTest
 	@Test
 	public void testGraphAlphabet()
 	{
-		String string = StringRand.graph(new RussianAlphabet(), 64);
+		String string = StringRand.graph(new RussianAlphabet(), 10);
 
-		boolean has = string.matches("[\\\\0-9а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{64}");
+		boolean has = string.matches("[\\\\0-9а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
 		assertTrue(has);
 	}
@@ -190,9 +203,9 @@ public class StringRandTest
 	@Test
 	public void testGraphAlphabetAndNumeralSystem()
 	{
-		String string = StringRand.graph(new RussianAlphabet(), new BinarySystem(), 64);
+		String string = StringRand.graph(new RussianAlphabet(), new BinarySystem(), 10);
 
-		boolean has = string.matches("[\\\\0-1а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{64}");
+		boolean has = string.matches("[\\\\0-1а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
 		assertTrue(has);
 	}

@@ -37,7 +37,7 @@ public final class StringRand
 	private StringRand() {}
 
 	/**
-	 * Возвращает строку из символов [0, 1].
+	 * Возвращает строку из символов [0-1].
 	 *
 	 * @param length Количество символов в возвращаемой строке.
 	 * @return Строку со случайным порядком символов.
@@ -48,6 +48,20 @@ public final class StringRand
 		Objects.requireNonNull(length);
 
 		return StringRand.generate(length, BinarySystem.DIGITS);
+	}
+
+	/**
+	 * Возвращает строку из символов 0-2.
+	 *
+	 * @param length Количество символов в возвращаемой строке.
+	 * @return Строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String ternary(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	{
+		Objects.requireNonNull(length);
+
+		return StringRand.generate(length, TernarySystem.DIGITS);
 	}
 
 	/**
