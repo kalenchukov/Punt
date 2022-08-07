@@ -134,7 +134,7 @@ public final class StringRand
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, alphabet.getLetters());
+		return StringRand.generate(length, alphabet.get());
 	}
 
 	/**
@@ -165,7 +165,7 @@ public final class StringRand
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, alphabet.getLetters());
+		return StringRand.generate(length, alphabet.get());
 	}
 
 	/**
@@ -196,7 +196,7 @@ public final class StringRand
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, alphabet.getLetters());
+		return StringRand.generate(length, alphabet.get());
 	}
 
 	/**
@@ -234,9 +234,9 @@ public final class StringRand
 		Objects.requireNonNull(length);
 
 		List<Character> symbols = new ArrayList<>(
-			alphabet.getLetters().size() + DecimalSystem.DIGITS.size()
+			alphabet.get().size() + DecimalSystem.DIGITS.size()
 		);
-		symbols.addAll(alphabet.getLetters());
+		symbols.addAll(alphabet.get());
 		symbols.addAll(DecimalSystem.DIGITS);
 
 		return StringRand.generate(length, symbols);
@@ -260,10 +260,10 @@ public final class StringRand
 		Objects.requireNonNull(length);
 
 		List<Character> symbols = new ArrayList<>(
-			alphabet.getLetters().size() + numeralSystem.getDigits().size()
+			alphabet.get().size() + numeralSystem.get().size()
 		);
-		symbols.addAll(alphabet.getLetters());
-		symbols.addAll(numeralSystem.getDigits());
+		symbols.addAll(alphabet.get());
+		symbols.addAll(numeralSystem.get());
 
 		return StringRand.generate(length, symbols);
 	}
@@ -304,9 +304,9 @@ public final class StringRand
 		Objects.requireNonNull(length);
 
 		List<Character> symbols = new ArrayList<>(
-			alphabet.getLetters().size() + DecimalSystem.DIGITS.size() + GRAPH.size()
+			alphabet.get().size() + DecimalSystem.DIGITS.size() + GRAPH.size()
 		);
-		symbols.addAll(alphabet.getLetters());
+		symbols.addAll(alphabet.get());
 		symbols.addAll(DecimalSystem.DIGITS);
 		symbols.addAll(GRAPH);
 
@@ -331,10 +331,10 @@ public final class StringRand
 		Objects.requireNonNull(length);
 
 		List<Character> symbols = new ArrayList<>(
-			alphabet.getLetters().size() + numeralSystem.getDigits().size() + GRAPH.size()
+			alphabet.get().size() + numeralSystem.get().size() + GRAPH.size()
 		);
-		symbols.addAll(alphabet.getLetters());
-		symbols.addAll(numeralSystem.getDigits());
+		symbols.addAll(alphabet.get());
+		symbols.addAll(numeralSystem.get());
 		symbols.addAll(GRAPH);
 
 		return StringRand.generate(length, symbols);
