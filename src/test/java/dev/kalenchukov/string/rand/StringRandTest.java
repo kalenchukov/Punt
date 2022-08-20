@@ -8,7 +8,6 @@ package dev.kalenchukov.string.rand;
 
 import dev.kalenchukov.alphabet.RussianAlphabet;
 import dev.kalenchukov.numeralsystem.BinarySystem;
-import dev.kalenchukov.numeralsystem.OctalSystem;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -181,9 +180,9 @@ public class StringRandTest
 	}
 
 	@Test
-	public void testGraph()
+	public void testSpecial()
 	{
-		String string = StringRand.graph(10);
+		String string = StringRand.special(10);
 
 		boolean has = string.matches("[\\\\0-9a-zA-Z!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
@@ -191,9 +190,9 @@ public class StringRandTest
 	}
 
 	@Test
-	public void testGraphAlphabet()
+	public void testSpecialAlphabet()
 	{
-		String string = StringRand.graph(new RussianAlphabet(), 10);
+		String string = StringRand.special(new RussianAlphabet(), 10);
 
 		boolean has = string.matches("[\\\\0-9а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
@@ -201,9 +200,9 @@ public class StringRandTest
 	}
 
 	@Test
-	public void testGraphAlphabetAndNumeralSystem()
+	public void testSpecialAlphabetAndNumeralSystem()
 	{
-		String string = StringRand.graph(new RussianAlphabet(), new BinarySystem(), 10);
+		String string = StringRand.special(new RussianAlphabet(), new BinarySystem(), 10);
 
 		boolean has = string.matches("[\\\\0-1а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 

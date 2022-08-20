@@ -22,13 +22,22 @@ import java.util.Random;
 public final class StringRand
 {
 	/**
-	 * Коллекция спецсимволов.
+	 * Коллекция специальных символов.
+	 * <p>
+	 * Специальными символами являются:
+	 * <blockquote><pre>
+	 * '&#33;', '&#64;', '&#35;', '&#36;', '&#37;', '&#94;', '&#38;',
+	 * '&#42;', '&#40;', '&#41;', '&#45;', '&#95;', '&#43;', '&#61;',
+	 * '&#59;', '&#58;', '&#44;', '&#39;', '&#46;', '&#47;', '&#63;',
+	 * '&#92;', '&#124;', '&#96;', '&#126;', '&#91;', '&#93;', '&#123;',
+	 * '&#125;', '&#34;', '&#60;', '&#62;'
+	 * </pre></blockquote>
+	 * </p>
 	 */
-	private static final List<Character> GRAPH = List.of(
-		'!', '"', '#', '$', '%', '&', '\'', '(', ')', '*',
-		'+', ',', '-', '.', '/', ':', ';', '<', '=', '>',
-		'?', '@', '[', '\\', ']', '^', '_', '`', '{', '|',
-		'}', '~'
+	private static final List<Character> SPECIAL = List.of(
+		'!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
+		'-', '_', '+', '=', ';', ':', ',', '\'', '.', '/', '?',
+		'\\', '|', '`', '~', '[', ']', '{', '}', '"', '<', '>'
 	);
 
 	/**
@@ -37,7 +46,7 @@ public final class StringRand
 	private StringRand() {}
 
 	/**
-	 * Возвращает строку из символов [0-1].
+	 * Возвращает строку из цифр двоичной системы счисления.
 	 *
 	 * @param length Количество символов в возвращаемой строке.
 	 * @return Строку со случайным порядком символов.
@@ -51,7 +60,7 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из символов 0-2.
+	 * Возвращает строку из цифр троичной системы счисления.
 	 *
 	 * @param length Количество символов в возвращаемой строке.
 	 * @return Строку со случайным порядком символов.
@@ -65,7 +74,7 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из символов [0-7].
+	 * Возвращает строку из цифр восьмеричной системы счисления.
 	 *
 	 * @param length Количество символов в возвращаемой строке.
 	 * @return Строку со случайным порядком символов.
@@ -79,7 +88,7 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из символов [0-9].
+	 * Возвращает строку из цифр десятеричной системы счисления.
 	 *
 	 * @param length Количество символов в возвращаемой строке.
 	 * @return Строку со случайным порядком символов.
@@ -93,7 +102,7 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из символов [0-9A-B].
+	 * Возвращает строку из цифр двенадцатеричной системы счисления.
 	 *
 	 * @param length Количество символов в возвращаемой строке.
 	 * @return Строку со случайным порядком символов.
@@ -107,7 +116,7 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из символов [0-9A-F].
+	 * Возвращает строку из цифр шестнадцатеричной системы счисления.
 	 *
 	 * @param length Количество символов в возвращаемой строке.
 	 * @return Строку со случайным порядком символов.
@@ -121,7 +130,7 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из символов [a-z].
+	 * Возвращает строку из строчных букв.
 	 *
 	 * @param length Количество символов в возвращаемой строке.
 	 * @return Строку со случайным порядком символов.
@@ -152,7 +161,7 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из символов [A-Z].
+	 * Возвращает строку из прописных букв.
 	 *
 	 * @param length Количество символов в возвращаемой строке.
 	 * @return Строку со случайным порядком символов.
@@ -183,7 +192,7 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из символов [A-Za-z].
+	 * Возвращает строку из букв.
 	 *
 	 * @param length Количество символов в возвращаемой строке.
 	 * @return Строку со случайным порядком символов.
@@ -214,7 +223,7 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из символов [A-Za-z0-9].
+	 * Возвращает строку из букв и цифр.
 	 *
 	 * @param length Количество символов в возвращаемой строке.
 	 * @return Строку со случайным порядком символов.
@@ -234,7 +243,7 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из букв и символов [0-9].
+	 * Возвращает строку из букв и цифр.
 	 *
 	 * @param alphabet Алфавит.
 	 * @param length Количество символов в возвращаемой строке.
@@ -283,52 +292,52 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из символов [a-zA-Z0-9!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~].
+	 * Возвращает строку из букв, цифр и специальных символов.
 	 *
 	 * @param length Количество символов в возвращаемой строке.
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String graph(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String special(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(length);
 
 		List<Character> symbols = new ArrayList<>(
-			EnglishAlphabet.LETTERS.size() + DecimalSystem.DIGITS.size() + GRAPH.size()
+			EnglishAlphabet.LETTERS.size() + DecimalSystem.DIGITS.size() + SPECIAL.size()
 		);
 		symbols.addAll(EnglishAlphabet.LETTERS);
 		symbols.addAll(DecimalSystem.DIGITS);
-		symbols.addAll(GRAPH);
+		symbols.addAll(SPECIAL);
 
 		return StringRand.generate(length, symbols);
 	}
 
 	/**
-	 * Возвращает строку из букв и символов [0-9!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~].
+	 * Возвращает строку из букв, цифр и специальных символов.
 	 *
 	 * @param alphabet Алфавит.
 	 * @param length Количество символов в возвращаемой строке.
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String graph(@NotNull final Alphabetical alphabet,
-							   @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String special(@NotNull final Alphabetical alphabet,
+								 @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(length);
 
 		List<Character> symbols = new ArrayList<>(
-			alphabet.get().size() + DecimalSystem.DIGITS.size() + GRAPH.size()
+			alphabet.get().size() + DecimalSystem.DIGITS.size() + SPECIAL.size()
 		);
 		symbols.addAll(alphabet.get());
 		symbols.addAll(DecimalSystem.DIGITS);
-		symbols.addAll(GRAPH);
+		symbols.addAll(SPECIAL);
 
 		return StringRand.generate(length, symbols);
 	}
 
 	/**
-	 * Возвращает строку из букв, цифр и символов [!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~].
+	 * Возвращает строку из букв, цифр и специальных символов.
 	 *
 	 * @param alphabet Алфавит.
 	 * @param numeralSystem Система счисления.
@@ -336,20 +345,20 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String graph(@NotNull final Alphabetical alphabet,
-							   @NotNull final Numerable numeralSystem,
-							   @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String special(@NotNull final Alphabetical alphabet,
+								 @NotNull final Numerable numeralSystem,
+								 @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(numeralSystem);
 		Objects.requireNonNull(length);
 
 		List<Character> symbols = new ArrayList<>(
-			alphabet.get().size() + numeralSystem.get().size() + GRAPH.size()
+			alphabet.get().size() + numeralSystem.get().size() + SPECIAL.size()
 		);
 		symbols.addAll(alphabet.get());
 		symbols.addAll(numeralSystem.get());
-		symbols.addAll(GRAPH);
+		symbols.addAll(SPECIAL);
 
 		return StringRand.generate(length, symbols);
 	}
