@@ -1,3 +1,6 @@
+/**
+ * Определяет API для генерирования строк случайных символов.
+ */
 module dev.kalenchukov.string.rand
 {
 	requires org.jetbrains.annotations;
