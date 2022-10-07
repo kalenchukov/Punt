@@ -22,4 +22,7 @@
  * SOFTWARE.
  */
 
+/**
+ * Предоставляет классы, необходимые для исполнения цели модуля.
+ */
 package dev.kalenchukov.string.rand;
