@@ -59,7 +59,7 @@ public final class StringRand
 	);
 
 	/**
-	 * Конструктор для {@code StringRand} запрещающий создавать объект класса.
+	 * Конструктор для {@code StringRand}.
 	 */
 	private StringRand() {}
 
