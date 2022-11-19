@@ -316,7 +316,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String special(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getSpecial(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(length);
 

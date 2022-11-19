@@ -198,9 +198,9 @@ public class StringRandTest
 	}
 
 	@Test
-	public void testSpecial()
+	public void testGetSpecial()
 	{
-		String string = StringRand.special(10);
+		String string = StringRand.getSpecial(10);
 
 		boolean has = string.matches("[\\\\0-9a-zA-Z!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 

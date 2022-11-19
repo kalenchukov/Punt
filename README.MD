@@ -112,7 +112,7 @@ StringRand.getAlnum(new RussianAlphabet(), new BinarySystem(), 10);
 #### Возвращает строку из букв, цифр и специальных символов
 
 ```java
-StringRand.special(10);
+StringRand.getSpecial(10);
 // Результат выполнения: kg;1#5KO>z
 ```
 
