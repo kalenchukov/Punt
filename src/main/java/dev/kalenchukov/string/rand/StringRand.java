@@ -112,7 +112,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String decimal(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getDecimal(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(length);
 

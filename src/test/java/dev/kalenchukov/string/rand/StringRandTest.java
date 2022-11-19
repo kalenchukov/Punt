@@ -72,9 +72,9 @@ public class StringRandTest
 	}
 
 	@Test
-	public void testDecimal()
+	public void testGetDecimal()
 	{
-		String string = StringRand.decimal(10);
+		String string = StringRand.getDecimal(10);
 
 		boolean has = string.matches("[0-9]{10}");
 

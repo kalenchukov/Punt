@@ -28,7 +28,7 @@ StringRand.getOctal(10);
 #### Возвращает строку из цифр десятеричной системы счисления
 
 ```java
-StringRand.decimal(10);
+StringRand.getDecimal(10);
 // Результат выполнения: 1680320347
 ```
 
