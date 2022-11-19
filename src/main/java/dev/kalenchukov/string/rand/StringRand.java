@@ -70,7 +70,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String binary(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getBinary(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(length);
 

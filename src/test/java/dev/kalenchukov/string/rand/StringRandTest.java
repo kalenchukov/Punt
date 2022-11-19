@@ -36,9 +36,9 @@ public class StringRandTest
 	 * Проверка на строку из символов [0-1].
 	 */
 	@Test
-	public void testBinary()
+	public void testGetBinary()
 	{
-		String string = StringRand.binary(10);
+		String string = StringRand.getBinary(10);
 
 		boolean has = string.matches("[0-1]{10}");
 
