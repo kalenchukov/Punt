@@ -119,7 +119,7 @@ StringRand.getSpecial(10);
 #### Возвращает строку из букв алфавита, цифр и специальных символов
 
 ```java
-StringRand.special(new RussianAlphabet(), 10);
+StringRand.getSpecial(new RussianAlphabet(), 10);
 // Результат выполнения: ~!яА{ЛХИ]2
 ```
 
