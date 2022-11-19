@@ -126,7 +126,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String duodecimal(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getDuodecimal(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(length);
 

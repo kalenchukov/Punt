@@ -85,9 +85,9 @@ public class StringRandTest
 	 * Проверка на строку из символов [0-9A-B].
 	 */
 	@Test
-	public void testDuodecimal()
+	public void testGetDuodecimal()
 	{
-		String string = StringRand.duodecimal(10);
+		String string = StringRand.getDuodecimal(10);
 
 		boolean has = string.matches("[0-9A-B]{10}");
 

@@ -35,7 +35,7 @@ StringRand.getDecimal(10);
 #### Возвращает строку из цифр двенадцатеричной системы счисления
 
 ```java
-StringRand.duodecimal(10);
+StringRand.getDuodecimal(10);
 // Результат выполнения: 41497B7906
 ```
 
