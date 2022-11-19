@@ -118,9 +118,9 @@ public class StringRandTest
 	}
 
 	@Test
-	public void testLowerAlphabet()
+	public void testGetLowerAlphabet()
 	{
-		String string = StringRand.lower(new RussianAlphabet.LowerCase(), 10);
+		String string = StringRand.getLower(new RussianAlphabet.LowerCase(), 10);
 
 		boolean has = string.matches("[а-яё]{10}");
 

@@ -56,7 +56,7 @@ StringRand.getLower(10);
 #### Возвращает строку из строчных букв алфавита
 
 ```java
-StringRand.lower(new RussianAlphabet.LowerCase(), 10);
+StringRand.getLower(new RussianAlphabet.LowerCase(), 10);
 // Результат выполнения: эвъзнзиыле
 ```
 
