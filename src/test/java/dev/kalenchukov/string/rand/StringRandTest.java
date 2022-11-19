@@ -98,9 +98,9 @@ public class StringRandTest
 	 * Проверка на строку из символов [0-9A-F].
 	 */
 	@Test
-	public void testHex()
+	public void testGetHex()
 	{
-		String string = StringRand.hex(10);
+		String string = StringRand.getHex(10);
 
 		boolean has = string.matches("[0-9A-F]{10}");
 

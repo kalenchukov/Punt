@@ -42,7 +42,7 @@ StringRand.getDuodecimal(10);
 #### Возвращает строку из цифр шестнадцатеричной системы счисления
 
 ```java
-StringRand.hex(10);
+StringRand.getHex(10);
 // Результат выполнения: BFB76A59D4
 ```
 
