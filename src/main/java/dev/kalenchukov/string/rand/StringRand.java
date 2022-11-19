@@ -154,7 +154,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String lower(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getLower(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(length);
 

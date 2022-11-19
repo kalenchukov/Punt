@@ -108,9 +108,9 @@ public class StringRandTest
 	}
 
 	@Test
-	public void testLower()
+	public void testGetLower()
 	{
-		String string = StringRand.lower(10);
+		String string = StringRand.getLower(10);
 
 		boolean has = string.matches("[a-z]{10}");
 

@@ -49,7 +49,7 @@ StringRand.getHex(10);
 #### Возвращает строку из строчных букв
 
 ```java
-StringRand.lower(10);
+StringRand.getLower(10);
 // Результат выполнения: wpcejmhmos
 ```
 
