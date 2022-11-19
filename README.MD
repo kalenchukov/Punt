@@ -77,7 +77,7 @@ StringRand.getUpper(new RussianAlphabet.UpperCase(), 10);
 #### Возвращает строку из букв
 
 ```java
-StringRand.alpha(10);
+StringRand.getAlpha(10);
 // Результат выполнения: meOnjOUUQw
 ```
 

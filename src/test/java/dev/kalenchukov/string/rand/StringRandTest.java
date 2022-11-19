@@ -148,9 +148,9 @@ public class StringRandTest
 	}
 
 	@Test
-	public void testAlpha()
+	public void testGetAlpha()
 	{
-		String string = StringRand.alpha(10);
+		String string = StringRand.getAlpha(10);
 
 		boolean has = string.matches("[a-zA-Z]{10}");
 
