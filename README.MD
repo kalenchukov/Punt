@@ -70,7 +70,7 @@ StringRand.getUpper(10);
 #### Возвращает строку из прописных букв алфавита
 
 ```java
-StringRand.upper(new RussianAlphabet.UpperCase(), 10);
+StringRand.getUpper(new RussianAlphabet.UpperCase(), 10);
 // Результат выполнения: ЛЫУВЖХРУЧТ
 ```
 

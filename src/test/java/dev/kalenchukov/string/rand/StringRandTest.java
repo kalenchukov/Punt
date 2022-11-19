@@ -138,9 +138,9 @@ public class StringRandTest
 	}
 
 	@Test
-	public void testUpperAlphabet()
+	public void testGetUpperAlphabet()
 	{
-		String string = StringRand.upper(new RussianAlphabet.UpperCase(), 10);
+		String string = StringRand.getUpper(new RussianAlphabet.UpperCase(), 10);
 
 		boolean has = string.matches("[А-ЯЁ]{10}");
 

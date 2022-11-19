@@ -200,8 +200,8 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String upper(@NotNull final AlphabeticalUpperCase alphabet,
-							   @NotNull@Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getUpper(@NotNull final AlphabeticalUpperCase alphabet,
+								  @NotNull@Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(length);
