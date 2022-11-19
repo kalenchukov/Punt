@@ -363,9 +363,9 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String special(@NotNull final Alphabetical alphabet,
-								 @NotNull final Numerable numeralSystem,
-								 @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getSpecial(@NotNull final Alphabetical alphabet,
+									@NotNull final Numerable numeralSystem,
+									@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(numeralSystem);

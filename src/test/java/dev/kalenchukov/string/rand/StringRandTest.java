@@ -218,9 +218,9 @@ public class StringRandTest
 	}
 
 	@Test
-	public void testSpecialAlphabetAndNumeralSystem()
+	public void testGetSpecialAlphabetAndNumeralSystem()
 	{
-		String string = StringRand.special(new RussianAlphabet(), new BinarySystem(), 10);
+		String string = StringRand.getSpecial(new RussianAlphabet(), new BinarySystem(), 10);
 
 		boolean has = string.matches("[\\\\0-1а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 

@@ -126,7 +126,7 @@ StringRand.getSpecial(new RussianAlphabet(), 10);
 #### Возвращает строку из букв алфавита, цифр системы счисления и специальных символов
 
 ```java
-StringRand.special(new RussianAlphabet(), new BinarySystem(), 10);
+StringRand.getSpecial(new RussianAlphabet(), new BinarySystem(), 10);
 // Результат выполнения: е=$'1@эШМ`
 ```
 
