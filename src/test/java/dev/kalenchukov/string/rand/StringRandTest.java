@@ -62,9 +62,9 @@ public class StringRandTest
 	 * Проверка на строку из символов [0-7].
 	 */
 	@Test
-	public void testOctal()
+	public void testGetOctal()
 	{
-		String string = StringRand.octal(10);
+		String string = StringRand.getOctal(10);
 
 		boolean has = string.matches("[0-7]{10}");
 

@@ -21,7 +21,7 @@ StringRand.getTernary(10);
 #### Возвращает строку из цифр восьмеричной системы счисления
 
 ```java
-StringRand.octal(10);
+StringRand.getOctal(10);
 // Результат выполнения: 3154202146
 ```
 
