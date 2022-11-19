@@ -84,7 +84,7 @@ StringRand.getAlpha(10);
 #### Возвращает строку из букв алфавита
 
 ```java
-StringRand.alpha(new RussianAlphabet(), 10);
+StringRand.getAlpha(new RussianAlphabet(), 10);
 // Результат выполнения: ёъЧПЁПыФоХ
 ```
 

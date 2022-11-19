@@ -231,8 +231,8 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String alpha(@NotNull final Alphabetical alphabet,
-							   @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getAlpha(@NotNull final Alphabetical alphabet,
+								  @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(length);

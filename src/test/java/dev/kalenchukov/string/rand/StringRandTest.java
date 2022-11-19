@@ -158,9 +158,9 @@ public class StringRandTest
 	}
 
 	@Test
-	public void testAlphaAlphabet()
+	public void testGetAlphaAlphabet()
 	{
-		String string = StringRand.alpha(new RussianAlphabet(), 10);
+		String string = StringRand.getAlpha(new RussianAlphabet(), 10);
 
 		boolean has = string.matches("[а-яёА-ЯЁ]{10}");
 
