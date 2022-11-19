@@ -98,7 +98,7 @@ StringRand.getAlnum(10);
 #### Возвращает строку из букв алфавита и цифр
 
 ```java
-StringRand.alnum(new RussianAlphabet(), 10);
+StringRand.getAlnum(new RussianAlphabet(), 10);
 // Результат выполнения: 2пСэчъЙдКЛ
 ```
 
