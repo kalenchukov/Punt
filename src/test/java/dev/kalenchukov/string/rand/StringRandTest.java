@@ -49,9 +49,9 @@ public class StringRandTest
 	 * Проверка на строку из символов [0-2].
 	 */
 	@Test
-	public void testTernary()
+	public void testGetTernary()
 	{
-		String string = StringRand.ternary(10);
+		String string = StringRand.getTernary(10);
 
 		boolean has = string.matches("[0-2]{10}");
 

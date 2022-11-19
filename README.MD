@@ -14,7 +14,7 @@ StringRand.getBinary(10);
 #### Возвращает строку из цифр троичной системы счисления
 
 ```java
-StringRand.ternary(10);
+StringRand.getTernary(10);
 // Результат выполнения: 2211200020
 ```
 
