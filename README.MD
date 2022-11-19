@@ -105,7 +105,7 @@ StringRand.getAlnum(new RussianAlphabet(), 10);
 #### Возвращает строку из букв алфавита и цифр системы счисления
 
 ```java
-StringRand.alnum(new RussianAlphabet(), new BinarySystem(), 10);
+StringRand.getAlnum(new RussianAlphabet(), new BinarySystem(), 10);
 // Результат выполнения: АжуЛТБЪ1мр
 ```
 
