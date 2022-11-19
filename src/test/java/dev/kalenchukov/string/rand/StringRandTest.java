@@ -128,9 +128,9 @@ public class StringRandTest
 	}
 
 	@Test
-	public void testUpper()
+	public void testGetUpper()
 	{
-		String string = StringRand.upper(10);
+		String string = StringRand.getUpper(10);
 
 		boolean has = string.matches("[A-Z]{10}");
 

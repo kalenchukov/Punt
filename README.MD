@@ -63,7 +63,7 @@ StringRand.getLower(new RussianAlphabet.LowerCase(), 10);
 #### Возвращает строку из прописных букв
 
 ```java
-StringRand.upper(10);
+StringRand.getUpper(10);
 // Результат выполнения: SDHSKGOLZD
 ```
 
