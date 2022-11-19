@@ -247,7 +247,7 @@ public final class StringRand
 	 * @return Строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String alnum(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getAlnum(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(length);
 

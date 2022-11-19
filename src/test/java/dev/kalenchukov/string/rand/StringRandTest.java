@@ -168,9 +168,9 @@ public class StringRandTest
 	}
 
 	@Test
-	public void testAlnum()
+	public void testGetAlnum()
 	{
-		String string = StringRand.alnum(10);
+		String string = StringRand.getAlnum(10);
 
 		boolean has = string.matches("[A-Za-z0-9]{10}");
 
