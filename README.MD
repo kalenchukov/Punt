@@ -130,14 +130,6 @@ StringRand.getSpecial(new RussianAlphabet(), new BinarySystem(), 10);
 // Результат выполнения: е=$'1@эШМ`
 ```
 
-## Установка
-
-Для установки этого проекта, введите в терминале:
-
-```bash
-git clone https://github.com/kalenchukov/StringRand.git
-```
-
 ## Версии
 
 Доступные [версии](https://github.com/kalenchukov/StringRand/releases).
