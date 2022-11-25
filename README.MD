@@ -142,10 +142,6 @@ git clone https://github.com/kalenchukov/StringRand.git
 
 Доступные [версии](https://github.com/kalenchukov/StringRand/releases).
 
-## Авторы
-
-[Алексей Каленчуков](https://github.com/kalenchukov)
-
 ## Лицензия
 
 [MIT](https://opensource.org/licenses/MIT)
