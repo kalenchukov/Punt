@@ -129,11 +129,3 @@ StringRand.getSpecial(new RussianAlphabet(), 10);
 StringRand.getSpecial(new RussianAlphabet(), new BinarySystem(), 10);
 // Результат выполнения: е=$'1@эШМ`
 ```
-
-## Версии
-
-Доступные [версии](https://github.com/kalenchukov/StringRand/releases).
-
-## Лицензия
-
-[MIT](https://opensource.org/licenses/MIT)
