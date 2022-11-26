@@ -3,27 +3,30 @@
 ## vX.X.X - XX.XX.XXXX
 
 ### Добавлено
-*
+* Добавлен AUTHOR.MD.
+* Добавлен INSTALL.MD.
+* Добавлен CHANGELOG.MD.
 
 ### Изменено
-Переименован метод StringRand.special(Alphabetical, Numerable, Integer) -> StringRand.getSpecial(Alphabetical, Numerable, Integer)
-Переименован метод StringRand.special(Alphabetical, Integer) -> StringRand.getSpecial(Alphabetical, Integer)
-Переименован метод StringRand.special(Integer) -> StringRand.getSpecial(Integer)
-Переименован метод StringRand.alnum(Alphabetical, Numerable, Integer) -> StringRand.getAlnum(Alphabetical, Numerable, Integer)
-Переименован метод StringRand.alnum(Alphabetical, Integer) -> StringRand.getAlnum(Alphabetical, Integer)
-Переименован метод StringRand.alnum(Integer) -> StringRand.getAlnum(Integer)
-Переименован метод StringRand.alpha(Alphabetical, Integer) -> StringRand.getAlpha(Alphabetical, Integer)
-Переименован метод StringRand.alpha(Integer) -> StringRand.getAlpha(Integer)
-Переименован метод StringRand.upper(AlphabeticalUpperCase, Integer) -> StringRand.getUpper(AlphabeticalUpperCase, Integer)
-Переименован метод StringRand.upper(Integer) -> StringRand.getUpper(Integer)
-Переименован метод StringRand.lower(AlphabeticalLowerCase, Integer) -> StringRand.getLower(AlphabeticalLowerCase, Integer)
-Переименован метод StringRand.lower(Integer) -> StringRand.getLower(Integer)
-Переименован метод StringRand.hex(Integer) -> StringRand.getHex(Integer)
-Переименован метод StringRand.duodecimal(Integer) -> StringRand.getDuodecimal(Integer)
-Переименован метод StringRand.decimal(Integer) -> StringRand.getDecimal(Integer)
-Переименован метод StringRand.octal(Integer) -> StringRand.getOctal(Integer)
-Переименован метод StringRand.ternary(Integer) -> StringRand.getTernary(Integer)
-Переименован метод StringRand.binary(Integer) -> StringRand.getBinary(Integer)
+* Переименован метод StringRand.special(Alphabetical, Numerable, Integer) -> StringRand.getSpecial(Alphabetical, Numerable, Integer)
+* Переименован метод StringRand.special(Alphabetical, Integer) -> StringRand.getSpecial(Alphabetical, Integer)
+* Переименован метод StringRand.special(Integer) -> StringRand.getSpecial(Integer)
+* Переименован метод StringRand.alnum(Alphabetical, Numerable, Integer) -> StringRand.getAlnum(Alphabetical, Numerable, Integer)
+* Переименован метод StringRand.alnum(Alphabetical, Integer) -> StringRand.getAlnum(Alphabetical, Integer)
+* Переименован метод StringRand.alnum(Integer) -> StringRand.getAlnum(Integer)
+* Переименован метод StringRand.alpha(Alphabetical, Integer) -> StringRand.getAlpha(Alphabetical, Integer)
+* Переименован метод StringRand.alpha(Integer) -> StringRand.getAlpha(Integer)
+* Переименован метод StringRand.upper(AlphabeticalUpperCase, Integer) -> StringRand.getUpper(AlphabeticalUpperCase, Integer)
+* Переименован метод StringRand.upper(Integer) -> StringRand.getUpper(Integer)
+* Переименован метод StringRand.lower(AlphabeticalLowerCase, Integer) -> StringRand.getLower(AlphabeticalLowerCase, Integer)
+* Переименован метод StringRand.lower(Integer) -> StringRand.getLower(Integer)
+* Переименован метод StringRand.hex(Integer) -> StringRand.getHex(Integer)
+* Переименован метод StringRand.duodecimal(Integer) -> StringRand.getDuodecimal(Integer)
+* Переименован метод StringRand.decimal(Integer) -> StringRand.getDecimal(Integer)
+* Переименован метод StringRand.octal(Integer) -> StringRand.getOctal(Integer)
+* Переименован метод StringRand.ternary(Integer) -> StringRand.getTernary(Integer)
+* Переименован метод StringRand.binary(Integer) -> StringRand.getBinary(Integer)
+* Обновлён README.MD.
 
 ### Исправлено
 *
