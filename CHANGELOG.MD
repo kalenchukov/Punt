@@ -1,6 +1,6 @@
 # Журнал изменений
 
-## vX.X.X - XX.XX.XXXX
+## v1.10.0 - 03.12.2022
 
 ### Добавлено
 * Добавлен AUTHOR.MD.
@@ -27,9 +27,6 @@
 * Переименован метод StringRand.ternary(Integer) -> StringRand.getTernary(Integer)
 * Переименован метод StringRand.binary(Integer) -> StringRand.getBinary(Integer)
 * Обновлён README.MD.
-
-### Исправлено
-*
 
 ## v1.9.0 - 16.10.2022
 
