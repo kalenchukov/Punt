@@ -66,8 +66,8 @@ public final class StringRand
 	/**
 	 * Возвращает строку из цифр двоичной системы счисления.
 	 *
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getBinary(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
@@ -80,8 +80,8 @@ public final class StringRand
 	/**
 	 * Возвращает строку из цифр троичной системы счисления.
 	 *
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getTernary(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
@@ -94,8 +94,8 @@ public final class StringRand
 	/**
 	 * Возвращает строку из цифр восьмеричной системы счисления.
 	 *
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getOctal(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
@@ -108,8 +108,8 @@ public final class StringRand
 	/**
 	 * Возвращает строку из цифр десятеричной системы счисления.
 	 *
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getDecimal(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
@@ -122,8 +122,8 @@ public final class StringRand
 	/**
 	 * Возвращает строку из цифр двенадцатеричной системы счисления.
 	 *
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getDuodecimal(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
@@ -136,8 +136,8 @@ public final class StringRand
 	/**
 	 * Возвращает строку из цифр шестнадцатеричной системы счисления.
 	 *
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getHex(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
@@ -150,8 +150,8 @@ public final class StringRand
 	/**
 	 * Возвращает строку из строчных букв.
 	 *
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getLower(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
@@ -164,9 +164,9 @@ public final class StringRand
 	/**
 	 * Возвращает строку из строчных букв.
 	 *
-	 * @param alphabet Алфавит строчных букв.
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param alphabet алфавит строчных букв.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getLower(@NotNull final AlphabeticalLowerCase alphabet,
@@ -181,8 +181,8 @@ public final class StringRand
 	/**
 	 * Возвращает строку из прописных букв.
 	 *
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getUpper(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
@@ -195,9 +195,9 @@ public final class StringRand
 	/**
 	 * Возвращает строку из прописных букв.
 	 *
-	 * @param alphabet Алфавит строчных букв.
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param alphabet алфавит строчных букв.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getUpper(@NotNull final AlphabeticalUpperCase alphabet,
@@ -212,8 +212,8 @@ public final class StringRand
 	/**
 	 * Возвращает строку из букв.
 	 *
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getAlpha(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
@@ -226,9 +226,9 @@ public final class StringRand
 	/**
 	 * Возвращает строку из букв.
 	 *
-	 * @param alphabet Алфавит.
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param alphabet алфавит.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getAlpha(@NotNull final Alphabetical alphabet,
@@ -243,8 +243,8 @@ public final class StringRand
 	/**
 	 * Возвращает строку из букв и цифр.
 	 *
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getAlnum(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
@@ -263,9 +263,9 @@ public final class StringRand
 	/**
 	 * Возвращает строку из букв и цифр.
 	 *
-	 * @param alphabet Алфавит.
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param alphabet алфавит.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getAlnum(@NotNull final Alphabetical alphabet,
@@ -286,10 +286,10 @@ public final class StringRand
 	/**
 	 * Возвращает строку из букв и цифр.
 	 *
-	 * @param alphabet Алфавит.
-	 * @param numeralSystem Система счисления.
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param alphabet алфавит.
+	 * @param numeralSystem система счисления.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getAlnum(@NotNull final Alphabetical alphabet,
@@ -312,8 +312,8 @@ public final class StringRand
 	/**
 	 * Возвращает строку из букв, цифр и специальных символов.
 	 *
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getSpecial(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
@@ -333,9 +333,9 @@ public final class StringRand
 	/**
 	 * Возвращает строку из букв, цифр и специальных символов.
 	 *
-	 * @param alphabet Алфавит.
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param alphabet алфавит.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getSpecial(@NotNull final Alphabetical alphabet,
@@ -357,10 +357,10 @@ public final class StringRand
 	/**
 	 * Возвращает строку из букв, цифр и специальных символов.
 	 *
-	 * @param alphabet Алфавит.
-	 * @param numeralSystem Система счисления.
-	 * @param length Количество символов в возвращаемой строке.
-	 * @return Строку со случайным порядком символов.
+	 * @param alphabet алфавит.
+	 * @param numeralSystem система счисления.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	public static String getSpecial(@NotNull final Alphabetical alphabet,
@@ -384,9 +384,9 @@ public final class StringRand
 	/**
 	 * Возвращает строку из указанных наборов символов.
 	 *
-	 * @param length Количество символов в возвращаемой строке.
-	 * @param symbols Символы из которых должна состоять строка.
-	 * @return Строку со случайным порядком символов.
+	 * @param length количество символов в возвращаемой строке.
+	 * @param symbols символы из которых должна состоять строка.
+	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
 	private static String generate(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length,
