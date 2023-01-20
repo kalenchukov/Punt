@@ -28,6 +28,7 @@ import dev.kalenchukov.alphabet.*;
 import dev.kalenchukov.numeralsystem.*;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Range;
+import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +53,8 @@ public final class StringRand
 	 * </pre></blockquote>
 	 * </p>
 	 */
-	private static final List<Character> SPECIAL = List.of(
+	@NotNull
+	private static final List<@NotNull Character> SPECIAL = List.of(
 		'!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
 		'-', '_', '+', '=', ';', ':', ',', '\'', '.', '/', '?',
 		'\\', '|', '`', '~', '[', ']', '{', '}', '"', '<', '>'
