@@ -54,6 +54,7 @@ public final class StringRand
 	 * </p>
 	 */
 	@NotNull
+	@Unmodifiable
 	private static final List<@NotNull Character> SPECIAL = List.of(
 		'!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
 		'-', '_', '+', '=', ';', ':', ',', '\'', '.', '/', '?',
