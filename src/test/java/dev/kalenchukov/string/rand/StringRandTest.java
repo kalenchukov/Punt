@@ -26,9 +26,9 @@ package dev.kalenchukov.string.rand;
 
 import dev.kalenchukov.alphabet.RussianAlphabet;
 import dev.kalenchukov.numeralsystem.BinarySystem;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class StringRandTest
 {
