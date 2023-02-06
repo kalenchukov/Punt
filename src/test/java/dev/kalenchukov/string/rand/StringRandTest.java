@@ -24,206 +24,219 @@
 
 package dev.kalenchukov.string.rand;
 
+import dev.kalenchukov.alphabet.Alphabetical;
+import dev.kalenchukov.alphabet.AlphabeticalLowerCase;
+import dev.kalenchukov.alphabet.AlphabeticalUpperCase;
 import dev.kalenchukov.alphabet.RussianAlphabet;
 import dev.kalenchukov.numeralsystem.BinarySystem;
+import dev.kalenchukov.numeralsystem.Numerable;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+/**
+ * Класс проверки методов класса {@code StringRand}.
+ */
 public class StringRandTest
 {
 	/**
-	 * Проверка на строку из символов [0-1].
+	 * Проверка метода {@link StringRand#getBinary(Integer)} на строку из символов [0-1].
 	 */
 	@Test
 	public void testGetBinary()
 	{
-		String string = StringRand.getBinary(10);
+		String value =  StringRand.getBinary(10);
 
-		boolean has = string.matches("[0-1]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[0-1]{10}"));
 	}
 
 	/**
-	 * Проверка на строку из символов [0-2].
+	 * Проверка метода {@link StringRand#getTernary(Integer)} на строку из символов [0-2].
 	 */
 	@Test
 	public void testGetTernary()
 	{
-		String string = StringRand.getTernary(10);
+		String value =  StringRand.getTernary(10);
 
-		boolean has = string.matches("[0-2]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[0-2]{10}"));
 	}
 
 	/**
-	 * Проверка на строку из символов [0-7].
+	 * Проверка метода {@link StringRand#getOctal(Integer)} на строку из символов [0-7].
 	 */
 	@Test
 	public void testGetOctal()
 	{
-		String string = StringRand.getOctal(10);
+		String value =  StringRand.getOctal(10);
 
-		boolean has = string.matches("[0-7]{10}");
-
-		assertTrue(has);
-	}
-
-	@Test
-	public void testGetDecimal()
-	{
-		String string = StringRand.getDecimal(10);
-
-		boolean has = string.matches("[0-9]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[0-7]{10}"));
 	}
 
 	/**
-	 * Проверка на строку из символов [0-9A-B].
+	 * Проверка метода {@link StringRand#getDecimal(Integer)} на строку из символов [0-9].
+	 */
+	@Test
+	public void testGetDecimal()
+	{
+		String value =  StringRand.getDecimal(10);
+
+		assertTrue(value.matches("[0-9]{10}"));
+	}
+
+	/**
+	 * Проверка метода {@link StringRand#getDuodecimal(Integer)} на строку из символов [0-9A-B].
 	 */
 	@Test
 	public void testGetDuodecimal()
 	{
-		String string = StringRand.getDuodecimal(10);
+		String value =  StringRand.getDuodecimal(10);
 
-		boolean has = string.matches("[0-9A-B]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[0-9A-B]{10}"));
 	}
 
 	/**
-	 * Проверка на строку из символов [0-9A-F].
+	 * Проверка метода {@link StringRand#getHex(Integer)} на строку из символов [0-9A-F].
 	 */
 	@Test
 	public void testGetHex()
 	{
-		String string = StringRand.getHex(10);
+		String value =  StringRand.getHex(10);
 
-		boolean has = string.matches("[0-9A-F]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[0-9A-F]{10}"));
 	}
 
+	/**
+	 * Проверка метода {@link StringRand#getLower(Integer)} на строку из строчных букв [a-z].
+	 */
 	@Test
 	public void testGetLower()
 	{
-		String string = StringRand.getLower(10);
+		String value =  StringRand.getLower(10);
 
-		boolean has = string.matches("[a-z]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[a-z]{10}"));
 	}
 
+	/**
+	 * Проверка метода {@link StringRand#getLower(AlphabeticalLowerCase, Integer)} на строку из букв алфавита.
+	 */
 	@Test
 	public void testGetLowerAlphabet()
 	{
-		String string = StringRand.getLower(new RussianAlphabet.LowerCase(), 10);
+		String value =  StringRand.getLower(new RussianAlphabet.LowerCase(), 10);
 
-		boolean has = string.matches("[а-яё]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[а-яё]{10}"));
 	}
 
+	/**
+	 * Проверка метода {@link StringRand#getUpper(Integer)} на строку из строчных букв [A-Z].
+	 */
 	@Test
 	public void testGetUpper()
 	{
-		String string = StringRand.getUpper(10);
+		String value =  StringRand.getUpper(10);
 
-		boolean has = string.matches("[A-Z]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[A-Z]{10}"));
 	}
 
+	/**
+	 * Проверка метода {@link StringRand#getUpper(AlphabeticalUpperCase, Integer)} на строку из букв алфавита.
+	 */
 	@Test
 	public void testGetUpperAlphabet()
 	{
-		String string = StringRand.getUpper(new RussianAlphabet.UpperCase(), 10);
+		String value =  StringRand.getUpper(new RussianAlphabet.UpperCase(), 10);
 
-		boolean has = string.matches("[А-ЯЁ]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[А-ЯЁ]{10}"));
 	}
 
+	/**
+	 * Проверка метода {@link StringRand#getAlpha(Integer)} на строку из букв [a-zA-Z].
+	 */
 	@Test
 	public void testGetAlpha()
 	{
-		String string = StringRand.getAlpha(10);
+		String value =  StringRand.getAlpha(10);
 
-		boolean has = string.matches("[a-zA-Z]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[a-zA-Z]{10}"));
 	}
 
+	/**
+	 * Проверка метода {@link StringRand#getAlpha(Alphabetical, Integer)} на строку из букв алфавита.
+	 */
 	@Test
 	public void testGetAlphaAlphabet()
 	{
-		String string = StringRand.getAlpha(new RussianAlphabet(), 10);
+		String value =  StringRand.getAlpha(new RussianAlphabet(), 10);
 
-		boolean has = string.matches("[а-яёА-ЯЁ]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[а-яёА-ЯЁ]{10}"));
 	}
 
+	/**
+	 * Проверка метода {@link StringRand#getAlnum(Integer)} на строку из букв и цифр.
+	 */
 	@Test
 	public void testGetAlnum()
 	{
-		String string = StringRand.getAlnum(10);
+		String value =  StringRand.getAlnum(10);
 
-		boolean has = string.matches("[A-Za-z0-9]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[A-Za-z0-9]{10}"));
 	}
 
+	/**
+	 * Проверка метода {@link StringRand#getAlnum(Alphabetical, Integer)} на строку из букв алфавита и цифр.
+	 */
 	@Test
 	public void testGetAlnumAlphabet()
 	{
-		String string = StringRand.getAlnum(new RussianAlphabet(), 10);
+		String value =  StringRand.getAlnum(new RussianAlphabet(), 10);
 
-		boolean has = string.matches("[а-яёА-ЯЁ0-9]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[а-яёА-ЯЁ0-9]{10}"));
 	}
 
+	/**
+	 * Проверка метода {@link StringRand#getAlnum(Alphabetical, Numerable, Integer)} на строку из
+	 * букв алфавита и цифр системы счисления.
+	 */
 	@Test
 	public void testGetAlnumAlphabetAndNumeralSystem()
 	{
-		String string = StringRand.getAlnum(new RussianAlphabet(), new BinarySystem(), 10);
+		String value =  StringRand.getAlnum(new RussianAlphabet(), new BinarySystem(), 10);
 
-		boolean has = string.matches("[а-яёА-ЯЁ0-1]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[а-яёА-ЯЁ0-1]{10}"));
 	}
 
+	/**
+	 * Проверка метода {@link StringRand#getSpecial(Integer)} на строку из букв, цифр и специальных символов.
+	 */
 	@Test
 	public void testGetSpecial()
 	{
-		String string = StringRand.getSpecial(10);
+		String value =  StringRand.getSpecial(10);
 
-		boolean has = string.matches("[\\\\0-9a-zA-Z!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[\\\\0-9a-zA-Z!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}"));
 	}
 
+	/**
+	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, Integer)} на строку из букв алфавита,
+	 * цифр и специальных символов.
+	 */
 	@Test
 	public void testGetSpecialAlphabet()
 	{
-		String string = StringRand.getSpecial(new RussianAlphabet(), 10);
+		String value =  StringRand.getSpecial(new RussianAlphabet(), 10);
 
-		boolean has = string.matches("[\\\\0-9а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[\\\\0-9а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}"));
 	}
 
+	/**
+	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, Numerable, Integer)} на строку из букв алфавита,
+	 * цифр системы счисления и специальных символов.
+	 */
 	@Test
 	public void testGetSpecialAlphabetAndNumeralSystem()
 	{
-		String string = StringRand.getSpecial(new RussianAlphabet(), new BinarySystem(), 10);
+		String value =  StringRand.getSpecial(new RussianAlphabet(), new BinarySystem(), 10);
 
-		boolean has = string.matches("[\\\\0-1а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
-
-		assertTrue(has);
+		assertTrue(value.matches("[\\\\0-1а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}"));
 	}
 }
