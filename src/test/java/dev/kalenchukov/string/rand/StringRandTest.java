@@ -35,7 +35,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * Класс проверки методов класса {@code StringRand}.
+ * Класс проверки методов класса {@link StringRand}.
  */
 public class StringRandTest
 {
