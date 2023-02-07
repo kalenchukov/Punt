@@ -40,7 +40,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class StringRandTest
 {
 	/**
-	 * Проверка метода {@link StringRand#getBinary(Integer)} на строку из символов [0-1].
+	 * Проверка метода {@link StringRand#getBinary(Integer)}.
 	 */
 	@Test
 	public void testGetBinary()
@@ -51,7 +51,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getTernary(Integer)} на строку из символов [0-2].
+	 * Проверка метода {@link StringRand#getTernary(Integer)}.
 	 */
 	@Test
 	public void testGetTernary()
@@ -62,7 +62,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getOctal(Integer)} на строку из символов [0-7].
+	 * Проверка метода {@link StringRand#getOctal(Integer)}.
 	 */
 	@Test
 	public void testGetOctal()
@@ -73,7 +73,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getDecimal(Integer)} на строку из символов [0-9].
+	 * Проверка метода {@link StringRand#getDecimal(Integer)}.
 	 */
 	@Test
 	public void testGetDecimal()
@@ -84,7 +84,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getDuodecimal(Integer)} на строку из символов [0-9A-B].
+	 * Проверка метода {@link StringRand#getDuodecimal(Integer)}.
 	 */
 	@Test
 	public void testGetDuodecimal()
@@ -95,7 +95,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getHex(Integer)} на строку из символов [0-9A-F].
+	 * Проверка метода {@link StringRand#getHex(Integer)}.
 	 */
 	@Test
 	public void testGetHex()
@@ -106,7 +106,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getLower(Integer)} на строку из строчных букв [a-z].
+	 * Проверка метода {@link StringRand#getLower(Integer)}.
 	 */
 	@Test
 	public void testGetLower()
@@ -117,7 +117,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getLower(AlphabeticalLowerCase, Integer)} на строку из букв алфавита.
+	 * Проверка метода {@link StringRand#getLower(AlphabeticalLowerCase, Integer)}.
 	 */
 	@Test
 	public void testGetLowerAlphabet()
@@ -128,7 +128,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getUpper(Integer)} на строку из строчных букв [A-Z].
+	 * Проверка метода {@link StringRand#getUpper(Integer)}.
 	 */
 	@Test
 	public void testGetUpper()
@@ -139,7 +139,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getUpper(AlphabeticalUpperCase, Integer)} на строку из букв алфавита.
+	 * Проверка метода {@link StringRand#getUpper(AlphabeticalUpperCase, Integer)}.
 	 */
 	@Test
 	public void testGetUpperAlphabet()
@@ -150,7 +150,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getAlpha(Integer)} на строку из букв [a-zA-Z].
+	 * Проверка метода {@link StringRand#getAlpha(Integer)}.
 	 */
 	@Test
 	public void testGetAlpha()
@@ -161,7 +161,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getAlpha(Alphabetical, Integer)} на строку из букв алфавита.
+	 * Проверка метода {@link StringRand#getAlpha(Alphabetical, Integer)}.
 	 */
 	@Test
 	public void testGetAlphaAlphabet()
@@ -172,7 +172,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getAlnum(Integer)} на строку из букв и цифр.
+	 * Проверка метода {@link StringRand#getAlnum(Integer)}.
 	 */
 	@Test
 	public void testGetAlnum()
@@ -183,7 +183,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getAlnum(Alphabetical, Integer)} на строку из букв алфавита и цифр.
+	 * Проверка метода {@link StringRand#getAlnum(Alphabetical, Integer)}.
 	 */
 	@Test
 	public void testGetAlnumAlphabet()
@@ -194,7 +194,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getAlnum(Alphabetical, Numerable, Integer)} на строку из
+	 * Проверка метода {@link StringRand#getAlnum(Alphabetical, Numerable, Integer)}.
 	 * букв алфавита и цифр системы счисления.
 	 */
 	@Test
@@ -206,7 +206,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getSpecial(Integer)} на строку из букв, цифр и специальных символов.
+	 * Проверка метода {@link StringRand#getSpecial(Integer)}.
 	 */
 	@Test
 	public void testGetSpecial()
@@ -217,7 +217,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, Integer)} на строку из букв алфавита,
+	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, Integer)}.
 	 * цифр и специальных символов.
 	 */
 	@Test
@@ -229,7 +229,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, Numerable, Integer)} на строку из букв алфавита,
+	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, Numerable, Integer)}.
 	 * цифр системы счисления и специальных символов.
 	 */
 	@Test
