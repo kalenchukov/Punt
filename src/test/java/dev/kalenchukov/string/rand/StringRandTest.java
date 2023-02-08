@@ -195,7 +195,6 @@ public class StringRandTest
 
 	/**
 	 * Проверка метода {@link StringRand#getAlnum(Alphabetical, Numerable, Integer)}.
-	 * букв алфавита и цифр системы счисления.
 	 */
 	@Test
 	public void testGetAlnumAlphabetAndNumeralSystem()
@@ -218,7 +217,6 @@ public class StringRandTest
 
 	/**
 	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, Integer)}.
-	 * цифр и специальных символов.
 	 */
 	@Test
 	public void testGetSpecialAlphabet()
@@ -230,7 +228,6 @@ public class StringRandTest
 
 	/**
 	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, Numerable, Integer)}.
-	 * цифр системы счисления и специальных символов.
 	 */
 	@Test
 	public void testGetSpecialAlphabetAndNumeralSystem()
