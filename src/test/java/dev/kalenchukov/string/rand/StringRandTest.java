@@ -66,6 +66,17 @@ public class StringRandTest
 	}
 
 	/**
+	 * Проверка метода {@link StringRand#get(Integer, List)}.
+	 */
+	@Test
+	public void testGetOneSymbol()
+	{
+		String value =  StringRand.get(10, List.of('.'));
+
+		assertTrue(value.matches("\\.{10}"));
+	}
+
+	/**
 	 * Проверка метода {@link StringRand#getBinary(Integer)}.
 	 */
 	@Test
