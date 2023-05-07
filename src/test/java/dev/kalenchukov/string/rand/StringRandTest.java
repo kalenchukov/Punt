@@ -32,6 +32,8 @@ import dev.kalenchukov.numeralsystem.BinarySystem;
 import dev.kalenchukov.numeralsystem.Numerable;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
@@ -41,6 +43,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 public class StringRandTest
 {
+	/**
+	 * Проверка метода {@link StringRand#get(Integer, List)}.
+	 */
+	@Test
+	public void testGet()
+	{
+		String value =  StringRand.get(10, List.of('0', '2', '4', '6', '8'));
+
+		assertTrue(value.matches("[02468]{10}"));
+	}
+
 	/**
 	 * Проверка метода {@link StringRand#getBinary(Integer)}.
 	 */

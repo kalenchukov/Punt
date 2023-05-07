@@ -79,7 +79,7 @@ public final class StringRand
 	{
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, BinarySystem.DIGITS);
+		return StringRand.get(length, BinarySystem.DIGITS);
 	}
 
 	/**
@@ -93,7 +93,7 @@ public final class StringRand
 	{
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, TernarySystem.DIGITS);
+		return StringRand.get(length, TernarySystem.DIGITS);
 	}
 
 	/**
@@ -107,7 +107,7 @@ public final class StringRand
 	{
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, OctalSystem.DIGITS);
+		return StringRand.get(length, OctalSystem.DIGITS);
 	}
 
 	/**
@@ -121,7 +121,7 @@ public final class StringRand
 	{
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, DecimalSystem.DIGITS);
+		return StringRand.get(length, DecimalSystem.DIGITS);
 	}
 
 	/**
@@ -135,7 +135,7 @@ public final class StringRand
 	{
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, DuodecimalSystem.DIGITS);
+		return StringRand.get(length, DuodecimalSystem.DIGITS);
 	}
 
 	/**
@@ -149,7 +149,7 @@ public final class StringRand
 	{
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, HexadecimalSystem.DIGITS);
+		return StringRand.get(length, HexadecimalSystem.DIGITS);
 	}
 
 	/**
@@ -163,7 +163,7 @@ public final class StringRand
 	{
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, EnglishAlphabet.LowerCase.LETTERS);
+		return StringRand.get(length, EnglishAlphabet.LowerCase.LETTERS);
 	}
 
 	/**
@@ -180,7 +180,7 @@ public final class StringRand
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, alphabet.get());
+		return StringRand.get(length, alphabet.get());
 	}
 
 	/**
@@ -194,7 +194,7 @@ public final class StringRand
 	{
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, EnglishAlphabet.UpperCase.LETTERS);
+		return StringRand.get(length, EnglishAlphabet.UpperCase.LETTERS);
 	}
 
 	/**
@@ -211,7 +211,7 @@ public final class StringRand
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, alphabet.get());
+		return StringRand.get(length, alphabet.get());
 	}
 
 	/**
@@ -225,7 +225,7 @@ public final class StringRand
 	{
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, EnglishAlphabet.LETTERS);
+		return StringRand.get(length, EnglishAlphabet.LETTERS);
 	}
 
 	/**
@@ -242,7 +242,7 @@ public final class StringRand
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(length);
 
-		return StringRand.generate(length, alphabet.get());
+		return StringRand.get(length, alphabet.get());
 	}
 
 	/**
@@ -262,7 +262,7 @@ public final class StringRand
 		symbols.addAll(EnglishAlphabet.LETTERS);
 		symbols.addAll(DecimalSystem.DIGITS);
 
-		return StringRand.generate(length, symbols);
+		return StringRand.get(length, symbols);
 	}
 
 	/**
@@ -285,7 +285,7 @@ public final class StringRand
 		symbols.addAll(alphabet.get());
 		symbols.addAll(DecimalSystem.DIGITS);
 
-		return StringRand.generate(length, symbols);
+		return StringRand.get(length, symbols);
 	}
 
 	/**
@@ -311,7 +311,7 @@ public final class StringRand
 		symbols.addAll(alphabet.get());
 		symbols.addAll(numeralSystem.get());
 
-		return StringRand.generate(length, symbols);
+		return StringRand.get(length, symbols);
 	}
 
 	/**
@@ -332,7 +332,7 @@ public final class StringRand
 		symbols.addAll(DecimalSystem.DIGITS);
 		symbols.addAll(SPECIAL);
 
-		return StringRand.generate(length, symbols);
+		return StringRand.get(length, symbols);
 	}
 
 	/**
@@ -356,7 +356,7 @@ public final class StringRand
 		symbols.addAll(DecimalSystem.DIGITS);
 		symbols.addAll(SPECIAL);
 
-		return StringRand.generate(length, symbols);
+		return StringRand.get(length, symbols);
 	}
 
 	/**
@@ -383,7 +383,7 @@ public final class StringRand
 		symbols.addAll(numeralSystem.get());
 		symbols.addAll(SPECIAL);
 
-		return StringRand.generate(length, symbols);
+		return StringRand.get(length, symbols);
 	}
 
 	/**
@@ -394,20 +394,22 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	private static String generate(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length,
-								   @NotNull final List<@NotNull Character> symbols)
+	public static String get(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length,
+							 @NotNull final List<@NotNull Character> symbols)
 	{
 		Objects.requireNonNull(length);
 		Objects.requireNonNull(symbols);
 
-		StringBuilder string = new StringBuilder();
-		Random random = new Random();
+		final StringBuilder string = new StringBuilder();
 
-		for (int l = 0; l < length; l++)
-		{
-			int position = random.nextInt(symbols.size());
+		if (!symbols.isEmpty()) {
+			final Random random = new Random();
 
-			string.append(symbols.get(position));
+			for (int l = 0; l < length; l++) {
+				int position = random.nextInt(symbols.size());
+
+				string.append(symbols.get(position));
+			}
 		}
 
 		return string.toString();
