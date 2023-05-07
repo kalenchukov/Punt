@@ -55,6 +55,17 @@ public class StringRandTest
 	}
 
 	/**
+	 * Проверка метода {@link StringRand#get(Integer, List)}.
+	 */
+	@Test
+	public void testGetEmpty()
+	{
+		String value =  StringRand.get(10, List.of());
+
+		assertTrue(value.isEmpty());
+	}
+
+	/**
 	 * Проверка метода {@link StringRand#getBinary(Integer)}.
 	 */
 	@Test
