@@ -2,7 +2,7 @@
 ## vX.X.X - XX.XX.XXXX
 ### Изменено
 * Изменена версия требуемого модуля alphabet до 2.7.0.
-* Изменена версия требуемого модуля numeral-system до 1.5.0.
+* Изменена версия требуемого модуля numeral-system до 1.6.0.
 * Сделан public и переименован метод StringRand.generate(Integer, List) -> StringRand.get(Integer, List).
 
 ## v1.10.0 - 03.12.2022
