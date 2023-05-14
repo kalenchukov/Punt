@@ -193,7 +193,7 @@ StringRand.getSpecial(10);
 )"#{]=//&~
 ```
 
-#### Возвращает строку из букв алфавита и специальных символов
+#### Возвращает строку из специальных символов и букв алфавита
 ```java
 StringRand.getSpecial(Alphabet.RUSSIAN, 10);
 ```
@@ -203,7 +203,7 @@ StringRand.getSpecial(Alphabet.RUSSIAN, 10);
 :Дщд_Н-|(ч
 ```
 
-#### Возвращает строку из цифр системы счисления и специальных символов
+#### Возвращает строку из специальных символов и цифр системы счисления
 ```java
 StringRand.getSpecial(NumeralSystem.QUATERNARY, 10);
 ```
@@ -213,7 +213,7 @@ StringRand.getSpecial(NumeralSystem.QUATERNARY, 10);
 2031023012
 ```
 
-#### Возвращает строку из букв алфавита, цифр системы счисления и специальных символов
+#### Возвращает строку из специальных символов, букв алфавита и цифр системы счисления
 ```java
 StringRand.getSpecial(Alphabet.RUSSIAN, NumeralSystem.QUATERNARY, 10);
 ```
