@@ -256,10 +256,21 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getAlnum(Alphabetical, Numerable, Integer)}.
+	 * Проверка метода {@link StringRand#getAlnum(Alphabet, NumeralSystem, Integer)}.
 	 */
 	@Test
 	public void testGetAlnumAlphabetAndNumeralSystem()
+	{
+		String value =  StringRand.getAlnum(Alphabet.RUSSIAN, NumeralSystem.BINARY, 10);
+
+		assertTrue(value.matches("[а-яёА-ЯЁ0-1]{10}"));
+	}
+
+	/**
+	 * Проверка метода {@link StringRand#getAlnum(Alphabetical, Numerable, Integer)}.
+	 */
+	@Test
+	public void testGetAlnumAlphabeticalAndNumerable()
 	{
 		String value =  StringRand.getAlnum(new RussianAlphabet(), new BinarySystem(), 10);
 
