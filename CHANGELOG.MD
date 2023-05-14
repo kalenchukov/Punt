@@ -2,6 +2,7 @@
 ## vX.X.X - XX.XX.XXXX
 ### Добавлено
 * Добавлен метод StringRand.getSpecial(Alphabet, NumeralSystem, Integer).
+* Добавлен метод StringRand.getSpecial(Alphabet, Integer).
 
 ### Изменено
 *

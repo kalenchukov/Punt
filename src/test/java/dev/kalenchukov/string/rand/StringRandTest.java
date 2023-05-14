@@ -31,6 +31,7 @@ import dev.kalenchukov.alphabet.RussianAlphabet;
 import dev.kalenchukov.alphabet.resources.Alphabet;
 import dev.kalenchukov.numeralsystem.BinarySystem;
 import dev.kalenchukov.numeralsystem.Numerable;
+import dev.kalenchukov.numeralsystem.QuaternarySystem;
 import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
 import org.junit.jupiter.api.Test;
 
@@ -273,18 +274,29 @@ public class StringRandTest
 	{
 		String value =  StringRand.getSpecial(10);
 
-		assertTrue(value.matches("[\\\\0-9a-zA-Z!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}"));
+		assertTrue(value.matches("[\\\\!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}"));
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, Integer)}.
+	 * Проверка метода {@link StringRand#getSpecial(Alphabet, Integer)}.
 	 */
 	@Test
 	public void testGetSpecialAlphabet()
 	{
 		String value =  StringRand.getSpecial(new RussianAlphabet(), 10);
 
-		assertTrue(value.matches("[\\\\0-9а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}"));
+		assertTrue(value.matches("[\\\\а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}"));
+	}
+
+	/**
+	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, Integer)}.
+	 */
+	@Test
+	public void testGetSpecialAlphabetical()
+	{
+		String value =  StringRand.getSpecial(new RussianAlphabet(), 10);
+
+		assertTrue(value.matches("[\\\\а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}"));
 	}
 
 	/**
@@ -304,8 +316,8 @@ public class StringRandTest
 	@Test
 	public void testGetSpecialAlphabeticalAndNumerable()
 	{
-		String value =  StringRand.getSpecial(new RussianAlphabet(), new BinarySystem(), 10);
+		String value =  StringRand.getSpecial(new RussianAlphabet(), new QuaternarySystem(), 10);
 
-		assertTrue(value.matches("[\\\\0-1а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}"));
+		assertTrue(value.matches("[\\\\0-3а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}"));
 	}
 }

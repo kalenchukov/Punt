@@ -341,18 +341,28 @@ public final class StringRand
 	{
 		Objects.requireNonNull(length);
 
-		List<Character> symbols = new ArrayList<>(
-			EnglishAlphabet.LETTERS.size() + DecimalSystem.DIGITS.size() + SPECIAL.size()
-		);
-		symbols.addAll(EnglishAlphabet.LETTERS);
-		symbols.addAll(DecimalSystem.DIGITS);
-		symbols.addAll(SPECIAL);
-
-		return StringRand.get(length, symbols);
+		return StringRand.get(length, SPECIAL);
 	}
 
 	/**
 	 * Возвращает строку из букв, цифр и специальных символов.
+	 *
+	 * @param alphabet алфавит.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String getSpecial(@NotNull final Alphabet alphabet,
+									@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	{
+		Objects.requireNonNull(alphabet);
+		Objects.requireNonNull(length);
+
+		return StringRand.getSpecial(alphabet.getAlphabet(), length);
+	}
+
+	/**
+	 * Возвращает строку из букв и специальных символов.
 	 *
 	 * @param alphabet алфавит.
 	 * @param length количество символов в возвращаемой строке.
@@ -366,10 +376,9 @@ public final class StringRand
 		Objects.requireNonNull(length);
 
 		List<Character> symbols = new ArrayList<>(
-			alphabet.get().size() + DecimalSystem.DIGITS.size() + SPECIAL.size()
+			alphabet.get().size() + SPECIAL.size()
 		);
 		symbols.addAll(alphabet.get());
-		symbols.addAll(DecimalSystem.DIGITS);
 		symbols.addAll(SPECIAL);
 
 		return StringRand.get(length, symbols);

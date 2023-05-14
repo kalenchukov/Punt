@@ -173,32 +173,32 @@ StringRand.getAlnum(new RussianAlphabet(), new BinarySystem(), 10);
 АжуЛТБЪ1мр
 ```
 
-#### Возвращает строку из букв, цифр и специальных символов
+#### Возвращает строку из специальных символов
 ```java
 StringRand.getSpecial(10);
 ```
 
 Результат выполнения:
 ```
-kg;1#5KO>z
+)"#{]=//&~
 ```
 
-#### Возвращает строку из букв алфавита, цифр и специальных символов
+#### Возвращает строку из букв алфавита и специальных символов
 ```java
-StringRand.getSpecial(new RussianAlphabet(), 10);
+StringRand.getSpecial(Alphabet.RUSSIAN, 10);
 ```
 
 Результат выполнения:
 ```
-~!яА{ЛХИ]2
+:Дщд_Н-|(ч
 ```
 
 #### Возвращает строку из букв алфавита, цифр системы счисления и специальных символов
 ```java
-StringRand.getSpecial(Alphabet.RUSSIAN, NumeralSystem.BINARY, 10);
+StringRand.getSpecial(Alphabet.RUSSIAN, NumeralSystem.QUATERNARY, 10);
 ```
 
 Результат выполнения:
 ```
-е=$'1@эШМ`
+1яид-ъТ)ДА
 ```
