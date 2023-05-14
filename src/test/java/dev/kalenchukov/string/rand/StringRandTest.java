@@ -55,7 +55,18 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#get(Integer, List)}.
+	 * Проверка метода {@link StringRand#get(Integer, List)} с указанием белых символов.
+	 */
+	@Test
+	public void testGetWhitespace()
+	{
+		String value =  StringRand.get(10, List.of('\t', '\n', '\r', ' '));
+
+		assertTrue(value.matches("[\\t\\n\\f\\r\\s]{10}"));
+	}
+
+	/**
+	 * Проверка метода {@link StringRand#get(Integer, List)} без указания символов.
 	 */
 	@Test
 	public void testGetEmpty()
@@ -66,7 +77,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#get(Integer, List)}.
+	 * Проверка метода {@link StringRand#get(Integer, List)} с указанием одного символа.
 	 */
 	@Test
 	public void testGetOneSymbol()
@@ -96,6 +107,17 @@ public class StringRandTest
 		String value =  StringRand.getTernary(10);
 
 		assertTrue(value.matches("[0-2]{10}"));
+	}
+
+	/**
+	 * Проверка метода {@link StringRand#getQuaternary(Integer)}.
+	 */
+	@Test
+	public void testGetQuaternary()
+	{
+		String value =  StringRand.getQuaternary(10);
+
+		assertTrue(value.matches("[0-3]{10}"));
 	}
 
 	/**

@@ -97,6 +97,20 @@ public final class StringRand
 	}
 
 	/**
+	 * Возвращает строку из цифр четвертичной системы счисления.
+	 *
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String getQuaternary(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	{
+		Objects.requireNonNull(length);
+
+		return StringRand.get(length, QuaternarySystem.DIGITS);
+	}
+
+	/**
 	 * Возвращает строку из цифр восьмеричной системы счисления.
 	 *
 	 * @param length количество символов в возвращаемой строке.
