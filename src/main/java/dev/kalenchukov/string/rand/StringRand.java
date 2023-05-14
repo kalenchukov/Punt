@@ -339,6 +339,23 @@ public final class StringRand
 	}
 
 	/**
+	 * Возвращает строку из букв английского алфавита и цифр системы счисления.
+	 *
+	 * @param numeralSystem система счисления.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String getAlnum(@NotNull final Numerable numeralSystem,
+								  @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	{
+		Objects.requireNonNull(numeralSystem);
+		Objects.requireNonNull(length);
+
+		return StringRand.getAlnum(new EnglishAlphabet(), numeralSystem, length);
+	}
+
+	/**
 	 * Возвращает строку из букв и цифр.
 	 *
 	 * @param alphabet алфавит.

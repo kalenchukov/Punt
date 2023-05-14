@@ -278,6 +278,17 @@ public class StringRandTest
 	}
 
 	/**
+	 * Проверка метода {@link StringRand#getAlnum(Numerable, Integer)}.
+	 */
+	@Test
+	public void testGetAlnumNumerable()
+	{
+		String value =  StringRand.getAlnum(new BinarySystem(), 10);
+
+		assertTrue(value.matches("[a-zA-Z0-1]{10}"));
+	}
+
+	/**
 	 * Проверка метода {@link StringRand#getAlnum(Alphabet, NumeralSystem, Integer)}.
 	 */
 	@Test
