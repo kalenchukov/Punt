@@ -193,6 +193,16 @@ StringRand.getSpecial(Alphabet.RUSSIAN, 10);
 :Дщд_Н-|(ч
 ```
 
+#### Возвращает строку из цифр системы счисления и специальных символов
+```java
+StringRand.getSpecial(NumeralSystem.QUATERNARY, 10);
+```
+
+Результат выполнения:
+```
+2031023012
+```
+
 #### Возвращает строку из букв алфавита, цифр системы счисления и специальных символов
 ```java
 StringRand.getSpecial(Alphabet.RUSSIAN, NumeralSystem.QUATERNARY, 10);

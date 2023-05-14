@@ -446,6 +446,23 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
+	public static String getSpecial(@NotNull final NumeralSystem numeralSystem,
+									@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	{
+		Objects.requireNonNull(numeralSystem);
+		Objects.requireNonNull(length);
+
+		return StringRand.getSpecial(numeralSystem.getNumeralSystem(), length);
+	}
+
+	/**
+	 * Возвращает строку из цифр и специальных символов.
+	 *
+	 * @param numeralSystem система счисления.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
+	 */
+	@NotNull
 	public static String getSpecial(@NotNull final Numerable numeralSystem,
 									@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
