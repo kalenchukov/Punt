@@ -25,7 +25,9 @@
 package dev.kalenchukov.string.rand;
 
 import dev.kalenchukov.alphabet.*;
+import dev.kalenchukov.alphabet.resources.Alphabet;
 import dev.kalenchukov.numeralsystem.*;
+import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Range;
 import org.jetbrains.annotations.Unmodifiable;
@@ -371,6 +373,26 @@ public final class StringRand
 		symbols.addAll(SPECIAL);
 
 		return StringRand.get(length, symbols);
+	}
+
+	/**
+	 * Возвращает строку из букв, цифр и специальных символов.
+	 *
+	 * @param alphabet алфавит.
+	 * @param numeralSystem система счисления.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String getSpecial(@NotNull final Alphabet alphabet,
+									@NotNull final NumeralSystem numeralSystem,
+									@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	{
+		Objects.requireNonNull(alphabet);
+		Objects.requireNonNull(numeralSystem);
+		Objects.requireNonNull(length);
+
+		return StringRand.getSpecial(alphabet.getAlphabet(), numeralSystem.getNumeralSystem(), length);
 	}
 
 	/**

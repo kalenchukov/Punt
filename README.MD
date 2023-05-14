@@ -195,7 +195,7 @@ StringRand.getSpecial(new RussianAlphabet(), 10);
 
 #### Возвращает строку из букв алфавита, цифр системы счисления и специальных символов
 ```java
-StringRand.getSpecial(new RussianAlphabet(), new BinarySystem(), 10);
+StringRand.getSpecial(Alphabet.RUSSIAN, NumeralSystem.BINARY, 10);
 ```
 
 Результат выполнения:

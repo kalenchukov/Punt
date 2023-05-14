@@ -28,8 +28,10 @@ import dev.kalenchukov.alphabet.Alphabetical;
 import dev.kalenchukov.alphabet.AlphabeticalLowerCase;
 import dev.kalenchukov.alphabet.AlphabeticalUpperCase;
 import dev.kalenchukov.alphabet.RussianAlphabet;
+import dev.kalenchukov.alphabet.resources.Alphabet;
 import dev.kalenchukov.numeralsystem.BinarySystem;
 import dev.kalenchukov.numeralsystem.Numerable;
+import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -286,10 +288,21 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, Numerable, Integer)}.
+	 * Проверка метода {@link StringRand#getSpecial(Alphabet, NumeralSystem, Integer)}.
 	 */
 	@Test
 	public void testGetSpecialAlphabetAndNumeralSystem()
+	{
+		String value =  StringRand.getSpecial(Alphabet.RUSSIAN, NumeralSystem.QUATERNARY, 10);
+
+		assertTrue(value.matches("[\\\\0-3а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}"));
+	}
+
+	/**
+	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, Numerable, Integer)}.
+	 */
+	@Test
+	public void testGetSpecialAlphabeticalAndNumerable()
 	{
 		String value =  StringRand.getSpecial(new RussianAlphabet(), new BinarySystem(), 10);
 

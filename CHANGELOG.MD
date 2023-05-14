@@ -1,4 +1,17 @@
 # Журнал изменений
+## vX.X.X - XX.XX.XXXX
+### Добавлено
+* Добавлен метод StringRand.getSpecial(Alphabet, NumeralSystem, Integer).
+
+### Изменено
+*
+
+### Исправлено
+*
+
+### Удалено
+*
+
 ## v1.11.0 - 14.05.2023
 ### Добавлено
 * Добавлен метод StringRand.getQuaternary().
