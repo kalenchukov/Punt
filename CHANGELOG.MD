@@ -8,7 +8,7 @@
 * Добавлен метод StringRand.getAlpha(Alphabet, Integer).
 
 ### Изменено
-*
+* Обновлён README.MD.
 
 ### Исправлено
 *
