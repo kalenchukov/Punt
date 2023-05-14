@@ -155,12 +155,12 @@ oYzqyxYx1R
 
 #### Возвращает строку из букв алфавита и цифр
 ```java
-StringRand.getAlnum(new RussianAlphabet(), 10);
+StringRand.getAlnum(Alphabet.RUSSIAN, 10);
 ```
 
 Результат выполнения:
 ```
-2пСэчъЙдКЛ
+7пСэ0ъЙдКЛ
 ```
 
 #### Возвращает строку из букв алфавита и цифр системы счисления

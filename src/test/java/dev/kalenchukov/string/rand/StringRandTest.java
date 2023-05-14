@@ -245,10 +245,21 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getAlnum(Alphabetical, Integer)}.
+	 * Проверка метода {@link StringRand#getAlnum(Alphabet, Integer)}.
 	 */
 	@Test
 	public void testGetAlnumAlphabet()
+	{
+		String value =  StringRand.getAlnum(Alphabet.RUSSIAN, 10);
+
+		assertTrue(value.matches("[а-яёА-ЯЁ0-9]{10}"));
+	}
+
+	/**
+	 * Проверка метода {@link StringRand#getAlnum(Alphabetical, Integer)}.
+	 */
+	@Test
+	public void testGetAlnumAlphabetical()
 	{
 		String value =  StringRand.getAlnum(new RussianAlphabet(), 10);
 
