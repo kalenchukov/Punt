@@ -6,6 +6,7 @@
 * Добавлен метод StringRand.getAlnum(Alphabet, NumeralSystem, Integer).
 * Добавлен метод StringRand.getAlnum(Alphabet, Integer).
 * Добавлен метод StringRand.getAlpha(Alphabet, Integer).
+* Добавлен метод StringRand.getSpecial(Numerable, Integer).
 
 ### Изменено
 * Обновлён README.MD.

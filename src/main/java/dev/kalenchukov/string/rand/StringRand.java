@@ -439,6 +439,29 @@ public final class StringRand
 	}
 
 	/**
+	 * Возвращает строку из цифр и специальных символов.
+	 *
+	 * @param numeralSystem система счисления.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String getSpecial(@NotNull final Numerable numeralSystem,
+									@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	{
+		Objects.requireNonNull(numeralSystem);
+		Objects.requireNonNull(length);
+
+		List<Character> symbols = new ArrayList<>(
+				numeralSystem.get().size() + SPECIAL.size()
+		);
+		symbols.addAll(numeralSystem.get());
+		symbols.addAll(SPECIAL);
+
+		return StringRand.get(length, symbols);
+	}
+
+	/**
 	 * Возвращает строку из букв, цифр и специальных символов.
 	 *
 	 * @param alphabet алфавит.

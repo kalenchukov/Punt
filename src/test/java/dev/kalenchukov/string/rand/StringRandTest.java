@@ -333,6 +333,17 @@ public class StringRandTest
 	}
 
 	/**
+	 * Проверка метода {@link StringRand#getSpecial(Numerable, Integer)}.
+	 */
+	@Test
+	public void testGetSpecialNumerable()
+	{
+		String value =  StringRand.getSpecial(new BinarySystem(), 10);
+
+		assertTrue(value.matches("[\\\\0-1!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}"));
+	}
+
+	/**
 	 * Проверка метода {@link StringRand#getSpecial(Alphabet, NumeralSystem, Integer)}.
 	 */
 	@Test
