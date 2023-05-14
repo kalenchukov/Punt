@@ -38,7 +38,7 @@ import java.util.Random;
 /**
  * Класс содержит статические методы для получения строк случайных символов.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class StringRand
 {

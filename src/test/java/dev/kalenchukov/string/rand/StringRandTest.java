@@ -39,7 +39,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * Класс проверки методов класса {@link StringRand}.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class StringRandTest
 {
