@@ -9,6 +9,7 @@
 * Добавлен метод StringRand.getSpecial(Numerable, Integer).
 * Добавлен метод StringRand.getSpecial(NumeralSystem, Integer).
 * Добавлен метод StringRand.getAlpha(Numerable, Integer).
+* Добавлен метод StringRand.getAlpha(NumeralSystem, Integer).
 
 ### Изменено
 * Обновлён README.MD.

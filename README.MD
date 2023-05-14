@@ -163,6 +163,16 @@ StringRand.getAlnum(Alphabet.RUSSIAN, 10);
 7пСэ0ъЙдКЛ
 ```
 
+#### Возвращает строку из букв английского алфавита и цифр системы счисления
+```java
+StringRand.getAlnum(NumeralSystem.BINARY, 10);
+```
+
+Результат выполнения:
+```
+Sfd10W1D0y
+```
+
 #### Возвращает строку из букв алфавита и цифр системы счисления
 ```java
 StringRand.getAlnum(Alphabet.RUSSIAN, NumeralSystem.BINARY, 10);
