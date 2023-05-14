@@ -241,7 +241,7 @@ public final class StringRand
 	{
 		Objects.requireNonNull(length);
 
-		return StringRand.get(length, EnglishAlphabet.LETTERS);
+		return StringRand.getAlpha(new EnglishAlphabet(), length);
 	}
 
 	/**
@@ -289,13 +289,7 @@ public final class StringRand
 	{
 		Objects.requireNonNull(length);
 
-		List<Character> symbols = new ArrayList<>(
-			EnglishAlphabet.LETTERS.size() + DecimalSystem.DIGITS.size()
-		);
-		symbols.addAll(EnglishAlphabet.LETTERS);
-		symbols.addAll(DecimalSystem.DIGITS);
-
-		return StringRand.get(length, symbols);
+		return StringRand.getAlnum(new EnglishAlphabet(), new DecimalSystem(), length);
 	}
 
 	/**
@@ -329,13 +323,7 @@ public final class StringRand
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(length);
 
-		List<Character> symbols = new ArrayList<>(
-			alphabet.get().size() + DecimalSystem.DIGITS.size()
-		);
-		symbols.addAll(alphabet.get());
-		symbols.addAll(DecimalSystem.DIGITS);
-
-		return StringRand.get(length, symbols);
+		return StringRand.getAlnum(alphabet, new DecimalSystem(), length);
 	}
 
 	/**
