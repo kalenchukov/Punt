@@ -223,10 +223,21 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getAlpha(Alphabetical, Integer)}.
+	 * Проверка метода {@link StringRand#getAlpha(Alphabet, Integer)}.
 	 */
 	@Test
 	public void testGetAlphaAlphabet()
+	{
+		String value =  StringRand.getAlpha(Alphabet.RUSSIAN, 10);
+
+		assertTrue(value.matches("[а-яёА-ЯЁ]{10}"));
+	}
+
+	/**
+	 * Проверка метода {@link StringRand#getAlpha(Alphabetical, Integer)}.
+	 */
+	@Test
+	public void testGetAlphaAlphabetical()
 	{
 		String value =  StringRand.getAlpha(new RussianAlphabet(), 10);
 
@@ -241,7 +252,7 @@ public class StringRandTest
 	{
 		String value =  StringRand.getAlnum(10);
 
-		assertTrue(value.matches("[A-Za-z0-9]{10}"));
+		assertTrue(value.matches("[a-zA-Z0-9]{10}"));
 	}
 
 	/**

@@ -252,6 +252,23 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
+	public static String getAlpha(@NotNull final Alphabet alphabet,
+								  @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	{
+		Objects.requireNonNull(alphabet);
+		Objects.requireNonNull(length);
+
+		return StringRand.getAlpha(alphabet.getAlphabet(), length);
+	}
+
+	/**
+	 * Возвращает строку из букв.
+	 *
+	 * @param alphabet алфавит.
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
+	 */
+	@NotNull
 	public static String getAlpha(@NotNull final Alphabetical alphabet,
 								  @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{

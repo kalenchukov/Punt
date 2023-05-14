@@ -135,7 +135,7 @@ meOnjOUUQw
 
 #### Возвращает строку из букв алфавита
 ```java
-StringRand.getAlpha(new RussianAlphabet(), 10);
+StringRand.getAlpha(Alphabet.RUSSIAN, 10);
 ```
 
 Результат выполнения:

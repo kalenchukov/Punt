@@ -5,6 +5,7 @@
 * Добавлен метод StringRand.getSpecial(Alphabet, Integer).
 * Добавлен метод StringRand.getAlnum(Alphabet, NumeralSystem, Integer).
 * Добавлен метод StringRand.getAlnum(Alphabet, Integer).
+* Добавлен метод StringRand.getAlpha(Alphabet, Integer).
 
 ### Изменено
 *
