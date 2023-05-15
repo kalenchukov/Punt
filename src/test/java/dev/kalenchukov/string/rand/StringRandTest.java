@@ -168,12 +168,12 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getLower(Integer)}.
+	 * Проверка метода {@link StringRand#getAlphaLower(Integer)}.
 	 */
 	@Test
 	public void testGetLower()
 	{
-		String value =  StringRand.getLower(10);
+		String value =  StringRand.getAlphaLower(10);
 
 		assertTrue(value.matches("[a-z]{10}"));
 	}

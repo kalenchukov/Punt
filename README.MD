@@ -85,7 +85,7 @@ BFB76A59D4
 
 #### Возвращает строку из строчных букв английского алфавита
 ```java
-StringRand.getLower(10);
+StringRand.getAlphaLower(10);
 ```
 
 Результат выполнения:
