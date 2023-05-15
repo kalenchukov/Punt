@@ -206,7 +206,7 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getUpper(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getAlphaUpper(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(length);
 

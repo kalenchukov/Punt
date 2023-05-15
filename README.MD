@@ -105,7 +105,7 @@ StringRand.getAlphaLower(new RussianAlphabet.LowerCase(), 10);
 
 #### Возвращает строку из прописных букв английского алфавита
 ```java
-StringRand.getUpper(10);
+StringRand.getAlphaUpper(10);
 ```
 
 Результат выполнения:

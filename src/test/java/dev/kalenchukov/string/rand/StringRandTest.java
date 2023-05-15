@@ -190,12 +190,12 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getUpper(Integer)}.
+	 * Проверка метода {@link StringRand#getAlphaUpper(Integer)}.
 	 */
 	@Test
-	public void testGetUpper()
+	public void testGetAlphaUpper()
 	{
-		String value =  StringRand.getUpper(10);
+		String value =  StringRand.getAlphaUpper(10);
 
 		assertTrue(value.matches("[A-Z]{10}"));
 	}
