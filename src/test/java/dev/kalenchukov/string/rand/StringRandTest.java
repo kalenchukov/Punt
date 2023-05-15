@@ -171,7 +171,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getAlphaLower(Integer)}.
 	 */
 	@Test
-	public void testGetLower()
+	public void testGetAlphaLower()
 	{
 		String value =  StringRand.getAlphaLower(10);
 
@@ -179,12 +179,12 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getLower(AlphabeticalLowerCase, Integer)}.
+	 * Проверка метода {@link StringRand#getAlphaLower(AlphabeticalLowerCase, Integer)}.
 	 */
 	@Test
-	public void testGetLowerAlphabet()
+	public void testGetAlphaLowerAlphabet()
 	{
-		String value =  StringRand.getLower(new RussianAlphabet.LowerCase(), 10);
+		String value =  StringRand.getAlphaLower(new RussianAlphabet.LowerCase(), 10);
 
 		assertTrue(value.matches("[а-яё]{10}"));
 	}

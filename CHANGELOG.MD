@@ -14,6 +14,7 @@
 ### Изменено
 * Обновлён README.MD.
 * Переименован метод StringRand.getLower(Integer) -> StringRand.getAlphaLower(Integer).
+* Переименован метод StringRand.getLower(AlphabeticalLowerCase, Integer) -> StringRand.getAlphaLower(AlphabeticalLowerCase, Integer).
 
 ### Исправлено
 *
