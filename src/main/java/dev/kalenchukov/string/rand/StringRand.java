@@ -222,7 +222,7 @@ public final class StringRand
 	 */
 	@NotNull
 	public static String getAlphaUpper(@NotNull final AlphabeticalUpperCase alphabet,
-									   @NotNull@Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+									   @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
 	{
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(length);
