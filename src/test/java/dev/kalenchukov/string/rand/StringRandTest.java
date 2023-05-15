@@ -201,12 +201,12 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getUpper(AlphabeticalUpperCase, Integer)}.
+	 * Проверка метода {@link StringRand#getAlphaUpper(AlphabeticalUpperCase, Integer)}.
 	 */
 	@Test
-	public void testGetUpperAlphabet()
+	public void testGetAlphaUpperAlphabet()
 	{
-		String value =  StringRand.getUpper(new RussianAlphabet.UpperCase(), 10);
+		String value =  StringRand.getAlphaUpper(new RussianAlphabet.UpperCase(), 10);
 
 		assertTrue(value.matches("[А-ЯЁ]{10}"));
 	}

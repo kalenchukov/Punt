@@ -115,7 +115,7 @@ SDHSKGOLZD
 
 #### Возвращает строку из прописных букв алфавита
 ```java
-StringRand.getUpper(new RussianAlphabet.UpperCase(), 10);
+StringRand.getAlphaUpper(new RussianAlphabet.UpperCase(), 10);
 ```
 
 Результат выполнения:

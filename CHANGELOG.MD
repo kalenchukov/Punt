@@ -16,6 +16,7 @@
 * Переименован метод StringRand.getLower(Integer) -> StringRand.getAlphaLower(Integer).
 * Переименован метод StringRand.getLower(AlphabeticalLowerCase, Integer) -> StringRand.getAlphaLower(AlphabeticalLowerCase, Integer).
 * Переименован метод StringRand.getUpper(Integer) -> StringRand.getAlphaUpper(Integer).
+* Переименован метод StringRand.getUpper(AlphabeticalUpperCase, Integer) -> StringRand.getAlphaUpper(AlphabeticalUpperCase, Integer).
 
 ### Исправлено
 *
