@@ -50,7 +50,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#get(Integer, List)}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		String value =  StringRand.get(10, List.of('0', '2', '4', '6', '8'));
 
@@ -61,7 +61,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#get(Integer, List)} с указанием белых символов.
 	 */
 	@Test
-	public void testGetWhitespace()
+	public void getWhitespace()
 	{
 		String value =  StringRand.get(10, List.of('\t', '\n', '\r', ' '));
 
@@ -72,7 +72,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#get(Integer, List)} без указания символов.
 	 */
 	@Test
-	public void testGetEmpty()
+	public void getEmpty()
 	{
 		String value =  StringRand.get(10, List.of());
 
@@ -83,7 +83,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#get(Integer, List)} с указанием одного символа.
 	 */
 	@Test
-	public void testGetOneSymbol()
+	public void getOneSymbol()
 	{
 		String value =  StringRand.get(10, List.of('.'));
 
@@ -94,7 +94,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getBinary(Integer)}.
 	 */
 	@Test
-	public void testGetBinary()
+	public void getBinary()
 	{
 		String value =  StringRand.getBinary(10);
 
@@ -105,7 +105,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getTernary(Integer)}.
 	 */
 	@Test
-	public void testGetTernary()
+	public void getTernary()
 	{
 		String value =  StringRand.getTernary(10);
 
@@ -116,7 +116,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getQuaternary(Integer)}.
 	 */
 	@Test
-	public void testGetQuaternary()
+	public void getQuaternary()
 	{
 		String value =  StringRand.getQuaternary(10);
 
@@ -127,7 +127,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getOctal(Integer)}.
 	 */
 	@Test
-	public void testGetOctal()
+	public void getOctal()
 	{
 		String value =  StringRand.getOctal(10);
 
@@ -138,7 +138,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getDecimal(Integer)}.
 	 */
 	@Test
-	public void testGetDecimal()
+	public void getDecimal()
 	{
 		String value =  StringRand.getDecimal(10);
 
@@ -149,7 +149,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getDuodecimal(Integer)}.
 	 */
 	@Test
-	public void testGetDuodecimal()
+	public void getDuodecimal()
 	{
 		String value =  StringRand.getDuodecimal(10);
 
@@ -160,7 +160,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getHex(Integer)}.
 	 */
 	@Test
-	public void testGetHex()
+	public void getHex()
 	{
 		String value =  StringRand.getHex(10);
 
@@ -171,7 +171,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getAlphaLower(Integer)}.
 	 */
 	@Test
-	public void testGetAlphaLower()
+	public void getAlphaLower()
 	{
 		String value =  StringRand.getAlphaLower(10);
 
@@ -182,7 +182,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getAlphaLower(AlphabeticalLowerCase, Integer)}.
 	 */
 	@Test
-	public void testGetAlphaLowerAlphabet()
+	public void getAlphaLowerAlphabet()
 	{
 		String value =  StringRand.getAlphaLower(new RussianAlphabet.LowerCase(), 10);
 
@@ -193,7 +193,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getAlphaUpper(Integer)}.
 	 */
 	@Test
-	public void testGetAlphaUpper()
+	public void getAlphaUpper()
 	{
 		String value =  StringRand.getAlphaUpper(10);
 
@@ -204,7 +204,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getAlphaUpper(AlphabeticalUpperCase, Integer)}.
 	 */
 	@Test
-	public void testGetAlphaUpperAlphabet()
+	public void getAlphaUpperAlphabet()
 	{
 		String value =  StringRand.getAlphaUpper(new RussianAlphabet.UpperCase(), 10);
 
@@ -215,7 +215,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getAlpha(Integer)}.
 	 */
 	@Test
-	public void testGetAlpha()
+	public void getAlpha()
 	{
 		String value =  StringRand.getAlpha(10);
 
@@ -226,7 +226,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getAlpha(Alphabet, Integer)}.
 	 */
 	@Test
-	public void testGetAlphaAlphabet()
+	public void getAlphaAlphabet()
 	{
 		String value =  StringRand.getAlpha(Alphabet.RUSSIAN, 10);
 
@@ -237,7 +237,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getAlpha(Alphabetical, Integer)}.
 	 */
 	@Test
-	public void testGetAlphaAlphabetical()
+	public void getAlphaAlphabetical()
 	{
 		String value =  StringRand.getAlpha(new RussianAlphabet(), 10);
 
@@ -248,7 +248,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getAlnum(Integer)}.
 	 */
 	@Test
-	public void testGetAlnum()
+	public void getAlnum()
 	{
 		String value =  StringRand.getAlnum(10);
 
@@ -259,7 +259,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getAlnum(Alphabet, Integer)}.
 	 */
 	@Test
-	public void testGetAlnumAlphabet()
+	public void getAlnumAlphabet()
 	{
 		String value =  StringRand.getAlnum(Alphabet.RUSSIAN, 10);
 
@@ -270,7 +270,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getAlnum(Alphabetical, Integer)}.
 	 */
 	@Test
-	public void testGetAlnumAlphabetical()
+	public void getAlnumAlphabetical()
 	{
 		String value =  StringRand.getAlnum(new RussianAlphabet(), 10);
 
@@ -281,7 +281,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getAlnum(NumeralSystem, Integer)}.
 	 */
 	@Test
-	public void testGetAlnumNumeralSystem()
+	public void getAlnumNumeralSystem()
 	{
 		String value =  StringRand.getAlnum(NumeralSystem.BINARY, 10);
 
@@ -292,7 +292,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getAlnum(Numerable, Integer)}.
 	 */
 	@Test
-	public void testGetAlnumNumerable()
+	public void getAlnumNumerable()
 	{
 		String value =  StringRand.getAlnum(new BinarySystem(), 10);
 
@@ -303,7 +303,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getAlnum(Alphabet, NumeralSystem, Integer)}.
 	 */
 	@Test
-	public void testGetAlnumAlphabetAndNumeralSystem()
+	public void getAlnumAlphabetAndNumeralSystem()
 	{
 		String value =  StringRand.getAlnum(Alphabet.RUSSIAN, NumeralSystem.BINARY, 10);
 
@@ -314,7 +314,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getAlnum(Alphabetical, Numerable, Integer)}.
 	 */
 	@Test
-	public void testGetAlnumAlphabeticalAndNumerable()
+	public void getAlnumAlphabeticalAndNumerable()
 	{
 		String value =  StringRand.getAlnum(new RussianAlphabet(), new BinarySystem(), 10);
 
@@ -325,7 +325,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getSpecial(Integer)}.
 	 */
 	@Test
-	public void testGetSpecial()
+	public void getSpecial()
 	{
 		String value =  StringRand.getSpecial(10);
 
@@ -336,7 +336,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getSpecial(Alphabet, Integer)}.
 	 */
 	@Test
-	public void testGetSpecialAlphabet()
+	public void getSpecialAlphabet()
 	{
 		String value =  StringRand.getSpecial(new RussianAlphabet(), 10);
 
@@ -347,7 +347,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, Integer)}.
 	 */
 	@Test
-	public void testGetSpecialAlphabetical()
+	public void getSpecialAlphabetical()
 	{
 		String value =  StringRand.getSpecial(new RussianAlphabet(), 10);
 
@@ -358,7 +358,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getSpecial(NumeralSystem, Integer)}.
 	 */
 	@Test
-	public void testGetSpecialNumeralSystem()
+	public void getSpecialNumeralSystem()
 	{
 		String value =  StringRand.getSpecial(NumeralSystem.QUATERNARY, 10);
 
@@ -369,7 +369,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getSpecial(Numerable, Integer)}.
 	 */
 	@Test
-	public void testGetSpecialNumerable()
+	public void getSpecialNumerable()
 	{
 		String value =  StringRand.getSpecial(new BinarySystem(), 10);
 
@@ -380,7 +380,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getSpecial(Alphabet, NumeralSystem, Integer)}.
 	 */
 	@Test
-	public void testGetSpecialAlphabetAndNumeralSystem()
+	public void getSpecialAlphabetAndNumeralSystem()
 	{
 		String value =  StringRand.getSpecial(Alphabet.RUSSIAN, NumeralSystem.QUATERNARY, 10);
 
@@ -391,7 +391,7 @@ public class StringRandTest
 	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, Numerable, Integer)}.
 	 */
 	@Test
-	public void testGetSpecialAlphabeticalAndNumerable()
+	public void getSpecialAlphabeticalAndNumerable()
 	{
 		String value =  StringRand.getSpecial(new RussianAlphabet(), new QuaternarySystem(), 10);
 
