@@ -37,7 +37,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link StringRand}.
@@ -56,7 +56,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[02468]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[\\t\\n\\f\\r\\s]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class StringRandTest
 
 		boolean actual = string.isEmpty();
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("\\.{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -108,7 +108,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[0-1]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -121,7 +121,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[0-2]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[0-3]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -147,7 +147,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[0-7]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -160,7 +160,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[0-9]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -173,7 +173,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[0-9A-B]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -186,7 +186,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[0-9A-F]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -199,7 +199,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[a-z]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -212,7 +212,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[а-яё]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -225,7 +225,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[A-Z]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -238,7 +238,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[А-ЯЁ]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -251,7 +251,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[a-zA-Z]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -264,7 +264,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[а-яёА-ЯЁ]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -277,7 +277,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[а-яёА-ЯЁ]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -290,7 +290,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[a-zA-Z0-9]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -303,7 +303,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[а-яёА-ЯЁ0-9]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -316,7 +316,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[а-яёА-ЯЁ0-9]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -329,7 +329,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[a-zA-Z0-1]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -342,7 +342,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[a-zA-Z0-1]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -355,7 +355,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[а-яёА-ЯЁ0-1]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -368,7 +368,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[а-яёА-ЯЁ0-1]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -381,7 +381,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[\\\\!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -394,7 +394,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[\\\\а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -407,7 +407,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[\\\\а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -420,7 +420,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[\\\\0-3!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -433,7 +433,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[\\\\0-1!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -446,7 +446,7 @@ public class StringRandTest
 
 		boolean actual = string.matches("[\\\\0-3а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -459,6 +459,6 @@ public class StringRandTest
 
 		boolean actual = string.matches("[\\\\0-3а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 }
