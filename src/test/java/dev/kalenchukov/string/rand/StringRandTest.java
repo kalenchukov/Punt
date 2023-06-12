@@ -52,9 +52,9 @@ public class StringRandTest
 	@Test
 	public void get()
 	{
-		String value = StringRand.get(10, List.of('0', '2', '4', '6', '8'));
+		String string = StringRand.get(10, List.of('0', '2', '4', '6', '8'));
 
-		boolean actual = value.matches("[02468]{10}");
+		boolean actual = string.matches("[02468]{10}");
 
 		assertTrue(actual);
 	}
@@ -65,9 +65,9 @@ public class StringRandTest
 	@Test
 	public void getWhitespace()
 	{
-		String value = StringRand.get(10, List.of('\t', '\n', '\r', ' '));
+		String string = StringRand.get(10, List.of('\t', '\n', '\r', ' '));
 
-		boolean actual = value.matches("[\\t\\n\\f\\r\\s]{10}");
+		boolean actual = string.matches("[\\t\\n\\f\\r\\s]{10}");
 
 		assertTrue(actual);
 	}
@@ -78,9 +78,9 @@ public class StringRandTest
 	@Test
 	public void getEmpty()
 	{
-		String value = StringRand.get(10, List.of());
+		String string = StringRand.get(10, List.of());
 
-		boolean actual = value.isEmpty();
+		boolean actual = string.isEmpty();
 
 		assertTrue(actual);
 	}
@@ -91,9 +91,9 @@ public class StringRandTest
 	@Test
 	public void getOneSymbol()
 	{
-		String value = StringRand.get(10, List.of('.'));
+		String string = StringRand.get(10, List.of('.'));
 
-		boolean actual = value.matches("\\.{10}");
+		boolean actual = string.matches("\\.{10}");
 
 		assertTrue(actual);
 	}
@@ -104,9 +104,9 @@ public class StringRandTest
 	@Test
 	public void getBinary()
 	{
-		String value = StringRand.getBinary(10);
+		String string = StringRand.getBinary(10);
 
-		boolean actual = value.matches("[0-1]{10}");
+		boolean actual = string.matches("[0-1]{10}");
 
 		assertTrue(actual);
 	}
@@ -117,9 +117,9 @@ public class StringRandTest
 	@Test
 	public void getTernary()
 	{
-		String value = StringRand.getTernary(10);
+		String string = StringRand.getTernary(10);
 
-		boolean actual = value.matches("[0-2]{10}");
+		boolean actual = string.matches("[0-2]{10}");
 
 		assertTrue(actual);
 	}
@@ -130,9 +130,9 @@ public class StringRandTest
 	@Test
 	public void getQuaternary()
 	{
-		String value = StringRand.getQuaternary(10);
+		String string = StringRand.getQuaternary(10);
 
-		boolean actual = value.matches("[0-3]{10}");
+		boolean actual = string.matches("[0-3]{10}");
 
 		assertTrue(actual);
 	}
@@ -143,9 +143,9 @@ public class StringRandTest
 	@Test
 	public void getOctal()
 	{
-		String value = StringRand.getOctal(10);
+		String string = StringRand.getOctal(10);
 
-		boolean actual = value.matches("[0-7]{10}");
+		boolean actual = string.matches("[0-7]{10}");
 
 		assertTrue(actual);
 	}
@@ -156,9 +156,9 @@ public class StringRandTest
 	@Test
 	public void getDecimal()
 	{
-		String value = StringRand.getDecimal(10);
+		String string = StringRand.getDecimal(10);
 
-		boolean actual = value.matches("[0-9]{10}");
+		boolean actual = string.matches("[0-9]{10}");
 
 		assertTrue(actual);
 	}
@@ -169,9 +169,9 @@ public class StringRandTest
 	@Test
 	public void getDuodecimal()
 	{
-		String value = StringRand.getDuodecimal(10);
+		String string = StringRand.getDuodecimal(10);
 
-		boolean actual = value.matches("[0-9A-B]{10}");
+		boolean actual = string.matches("[0-9A-B]{10}");
 
 		assertTrue(actual);
 	}
@@ -182,9 +182,9 @@ public class StringRandTest
 	@Test
 	public void getHex()
 	{
-		String value = StringRand.getHex(10);
+		String string = StringRand.getHex(10);
 
-		boolean actual = value.matches("[0-9A-F]{10}");
+		boolean actual = string.matches("[0-9A-F]{10}");
 
 		assertTrue(actual);
 	}
@@ -195,9 +195,9 @@ public class StringRandTest
 	@Test
 	public void getAlphaLower()
 	{
-		String value = StringRand.getAlphaLower(10);
+		String string = StringRand.getAlphaLower(10);
 
-		boolean actual = value.matches("[a-z]{10}");
+		boolean actual = string.matches("[a-z]{10}");
 
 		assertTrue(actual);
 	}
@@ -208,9 +208,9 @@ public class StringRandTest
 	@Test
 	public void getAlphaLowerAlphabet()
 	{
-		String value = StringRand.getAlphaLower(new RussianAlphabet.LowerCase(), 10);
+		String string = StringRand.getAlphaLower(new RussianAlphabet.LowerCase(), 10);
 
-		boolean actual = value.matches("[а-яё]{10}");
+		boolean actual = string.matches("[а-яё]{10}");
 
 		assertTrue(actual);
 	}
@@ -221,9 +221,9 @@ public class StringRandTest
 	@Test
 	public void getAlphaUpper()
 	{
-		String value = StringRand.getAlphaUpper(10);
+		String string = StringRand.getAlphaUpper(10);
 
-		boolean actual = value.matches("[A-Z]{10}");
+		boolean actual = string.matches("[A-Z]{10}");
 
 		assertTrue(actual);
 	}
@@ -234,9 +234,9 @@ public class StringRandTest
 	@Test
 	public void getAlphaUpperAlphabet()
 	{
-		String value = StringRand.getAlphaUpper(new RussianAlphabet.UpperCase(), 10);
+		String string = StringRand.getAlphaUpper(new RussianAlphabet.UpperCase(), 10);
 
-		boolean actual = value.matches("[А-ЯЁ]{10}");
+		boolean actual = string.matches("[А-ЯЁ]{10}");
 
 		assertTrue(actual);
 	}
@@ -247,9 +247,9 @@ public class StringRandTest
 	@Test
 	public void getAlpha()
 	{
-		String value = StringRand.getAlpha(10);
+		String string = StringRand.getAlpha(10);
 
-		boolean actual = value.matches("[a-zA-Z]{10}");
+		boolean actual = string.matches("[a-zA-Z]{10}");
 
 		assertTrue(actual);
 	}
@@ -260,9 +260,9 @@ public class StringRandTest
 	@Test
 	public void getAlphaAlphabet()
 	{
-		String value = StringRand.getAlpha(Alphabet.RUSSIAN, 10);
+		String string = StringRand.getAlpha(Alphabet.RUSSIAN, 10);
 
-		boolean actual = value.matches("[а-яёА-ЯЁ]{10}");
+		boolean actual = string.matches("[а-яёА-ЯЁ]{10}");
 
 		assertTrue(actual);
 	}
@@ -273,9 +273,9 @@ public class StringRandTest
 	@Test
 	public void getAlphaAlphabetical()
 	{
-		String value = StringRand.getAlpha(new RussianAlphabet(), 10);
+		String string = StringRand.getAlpha(new RussianAlphabet(), 10);
 
-		boolean actual = value.matches("[а-яёА-ЯЁ]{10}");
+		boolean actual = string.matches("[а-яёА-ЯЁ]{10}");
 
 		assertTrue(actual);
 	}
@@ -286,9 +286,9 @@ public class StringRandTest
 	@Test
 	public void getAlnum()
 	{
-		String value = StringRand.getAlnum(10);
+		String string = StringRand.getAlnum(10);
 
-		boolean actual = value.matches("[a-zA-Z0-9]{10}");
+		boolean actual = string.matches("[a-zA-Z0-9]{10}");
 
 		assertTrue(actual);
 	}
@@ -299,9 +299,9 @@ public class StringRandTest
 	@Test
 	public void getAlnumAlphabet()
 	{
-		String value = StringRand.getAlnum(Alphabet.RUSSIAN, 10);
+		String string = StringRand.getAlnum(Alphabet.RUSSIAN, 10);
 
-		boolean actual = value.matches("[а-яёА-ЯЁ0-9]{10}");
+		boolean actual = string.matches("[а-яёА-ЯЁ0-9]{10}");
 
 		assertTrue(actual);
 	}
@@ -312,9 +312,9 @@ public class StringRandTest
 	@Test
 	public void getAlnumAlphabetical()
 	{
-		String value = StringRand.getAlnum(new RussianAlphabet(), 10);
+		String string = StringRand.getAlnum(new RussianAlphabet(), 10);
 
-		boolean actual = value.matches("[а-яёА-ЯЁ0-9]{10}");
+		boolean actual = string.matches("[а-яёА-ЯЁ0-9]{10}");
 
 		assertTrue(actual);
 	}
@@ -325,9 +325,9 @@ public class StringRandTest
 	@Test
 	public void getAlnumNumeralSystem()
 	{
-		String value = StringRand.getAlnum(NumeralSystem.BINARY, 10);
+		String string = StringRand.getAlnum(NumeralSystem.BINARY, 10);
 
-		boolean actual = value.matches("[a-zA-Z0-1]{10}");
+		boolean actual = string.matches("[a-zA-Z0-1]{10}");
 
 		assertTrue(actual);
 	}
@@ -338,9 +338,9 @@ public class StringRandTest
 	@Test
 	public void getAlnumNumerable()
 	{
-		String value = StringRand.getAlnum(new BinarySystem(), 10);
+		String string = StringRand.getAlnum(new BinarySystem(), 10);
 
-		boolean actual = value.matches("[a-zA-Z0-1]{10}");
+		boolean actual = string.matches("[a-zA-Z0-1]{10}");
 
 		assertTrue(actual);
 	}
@@ -351,9 +351,9 @@ public class StringRandTest
 	@Test
 	public void getAlnumAlphabetAndNumeralSystem()
 	{
-		String value = StringRand.getAlnum(Alphabet.RUSSIAN, NumeralSystem.BINARY, 10);
+		String string = StringRand.getAlnum(Alphabet.RUSSIAN, NumeralSystem.BINARY, 10);
 
-		boolean actual = value.matches("[а-яёА-ЯЁ0-1]{10}");
+		boolean actual = string.matches("[а-яёА-ЯЁ0-1]{10}");
 
 		assertTrue(actual);
 	}
@@ -364,9 +364,9 @@ public class StringRandTest
 	@Test
 	public void getAlnumAlphabeticalAndNumerable()
 	{
-		String value = StringRand.getAlnum(new RussianAlphabet(), new BinarySystem(), 10);
+		String string = StringRand.getAlnum(new RussianAlphabet(), new BinarySystem(), 10);
 
-		boolean actual = value.matches("[а-яёА-ЯЁ0-1]{10}");
+		boolean actual = string.matches("[а-яёА-ЯЁ0-1]{10}");
 
 		assertTrue(actual);
 	}
@@ -377,9 +377,9 @@ public class StringRandTest
 	@Test
 	public void getSpecial()
 	{
-		String value = StringRand.getSpecial(10);
+		String string = StringRand.getSpecial(10);
 
-		boolean actual = value.matches("[\\\\!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
+		boolean actual = string.matches("[\\\\!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
 		assertTrue(actual);
 	}
@@ -390,9 +390,9 @@ public class StringRandTest
 	@Test
 	public void getSpecialAlphabet()
 	{
-		String value = StringRand.getSpecial(new RussianAlphabet(), 10);
+		String string = StringRand.getSpecial(new RussianAlphabet(), 10);
 
-		boolean actual = value.matches("[\\\\а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
+		boolean actual = string.matches("[\\\\а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
 		assertTrue(actual);
 	}
@@ -403,9 +403,9 @@ public class StringRandTest
 	@Test
 	public void getSpecialAlphabetical()
 	{
-		String value = StringRand.getSpecial(new RussianAlphabet(), 10);
+		String string = StringRand.getSpecial(new RussianAlphabet(), 10);
 
-		boolean actual = value.matches("[\\\\а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
+		boolean actual = string.matches("[\\\\а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
 		assertTrue(actual);
 	}
@@ -416,9 +416,9 @@ public class StringRandTest
 	@Test
 	public void getSpecialNumeralSystem()
 	{
-		String value = StringRand.getSpecial(NumeralSystem.QUATERNARY, 10);
+		String string = StringRand.getSpecial(NumeralSystem.QUATERNARY, 10);
 
-		boolean actual = value.matches("[\\\\0-3!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
+		boolean actual = string.matches("[\\\\0-3!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
 		assertTrue(actual);
 	}
@@ -429,9 +429,9 @@ public class StringRandTest
 	@Test
 	public void getSpecialNumerable()
 	{
-		String value = StringRand.getSpecial(new BinarySystem(), 10);
+		String string = StringRand.getSpecial(new BinarySystem(), 10);
 
-		boolean actual = value.matches("[\\\\0-1!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
+		boolean actual = string.matches("[\\\\0-1!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
 		assertTrue(actual);
 	}
@@ -442,9 +442,9 @@ public class StringRandTest
 	@Test
 	public void getSpecialAlphabetAndNumeralSystem()
 	{
-		String value = StringRand.getSpecial(Alphabet.RUSSIAN, NumeralSystem.QUATERNARY, 10);
+		String string = StringRand.getSpecial(Alphabet.RUSSIAN, NumeralSystem.QUATERNARY, 10);
 
-		boolean actual = value.matches("[\\\\0-3а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
+		boolean actual = string.matches("[\\\\0-3а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
 		assertTrue(actual);
 	}
@@ -455,9 +455,9 @@ public class StringRandTest
 	@Test
 	public void getSpecialAlphabeticalAndNumerable()
 	{
-		String value = StringRand.getSpecial(new RussianAlphabet(), new QuaternarySystem(), 10);
+		String string = StringRand.getSpecial(new RussianAlphabet(), new QuaternarySystem(), 10);
 
-		boolean actual = value.matches("[\\\\0-3а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
+		boolean actual = string.matches("[\\\\0-3а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
 		assertTrue(actual);
 	}
