@@ -29,7 +29,6 @@ import dev.kalenchukov.alphabet.resources.Alphabet;
 import dev.kalenchukov.numeralsystem.*;
 import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Range;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.ArrayList;
@@ -77,10 +76,8 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getBinary(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getBinary(final int length)
 	{
-		Objects.requireNonNull(length);
-
 		return StringRand.get(length, BinarySystem.DIGITS);
 	}
 
@@ -91,10 +88,8 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getTernary(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getTernary(final int length)
 	{
-		Objects.requireNonNull(length);
-
 		return StringRand.get(length, TernarySystem.DIGITS);
 	}
 
@@ -105,10 +100,8 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getQuaternary(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getQuaternary(final int length)
 	{
-		Objects.requireNonNull(length);
-
 		return StringRand.get(length, QuaternarySystem.DIGITS);
 	}
 
@@ -119,10 +112,8 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getOctal(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getOctal(final int length)
 	{
-		Objects.requireNonNull(length);
-
 		return StringRand.get(length, OctalSystem.DIGITS);
 	}
 
@@ -133,10 +124,8 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getDecimal(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getDecimal(final int length)
 	{
-		Objects.requireNonNull(length);
-
 		return StringRand.get(length, DecimalSystem.DIGITS);
 	}
 
@@ -147,10 +136,8 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getDuodecimal(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getDuodecimal(final int length)
 	{
-		Objects.requireNonNull(length);
-
 		return StringRand.get(length, DuodecimalSystem.DIGITS);
 	}
 
@@ -161,10 +148,8 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getHex(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getHex(final int length)
 	{
-		Objects.requireNonNull(length);
-
 		return StringRand.get(length, HexadecimalSystem.DIGITS);
 	}
 
@@ -175,10 +160,8 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getAlphaLower(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getAlphaLower(final int length)
 	{
-		Objects.requireNonNull(length);
-
 		return StringRand.get(length, EnglishAlphabet.LowerCase.LETTERS);
 	}
 
@@ -190,13 +173,11 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getAlphaLower(@NotNull final AlphabeticalLowerCase alphabet,
-									   @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getAlphaLower(@NotNull final AlphabeticalLowerCase alphabet, final int length)
 	{
 		Objects.requireNonNull(alphabet);
-		Objects.requireNonNull(length);
 
-		return StringRand.get(length, alphabet.get());
+		return StringRand.get(length, alphabet.toList());
 	}
 
 	/**
@@ -206,10 +187,8 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getAlphaUpper(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getAlphaUpper(final int length)
 	{
-		Objects.requireNonNull(length);
-
 		return StringRand.get(length, EnglishAlphabet.UpperCase.LETTERS);
 	}
 
@@ -221,13 +200,11 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getAlphaUpper(@NotNull final AlphabeticalUpperCase alphabet,
-									   @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getAlphaUpper(@NotNull final AlphabeticalUpperCase alphabet, final int length)
 	{
 		Objects.requireNonNull(alphabet);
-		Objects.requireNonNull(length);
 
-		return StringRand.get(length, alphabet.get());
+		return StringRand.get(length, alphabet.toList());
 	}
 
 	/**
@@ -237,10 +214,8 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getAlpha(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getAlpha(final int length)
 	{
-		Objects.requireNonNull(length);
-
 		return StringRand.getAlpha(new EnglishAlphabet(), length);
 	}
 
@@ -252,11 +227,9 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getAlpha(@NotNull final Alphabet alphabet,
-								  @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getAlpha(@NotNull final Alphabet alphabet, final int length)
 	{
 		Objects.requireNonNull(alphabet);
-		Objects.requireNonNull(length);
 
 		return StringRand.getAlpha(alphabet.getAlphabet(), length);
 	}
@@ -269,13 +242,11 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getAlpha(@NotNull final Alphabetical alphabet,
-								  @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getAlpha(@NotNull final Alphabetical alphabet, final int length)
 	{
 		Objects.requireNonNull(alphabet);
-		Objects.requireNonNull(length);
 
-		return StringRand.get(length, alphabet.get());
+		return StringRand.get(length, alphabet.toList());
 	}
 
 	/**
@@ -285,10 +256,8 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getAlnum(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getAlnum(final int length)
 	{
-		Objects.requireNonNull(length);
-
 		return StringRand.getAlnum(new EnglishAlphabet(), new DecimalSystem(), length);
 	}
 
@@ -300,12 +269,9 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getAlnum(@NotNull final Alphabet alphabet,
-								  @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getAlnum(@NotNull final Alphabet alphabet, final int length)
 	{
 		Objects.requireNonNull(alphabet);
-		Objects.requireNonNull(length);
-
 		return StringRand.getAlnum(alphabet.getAlphabet(), length);
 	}
 
@@ -317,11 +283,9 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getAlnum(@NotNull final Alphabetical alphabet,
-								  @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getAlnum(@NotNull final Alphabetical alphabet, final int length)
 	{
 		Objects.requireNonNull(alphabet);
-		Objects.requireNonNull(length);
 
 		return StringRand.getAlnum(alphabet, new DecimalSystem(), length);
 	}
@@ -334,11 +298,9 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getAlnum(@NotNull final NumeralSystem numeralSystem,
-								  @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getAlnum(@NotNull final NumeralSystem numeralSystem, final int length)
 	{
 		Objects.requireNonNull(numeralSystem);
-		Objects.requireNonNull(length);
 
 		return StringRand.getAlnum(numeralSystem.getNumeralSystem(), length);
 	}
@@ -351,11 +313,9 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getAlnum(@NotNull final Numerable numeralSystem,
-								  @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getAlnum(@NotNull final Numerable numeralSystem, final int length)
 	{
 		Objects.requireNonNull(numeralSystem);
-		Objects.requireNonNull(length);
 
 		return StringRand.getAlnum(new EnglishAlphabet(), numeralSystem, length);
 	}
@@ -371,11 +331,10 @@ public final class StringRand
 	@NotNull
 	public static String getAlnum(@NotNull final Alphabet alphabet,
 								  @NotNull final NumeralSystem numeralSystem,
-								  @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+								  final int length)
 	{
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(numeralSystem);
-		Objects.requireNonNull(length);
 
 		return StringRand.getAlnum(alphabet.getAlphabet(), numeralSystem.getNumeralSystem(), length);
 	}
@@ -391,17 +350,16 @@ public final class StringRand
 	@NotNull
 	public static String getAlnum(@NotNull final Alphabetical alphabet,
 								  @NotNull final Numerable numeralSystem,
-								  @NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+								  final int length)
 	{
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(numeralSystem);
-		Objects.requireNonNull(length);
 
 		List<Character> symbols = new ArrayList<>(
-			alphabet.get().size() + numeralSystem.get().size()
+			alphabet.toList().size() + numeralSystem.toList().size()
 		);
-		symbols.addAll(alphabet.get());
-		symbols.addAll(numeralSystem.get());
+		symbols.addAll(alphabet.toList());
+		symbols.addAll(numeralSystem.toList());
 
 		return StringRand.get(length, symbols);
 	}
@@ -413,10 +371,8 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getSpecial(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getSpecial(final int length)
 	{
-		Objects.requireNonNull(length);
-
 		return StringRand.get(length, SPECIAL);
 	}
 
@@ -428,11 +384,9 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getSpecial(@NotNull final Alphabet alphabet,
-									@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getSpecial(@NotNull final Alphabet alphabet, final int length)
 	{
 		Objects.requireNonNull(alphabet);
-		Objects.requireNonNull(length);
 
 		return StringRand.getSpecial(alphabet.getAlphabet(), length);
 	}
@@ -445,16 +399,14 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getSpecial(@NotNull final Alphabetical alphabet,
-									@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getSpecial(@NotNull final Alphabetical alphabet, final int length)
 	{
 		Objects.requireNonNull(alphabet);
-		Objects.requireNonNull(length);
 
 		List<Character> symbols = new ArrayList<>(
-			alphabet.get().size() + SPECIAL.size()
+			alphabet.toList().size() + SPECIAL.size()
 		);
-		symbols.addAll(alphabet.get());
+		symbols.addAll(alphabet.toList());
 		symbols.addAll(SPECIAL);
 
 		return StringRand.get(length, symbols);
@@ -468,11 +420,9 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getSpecial(@NotNull final NumeralSystem numeralSystem,
-									@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getSpecial(@NotNull final NumeralSystem numeralSystem, final int length)
 	{
 		Objects.requireNonNull(numeralSystem);
-		Objects.requireNonNull(length);
 
 		return StringRand.getSpecial(numeralSystem.getNumeralSystem(), length);
 	}
@@ -485,16 +435,14 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getSpecial(@NotNull final Numerable numeralSystem,
-									@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+	public static String getSpecial(@NotNull final Numerable numeralSystem, final int length)
 	{
 		Objects.requireNonNull(numeralSystem);
-		Objects.requireNonNull(length);
 
 		List<Character> symbols = new ArrayList<>(
-				numeralSystem.get().size() + SPECIAL.size()
+				numeralSystem.toList().size() + SPECIAL.size()
 		);
-		symbols.addAll(numeralSystem.get());
+		symbols.addAll(numeralSystem.toList());
 		symbols.addAll(SPECIAL);
 
 		return StringRand.get(length, symbols);
@@ -511,11 +459,10 @@ public final class StringRand
 	@NotNull
 	public static String getSpecial(@NotNull final Alphabet alphabet,
 									@NotNull final NumeralSystem numeralSystem,
-									@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+									final int length)
 	{
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(numeralSystem);
-		Objects.requireNonNull(length);
 
 		return StringRand.getSpecial(alphabet.getAlphabet(), numeralSystem.getNumeralSystem(), length);
 	}
@@ -531,17 +478,16 @@ public final class StringRand
 	@NotNull
 	public static String getSpecial(@NotNull final Alphabetical alphabet,
 									@NotNull final Numerable numeralSystem,
-									@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length)
+									final int length)
 	{
 		Objects.requireNonNull(alphabet);
 		Objects.requireNonNull(numeralSystem);
-		Objects.requireNonNull(length);
 
 		List<Character> symbols = new ArrayList<>(
-			alphabet.get().size() + numeralSystem.get().size() + SPECIAL.size()
+			alphabet.toList().size() + numeralSystem.toList().size() + SPECIAL.size()
 		);
-		symbols.addAll(alphabet.get());
-		symbols.addAll(numeralSystem.get());
+		symbols.addAll(alphabet.toList());
+		symbols.addAll(numeralSystem.toList());
 		symbols.addAll(SPECIAL);
 
 		return StringRand.get(length, symbols);
@@ -555,10 +501,8 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String get(@NotNull @Range(from = 1, to = Integer.MAX_VALUE) final Integer length,
-							 @NotNull final List<@NotNull Character> symbols)
+	public static String get(final int length, @NotNull final List<@NotNull Character> symbols)
 	{
-		Objects.requireNonNull(length);
 		Objects.requireNonNull(symbols);
 
 		final StringBuilder string = new StringBuilder();
