@@ -171,6 +171,7 @@ public final class StringRand
 	 * @param alphabet алфавит строчных букв.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
 	 */
 	@NotNull
 	public static String getAlphaLower(@NotNull final AlphabeticalLowerCase alphabet, final int length)
@@ -198,6 +199,7 @@ public final class StringRand
 	 * @param alphabet алфавит строчных букв.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
 	 */
 	@NotNull
 	public static String getAlphaUpper(@NotNull final AlphabeticalUpperCase alphabet, final int length)
@@ -225,6 +227,7 @@ public final class StringRand
 	 * @param alphabet алфавит.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
 	 */
 	@NotNull
 	public static String getAlpha(@NotNull final Alphabet alphabet, final int length)
@@ -240,6 +243,7 @@ public final class StringRand
 	 * @param alphabet алфавит.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
 	 */
 	@NotNull
 	public static String getAlpha(@NotNull final Alphabetical alphabet, final int length)
@@ -267,6 +271,7 @@ public final class StringRand
 	 * @param alphabet алфавит.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
 	 */
 	@NotNull
 	public static String getAlnum(@NotNull final Alphabet alphabet, final int length)
@@ -281,6 +286,7 @@ public final class StringRand
 	 * @param alphabet алфавит.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
 	 */
 	@NotNull
 	public static String getAlnum(@NotNull final Alphabetical alphabet, final int length)
@@ -296,6 +302,7 @@ public final class StringRand
 	 * @param numeralSystem система счисления.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
 	 */
 	@NotNull
 	public static String getAlnum(@NotNull final NumeralSystem numeralSystem, final int length)
@@ -311,6 +318,7 @@ public final class StringRand
 	 * @param numeralSystem система счисления.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
 	 */
 	@NotNull
 	public static String getAlnum(@NotNull final Numerable numeralSystem, final int length)
@@ -327,6 +335,8 @@ public final class StringRand
 	 * @param numeralSystem система счисления.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
 	 */
 	@NotNull
 	public static String getAlnum(@NotNull final Alphabet alphabet,
@@ -346,6 +356,8 @@ public final class StringRand
 	 * @param numeralSystem система счисления.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
 	 */
 	@NotNull
 	public static String getAlnum(@NotNull final Alphabetical alphabet,
@@ -382,6 +394,7 @@ public final class StringRand
 	 * @param alphabet алфавит.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
 	 */
 	@NotNull
 	public static String getSpecial(@NotNull final Alphabet alphabet, final int length)
@@ -397,6 +410,7 @@ public final class StringRand
 	 * @param alphabet алфавит.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
 	 */
 	@NotNull
 	public static String getSpecial(@NotNull final Alphabetical alphabet, final int length)
@@ -418,6 +432,7 @@ public final class StringRand
 	 * @param numeralSystem система счисления.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
 	 */
 	@NotNull
 	public static String getSpecial(@NotNull final NumeralSystem numeralSystem, final int length)
@@ -433,6 +448,7 @@ public final class StringRand
 	 * @param numeralSystem система счисления.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
 	 */
 	@NotNull
 	public static String getSpecial(@NotNull final Numerable numeralSystem, final int length)
@@ -455,6 +471,8 @@ public final class StringRand
 	 * @param numeralSystem система счисления.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
 	 */
 	@NotNull
 	public static String getSpecial(@NotNull final Alphabet alphabet,
@@ -474,6 +492,8 @@ public final class StringRand
 	 * @param numeralSystem система счисления.
 	 * @param length количество символов в возвращаемой строке.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
 	 */
 	@NotNull
 	public static String getSpecial(@NotNull final Alphabetical alphabet,
@@ -499,6 +519,7 @@ public final class StringRand
 	 * @param length количество символов в возвращаемой строке.
 	 * @param symbols символы из которых должна состоять строка.
 	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code symbols} передан {@code null}.
 	 */
 	@NotNull
 	public static String get(final int length, @NotNull final List<@NotNull Character> symbols)
