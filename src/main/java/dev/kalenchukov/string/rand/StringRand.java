@@ -34,7 +34,7 @@ import org.jetbrains.annotations.Unmodifiable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Класс содержит статические методы для получения строк случайных символов.
@@ -529,12 +529,10 @@ public final class StringRand
 		final StringBuilder string = new StringBuilder();
 
 		if (!symbols.isEmpty()) {
-			final Random random = new Random();
+			for (int i = 0; i < length; i++) {
+				int rndPosition = ThreadLocalRandom.current().nextInt(symbols.size());
 
-			for (int l = 0; l < length; l++) {
-				int position = random.nextInt(symbols.size());
-
-				string.append(symbols.get(position));
+				string.append(symbols.get(rndPosition));
 			}
 		}
 
