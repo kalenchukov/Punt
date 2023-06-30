@@ -31,9 +31,7 @@ import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Unmodifiable;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -537,5 +535,56 @@ public final class StringRand
 		}
 
 		return string.toString();
+	}
+
+	/**
+	 * Класс строителя {@code StringRand}.
+	 *
+	 * @author Алексей Каленчуков
+	 */
+	public static final class Builder
+	{
+		/**
+		 * Коллекция символов из которых будет формироваться строка.
+		 */
+		@NotNull
+		private final List<@NotNull Character> symbols;
+
+		/**
+		 * Конструктор для {@code Builder}.
+		 */
+		public Builder()
+		{
+			this.symbols = new ArrayList<>();
+		}
+
+		/**
+		 * Устанавливает персональные символы.
+		 *
+		 * @param symbols символы из которых должна состоять строка.
+		 * @return текущий объект.
+		 * @throws NullPointerException если в качестве {@code symbols} передан {@code null}.
+		 */
+		@NotNull
+		public StringRand.Builder personal(@NotNull final List<@NotNull Character> symbols)
+		{
+			Objects.requireNonNull(symbols);
+
+			this.symbols.addAll(symbols);
+
+			return this;
+		}
+
+		/**
+		 * Возвращает сгенерированную строку из указанных наборов символов.
+		 *
+		 * @param length количество символов в возвращаемой строке.
+		 * @return строку со случайным порядком символов.
+		 */
+		@NotNull
+		public String build(final int length)
+		{
+			return StringRand.get(length, this.symbols);
+		}
 	}
 }

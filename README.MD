@@ -7,6 +7,10 @@
 ```java
 StringRand.get(10, List.of('0', '2', '4', '6', '8'));
 ```
+или
+```java
+new StringRand.Builder().personal(List.of('0', '2', '4', '6', '8')).build(10);
+```
 
 Результат выполнения:
 ```

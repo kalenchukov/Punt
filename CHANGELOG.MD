@@ -2,6 +2,7 @@
 ## vX.X.X - XX.XX.XXXX
 ### Добавлено
 * Добавлен модуль assertj-core версии 3.24.2.
+* Добавлен класс StringRand.Builder.
 
 ### Изменено
 *

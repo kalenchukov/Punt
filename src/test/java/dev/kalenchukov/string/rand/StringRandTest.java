@@ -33,6 +33,7 @@ import dev.kalenchukov.numeralsystem.BinarySystem;
 import dev.kalenchukov.numeralsystem.Numerable;
 import dev.kalenchukov.numeralsystem.QuaternarySystem;
 import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -460,5 +461,29 @@ public class StringRandTest
 		boolean actual = string.matches("[\\\\0-3а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
 		assertThat(actual).isTrue();
+	}
+
+	/**
+	 * Класс проверки методов класса {@link StringRand.Builder}.
+	 *
+	 * @author Алексей Каленчуков
+	 */
+	@Nested
+	public class Builder
+	{
+		/**
+		 * Проверка метода {@link StringRand.Builder#personal(List)}.
+		 */
+		@Test
+		public void personal()
+		{
+			List<Character> symbols = List.of('0', '2', '4', '6', '8');
+
+			String actualString = new StringRand.Builder()
+				.personal(symbols)
+				.build(10);
+
+			assertThat(actualString).containsPattern("[02468]{10}");
+		}
 	}
 }
