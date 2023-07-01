@@ -13,7 +13,6 @@
 * Метод StringRand.Builder.duodecimal().
 * Метод StringRand.Builder.hex().
 
-* Метод StringRand.Builder.alpha().
 * Метод StringRand.Builder.alpha(Alphabetical).
 
 * Метод StringRand.Builder.special().

@@ -135,6 +135,10 @@ StringRand.getAlphaUpper(new RussianAlphabet.UpperCase(), 10);
 ```java
 StringRand.getAlpha(10);
 ```
+или
+```java
+new StringRand.Builder().alpha().build(10);
+```
 
 Результат выполнения:
 ```

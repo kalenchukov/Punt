@@ -589,6 +589,19 @@ public final class StringRand
 		}
 
 		/**
+		 * Устанавливает буквы английского алфавита.
+		 *
+		 * @return текущий объект.
+		 */
+		@NotNull
+		public StringRand.Builder alpha()
+		{
+			this.symbols.addAll(new EnglishAlphabet().toList());
+
+			return this;
+		}
+
+		/**
 		 * Возвращает сгенерированную строку из указанных наборов символов.
 		 *
 		 * @param length количество символов в возвращаемой строке.

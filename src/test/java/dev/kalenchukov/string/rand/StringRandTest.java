@@ -498,5 +498,18 @@ public class StringRandTest
 
 			assertThat(actualString).containsPattern("[0123456789]{13}");
 		}
+
+		/**
+		 * Проверка метода {@link StringRand.Builder#alpha()}.
+		 */
+		@Test
+		public void alpha()
+		{
+			String actualString = new StringRand.Builder()
+					.alpha()
+					.build(13);
+
+			assertThat(actualString).containsPattern("[a-zA-Z]{13}");
+		}
 	}
 }
