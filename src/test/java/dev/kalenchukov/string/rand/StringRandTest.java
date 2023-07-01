@@ -178,12 +178,12 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getHex(int)}.
+	 * Проверка метода {@link StringRand#getHexadecimal(int)}.
 	 */
 	@Test
-	public void getHex()
+	public void getHexadecimal()
 	{
-		String string = StringRand.getHex(10);
+		String string = StringRand.getHexadecimal(10);
 
 		boolean actual = string.matches("[0-9A-F]{10}");
 

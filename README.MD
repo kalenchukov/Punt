@@ -112,7 +112,7 @@ new StringRand.Builder().duodecimal().build(10);
 
 #### Возвращает строку из цифр шестнадцатеричной системы счисления
 ```java
-StringRand.getHex(10);
+StringRand.getHexadecimal(10);
 ```
 или
 ```java

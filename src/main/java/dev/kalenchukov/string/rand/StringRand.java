@@ -56,7 +56,7 @@ public final class StringRand
 	 */
 	@NotNull
 	@Unmodifiable
-	private static final List<@NotNull Character> SPECIAL = List.of(
+	private static final Collection<@NotNull Character> SPECIAL = Set.of(
 		'!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
 		'-', '_', '+', '=', ';', ':', ',', '\'', '.', '/', '?',
 		'\\', '|', '`', '~', '[', ']', '{', '}', '"', '<', '>'
@@ -146,7 +146,7 @@ public final class StringRand
 	 * @return строку со случайным порядком символов.
 	 */
 	@NotNull
-	public static String getHex(final int length)
+	public static String getHexadecimal(final int length)
 	{
 		return StringRand.get(length, HexadecimalSystem.DIGITS);
 	}
@@ -383,7 +383,7 @@ public final class StringRand
 	@NotNull
 	public static String getSpecial(final int length)
 	{
-		return StringRand.get(length, SPECIAL);
+		return StringRand.get(length, List.copyOf(SPECIAL));
 	}
 
 	/**
@@ -548,14 +548,14 @@ public final class StringRand
 		 * Коллекция символов из которых будет формироваться строка.
 		 */
 		@NotNull
-		private final List<@NotNull Character> symbols;
+		private final Set<@NotNull Character> symbols;
 
 		/**
 		 * Конструктор для {@code Builder}.
 		 */
 		public Builder()
 		{
-			this.symbols = new ArrayList<>();
+			this.symbols = new HashSet<>();
 		}
 
 		/**
@@ -566,7 +566,7 @@ public final class StringRand
 		 * @throws NullPointerException если в качестве {@code symbols} передан {@code null}.
 		 */
 		@NotNull
-		public StringRand.Builder personal(@NotNull final List<@NotNull Character> symbols)
+		public StringRand.Builder personal(@NotNull final Collection<@NotNull Character> symbols)
 		{
 			Objects.requireNonNull(symbols);
 
@@ -749,7 +749,7 @@ public final class StringRand
 		@NotNull
 		public String build(final int length)
 		{
-			return StringRand.get(length, this.symbols);
+			return StringRand.get(length, List.copyOf(this.symbols));
 		}
 	}
 }
