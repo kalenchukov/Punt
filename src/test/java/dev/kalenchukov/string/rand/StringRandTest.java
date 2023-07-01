@@ -175,7 +175,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Класс проверки метода {@link StringRand#getPersonal(int, List)}.
+	 * Класс проверки метода {@link StringRand#getPersonal(int, Collection)}.
 	 *
 	 * @author Алексей Каленчуков
 	 */
@@ -183,7 +183,7 @@ public class StringRandTest
 	public class GetPersonal
 	{
 		/**
-		 * Проверка метода {@link StringRand#getPersonal(int, List)}.
+		 * Проверка метода {@link StringRand#getPersonal(int, Collection)}.
 		 */
 		@Test
 		public void getPersonal()
@@ -196,7 +196,7 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getPersonal(int, List)} с указанием белых символов.
+		 * Проверка метода {@link StringRand#getPersonal(int, Collection)} с указанием белых символов.
 		 */
 		@Test
 		public void getPersonalWhitespace()
@@ -209,7 +209,7 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getPersonal(int, List)} без указания символов.
+		 * Проверка метода {@link StringRand#getPersonal(int, Collection)} без указания символов.
 		 */
 		@Test
 		public void getPersonalEmpty()
@@ -222,7 +222,7 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getPersonal(int, List)} с указанием одного символа.
+		 * Проверка метода {@link StringRand#getPersonal(int, Collection)} с указанием одного символа.
 		 */
 		@Test
 		public void getPersonalOneSymbol()
@@ -235,7 +235,7 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getPersonal(int, List)} с {@code null}.
+		 * Проверка метода {@link StringRand#getPersonal(int, Collection)} с {@code null}.
 		 */
 		@Test
 		public void getPersonalNull()
