@@ -100,6 +100,10 @@ new StringRand.Builder().digit().build(10);
 ```java
 StringRand.getDuodecimal(10);
 ```
+или
+```java
+new StringRand.Builder().duodecimal().build(10);
+```
 
 Результат выполнения:
 ```

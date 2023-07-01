@@ -552,6 +552,19 @@ public class StringRandTest
 		}
 
 		/**
+		 * Проверка метода {@link StringRand.Builder#duodecimal()}.
+		 */
+		@Test
+		public void duodecimal()
+		{
+			String actualString = new StringRand.Builder()
+					.duodecimal()
+					.build(12);
+
+			assertThat(actualString).containsPattern("[0123456789AB]{12}");
+		}
+
+		/**
 		 * Проверка метода {@link StringRand.Builder#digit()}.
 		 */
 		@Test

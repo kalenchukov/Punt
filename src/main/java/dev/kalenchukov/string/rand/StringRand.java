@@ -641,6 +641,19 @@ public final class StringRand
 		}
 
 		/**
+		 * Устанавливает цифры двенадцатеричной системы счисления.
+		 *
+		 * @return текущий объект.
+		 */
+		@NotNull
+		public StringRand.Builder duodecimal()
+		{
+			this.symbols.addAll(new DuodecimalSystem().toList());
+
+			return this;
+		}
+
+		/**
 		 * Устанавливает цифры десятичной системы счисления.
 		 *
 		 * @return текущий объект.

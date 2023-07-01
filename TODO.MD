@@ -3,7 +3,6 @@
 * Метод StringRand.Builder.personal(char[]).
 * Метод StringRand.Builder.personal(char...).
 
-* Метод StringRand.Builder.duodecimal().
 * Метод StringRand.Builder.hex().
 
 ## Можно сделать
