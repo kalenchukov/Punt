@@ -25,13 +25,9 @@
 package dev.kalenchukov.string.rand;
 
 import dev.kalenchukov.alphabet.Alphabetical;
-import dev.kalenchukov.alphabet.AlphabeticalUpperCase;
 import dev.kalenchukov.alphabet.RussianAlphabet;
-import dev.kalenchukov.alphabet.resources.Alphabet;
 import dev.kalenchukov.numeralsystem.BinarySystem;
 import dev.kalenchukov.numeralsystem.Numerable;
-import dev.kalenchukov.numeralsystem.QuaternarySystem;
-import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
@@ -49,12 +45,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class StringRandTest
 {
 	/**
-	 * Проверка метода {@link StringRand#get(int, List)}.
+	 * Проверка метода {@link StringRand#getPersonal(int, List)}.
 	 */
 	@Test
-	public void get()
+	public void getPersonal()
 	{
-		String string = StringRand.get(10, List.of('0', '2', '4', '6', '8'));
+		String string = StringRand.getPersonal(10, List.of('0', '2', '4', '6', '8'));
 
 		boolean actual = string.matches("[02468]{10}");
 
@@ -62,12 +58,12 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#get(int, List)} с указанием белых символов.
+	 * Проверка метода {@link StringRand#getPersonal(int, List)} с указанием белых символов.
 	 */
 	@Test
 	public void getWhitespace()
 	{
-		String string = StringRand.get(10, List.of('\t', '\n', '\r', ' '));
+		String string = StringRand.getPersonal(10, List.of('\t', '\n', '\r', ' '));
 
 		boolean actual = string.matches("[\\t\\n\\f\\r\\s]{10}");
 
@@ -75,12 +71,12 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#get(int, List)} без указания символов.
+	 * Проверка метода {@link StringRand#getPersonal(int, List)} без указания символов.
 	 */
 	@Test
 	public void getEmpty()
 	{
-		String string = StringRand.get(10, List.of());
+		String string = StringRand.getPersonal(10, List.of());
 
 		boolean actual = string.isEmpty();
 
@@ -88,12 +84,12 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#get(int, List)} с указанием одного символа.
+	 * Проверка метода {@link StringRand#getPersonal(int, List)} с указанием одного символа.
 	 */
 	@Test
 	public void getOneSymbol()
 	{
-		String string = StringRand.get(10, List.of('.'));
+		String string = StringRand.getPersonal(10, List.of('.'));
 
 		boolean actual = string.matches("\\.{10}");
 

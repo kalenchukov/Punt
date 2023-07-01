@@ -6,6 +6,7 @@
 
 ### Изменено
 * Переименован метод StringRand.getHex(int) -> StringRand.getHexadecimal(int).
+* Переименован метод StringRand.get(int, List) -> StringRand.getPersonal(int, List).
 *
 
 ### Исправлено

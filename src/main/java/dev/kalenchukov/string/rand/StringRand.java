@@ -25,9 +25,7 @@
 package dev.kalenchukov.string.rand;
 
 import dev.kalenchukov.alphabet.*;
-import dev.kalenchukov.alphabet.resources.Alphabet;
 import dev.kalenchukov.numeralsystem.*;
-import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Unmodifiable;
 
@@ -76,7 +74,7 @@ public final class StringRand
 	@NotNull
 	public static String getBinary(final int length)
 	{
-		return StringRand.get(length, BinarySystem.DIGITS);
+		return StringRand.getPersonal(length, BinarySystem.DIGITS);
 	}
 
 	/**
@@ -88,7 +86,7 @@ public final class StringRand
 	@NotNull
 	public static String getTernary(final int length)
 	{
-		return StringRand.get(length, TernarySystem.DIGITS);
+		return StringRand.getPersonal(length, TernarySystem.DIGITS);
 	}
 
 	/**
@@ -100,7 +98,7 @@ public final class StringRand
 	@NotNull
 	public static String getQuaternary(final int length)
 	{
-		return StringRand.get(length, QuaternarySystem.DIGITS);
+		return StringRand.getPersonal(length, QuaternarySystem.DIGITS);
 	}
 
 	/**
@@ -112,7 +110,7 @@ public final class StringRand
 	@NotNull
 	public static String getOctal(final int length)
 	{
-		return StringRand.get(length, OctalSystem.DIGITS);
+		return StringRand.getPersonal(length, OctalSystem.DIGITS);
 	}
 
 	/**
@@ -124,7 +122,7 @@ public final class StringRand
 	@NotNull
 	public static String getDecimal(final int length)
 	{
-		return StringRand.get(length, DecimalSystem.DIGITS);
+		return StringRand.getPersonal(length, DecimalSystem.DIGITS);
 	}
 
 	/**
@@ -136,7 +134,7 @@ public final class StringRand
 	@NotNull
 	public static String getDuodecimal(final int length)
 	{
-		return StringRand.get(length, DuodecimalSystem.DIGITS);
+		return StringRand.getPersonal(length, DuodecimalSystem.DIGITS);
 	}
 
 	/**
@@ -148,7 +146,7 @@ public final class StringRand
 	@NotNull
 	public static String getHexadecimal(final int length)
 	{
-		return StringRand.get(length, HexadecimalSystem.DIGITS);
+		return StringRand.getPersonal(length, HexadecimalSystem.DIGITS);
 	}
 
 	/**
@@ -160,7 +158,7 @@ public final class StringRand
 	@NotNull
 	public static String getAlpha(final int length)
 	{
-		return StringRand.get(length, new EnglishAlphabet().toList());
+		return StringRand.getPersonal(length, new EnglishAlphabet().toList());
 	}
 
 	/**
@@ -172,7 +170,7 @@ public final class StringRand
 	@NotNull
 	public static String getSpecial(final int length)
 	{
-		return StringRand.get(length, List.copyOf(SPECIAL));
+		return StringRand.getPersonal(length, List.copyOf(SPECIAL));
 	}
 
 	/**
@@ -184,7 +182,7 @@ public final class StringRand
 	 * @throws NullPointerException если в качестве {@code symbols} передан {@code null}.
 	 */
 	@NotNull
-	public static String get(final int length, @NotNull final List<@NotNull Character> symbols)
+	public static String getPersonal(final int length, @NotNull final List<@NotNull Character> symbols)
 	{
 		Objects.requireNonNull(symbols);
 
@@ -413,7 +411,7 @@ public final class StringRand
 		@NotNull
 		public String build(final int length)
 		{
-			return StringRand.get(length, List.copyOf(this.symbols));
+			return StringRand.getPersonal(length, List.copyOf(this.symbols));
 		}
 	}
 }
