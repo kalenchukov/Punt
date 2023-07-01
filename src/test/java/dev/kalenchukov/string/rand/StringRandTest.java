@@ -192,19 +192,6 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getAlphaUpper(int)}.
-	 */
-	@Test
-	public void getAlphaUpper()
-	{
-		String string = StringRand.getAlphaUpper(10);
-
-		boolean actual = string.matches("[A-Z]{10}");
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
 	 * Проверка метода {@link StringRand#getAlpha(int)}.
 	 */
 	@Test

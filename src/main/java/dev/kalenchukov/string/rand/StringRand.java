@@ -152,18 +152,6 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из прописных букв английского алфавита.
-	 *
-	 * @param length количество символов в возвращаемой строке.
-	 * @return строку со случайным порядком символов.
-	 */
-	@NotNull
-	public static String getAlphaUpper(final int length)
-	{
-		return StringRand.get(length, EnglishAlphabet.UpperCase.LETTERS);
-	}
-
-	/**
 	 * Возвращает строку из букв английского алфавита.
 	 *
 	 * @param length количество символов в возвращаемой строке.
