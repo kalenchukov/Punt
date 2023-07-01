@@ -35,7 +35,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 
 /**
  * Класс проверки методов класса {@link StringRand}.
@@ -232,6 +232,17 @@ public class StringRandTest
 			boolean actual = string.matches("\\.{10}");
 
 			assertThat(actual).isTrue();
+		}
+
+		/**
+		 * Проверка метода {@link StringRand#getPersonal(int, List)} с {@code null}.
+		 */
+		@Test
+		public void getPersonalNull()
+		{
+			assertThatExceptionOfType(NullPointerException.class).isThrownBy(() -> {
+				StringRand.getPersonal(10, null);
+			});
 		}
 	}
 
