@@ -68,6 +68,11 @@ new StringRand.Builder().quaternary().build(10);
 ```java
 StringRand.getOctal(10);
 ```
+или
+```java
+new StringRand.Builder().octal().build(10);
+```
+
 Результат выполнения:
 ```
 3154202146

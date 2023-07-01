@@ -615,6 +615,19 @@ public final class StringRand
 		}
 
 		/**
+		 * Устанавливает цифры восьмеричной системы счисления.
+		 *
+		 * @return текущий объект.
+		 */
+		@NotNull
+		public StringRand.Builder octal()
+		{
+			this.symbols.addAll(new OctalSystem().toList());
+
+			return this;
+		}
+
+		/**
 		 * Устанавливает цифры десятичной системы счисления.
 		 *
 		 * @return текущий объект.

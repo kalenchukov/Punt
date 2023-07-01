@@ -526,6 +526,19 @@ public class StringRandTest
 		}
 
 		/**
+		 * Проверка метода {@link StringRand.Builder#octal()}.
+		 */
+		@Test
+		public void octal()
+		{
+			String actualString = new StringRand.Builder()
+					.octal()
+					.build(12);
+
+			assertThat(actualString).containsPattern("[01234567]{12}");
+		}
+
+		/**
 		 * Проверка метода {@link StringRand.Builder#digit()}.
 		 */
 		@Test
