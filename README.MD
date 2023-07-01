@@ -134,16 +134,6 @@ StringRand.getAlphaLower(10);
 wpcejmhmos
 ```
 
-#### Возвращает строку из строчных букв алфавита
-```java
-StringRand.getAlphaLower(new RussianAlphabet.LowerCase(), 10);
-```
-
-Результат выполнения:
-```
-эвъзнзиыле
-```
-
 #### Возвращает строку из прописных букв английского алфавита
 ```java
 StringRand.getAlphaUpper(10);

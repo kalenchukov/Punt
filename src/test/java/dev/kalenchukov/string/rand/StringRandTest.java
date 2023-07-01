@@ -25,7 +25,6 @@
 package dev.kalenchukov.string.rand;
 
 import dev.kalenchukov.alphabet.Alphabetical;
-import dev.kalenchukov.alphabet.AlphabeticalLowerCase;
 import dev.kalenchukov.alphabet.AlphabeticalUpperCase;
 import dev.kalenchukov.alphabet.RussianAlphabet;
 import dev.kalenchukov.alphabet.resources.Alphabet;
@@ -36,7 +35,9 @@ import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -199,19 +200,6 @@ public class StringRandTest
 		String string = StringRand.getAlphaLower(10);
 
 		boolean actual = string.matches("[a-z]{10}");
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link StringRand#getAlphaLower(AlphabeticalLowerCase, int)}.
-	 */
-	@Test
-	public void getAlphaLowerAlphabet()
-	{
-		String string = StringRand.getAlphaLower(new RussianAlphabet.LowerCase(), 10);
-
-		boolean actual = string.matches("[а-яё]{10}");
 
 		assertThat(actual).isTrue();
 	}
@@ -472,12 +460,12 @@ public class StringRandTest
 	public class Builder
 	{
 		/**
-		 * Проверка метода {@link StringRand.Builder#personal(List)}.
+		 * Проверка метода {@link StringRand.Builder#personal(Collection)}.
 		 */
 		@Test
 		public void personal()
 		{
-			List<Character> symbols = List.of('0', '2', '4', '6', '8');
+			Set<Character> symbols = Set.of('0', '2', '4', '6', '8');
 
 			String actualString = new StringRand.Builder()
 				.personal(symbols)

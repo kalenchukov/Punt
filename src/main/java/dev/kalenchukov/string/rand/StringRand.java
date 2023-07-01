@@ -164,22 +164,6 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из строчных букв алфавита.
-	 *
-	 * @param alphabet алфавит строчных букв.
-	 * @param length количество символов в возвращаемой строке.
-	 * @return строку со случайным порядком символов.
-	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
-	 */
-	@NotNull
-	public static String getAlphaLower(@NotNull final AlphabeticalLowerCase alphabet, final int length)
-	{
-		Objects.requireNonNull(alphabet);
-
-		return StringRand.get(length, alphabet.toList());
-	}
-
-	/**
 	 * Возвращает строку из прописных букв английского алфавита.
 	 *
 	 * @param length количество символов в возвращаемой строке.

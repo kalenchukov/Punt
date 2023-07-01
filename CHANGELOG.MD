@@ -12,7 +12,7 @@
 *
 
 ### Удалено
-*
+* Удалён метод метод StringRand.getAlphaLower(AlphabeticalLowerCase, int).
 
 ## v1.12.0 - 15.05.2023
 ### Добавлено
