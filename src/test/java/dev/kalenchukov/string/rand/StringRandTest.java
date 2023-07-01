@@ -45,58 +45,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class StringRandTest
 {
 	/**
-	 * Проверка метода {@link StringRand#getPersonal(int, List)}.
-	 */
-	@Test
-	public void getPersonal()
-	{
-		String string = StringRand.getPersonal(10, List.of('0', '2', '4', '6', '8'));
-
-		boolean actual = string.matches("[02468]{10}");
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link StringRand#getPersonal(int, List)} с указанием белых символов.
-	 */
-	@Test
-	public void getWhitespace()
-	{
-		String string = StringRand.getPersonal(10, List.of('\t', '\n', '\r', ' '));
-
-		boolean actual = string.matches("[\\t\\n\\f\\r\\s]{10}");
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link StringRand#getPersonal(int, List)} без указания символов.
-	 */
-	@Test
-	public void getEmpty()
-	{
-		String string = StringRand.getPersonal(10, List.of());
-
-		boolean actual = string.isEmpty();
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link StringRand#getPersonal(int, List)} с указанием одного символа.
-	 */
-	@Test
-	public void getOneSymbol()
-	{
-		String string = StringRand.getPersonal(10, List.of('.'));
-
-		boolean actual = string.matches("\\.{10}");
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
 	 * Проверка метода {@link StringRand#getDigit(int)}.
 	 */
 	@Test
@@ -224,6 +172,67 @@ public class StringRandTest
 		boolean actual = string.matches("[\\\\!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
 		assertThat(actual).isTrue();
+	}
+
+	/**
+	 * Класс проверки метода {@link StringRand#getPersonal(int, List)}.
+	 *
+	 * @author Алексей Каленчуков
+	 */
+	@Nested
+	public class GetPersonal
+	{
+		/**
+		 * Проверка метода {@link StringRand#getPersonal(int, List)}.
+		 */
+		@Test
+		public void getPersonal()
+		{
+			String string = StringRand.getPersonal(10, List.of('0', '2', '4', '6', '8'));
+
+			boolean actual = string.matches("[02468]{10}");
+
+			assertThat(actual).isTrue();
+		}
+
+		/**
+		 * Проверка метода {@link StringRand#getPersonal(int, List)} с указанием белых символов.
+		 */
+		@Test
+		public void getPersonalWhitespace()
+		{
+			String string = StringRand.getPersonal(10, List.of('\t', '\n', '\r', ' '));
+
+			boolean actual = string.matches("[\\t\\n\\f\\r\\s]{10}");
+
+			assertThat(actual).isTrue();
+		}
+
+		/**
+		 * Проверка метода {@link StringRand#getPersonal(int, List)} без указания символов.
+		 */
+		@Test
+		public void getPersonalEmpty()
+		{
+			String string = StringRand.getPersonal(10, List.of());
+
+			boolean actual = string.isEmpty();
+
+			assertThat(actual).isTrue();
+		}
+
+		/**
+		 * Проверка метода {@link StringRand#getPersonal(int, List)} с указанием одного символа.
+		 */
+		@Test
+		public void getPersonalOneSymbol()
+		{
+			String string = StringRand.getPersonal(10, List.of('.'));
+
+			boolean actual = string.matches("\\.{10}");
+
+			assertThat(actual).isTrue();
+		}
 	}
 
 	/**

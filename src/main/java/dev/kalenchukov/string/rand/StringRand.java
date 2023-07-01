@@ -74,7 +74,7 @@ public final class StringRand
 	@NotNull
 	public static String getBinary(final int length)
 	{
-		return StringRand.getPersonal(length, BinarySystem.DIGITS);
+		return StringRand.generate(length, BinarySystem.DIGITS);
 	}
 
 	/**
@@ -86,7 +86,7 @@ public final class StringRand
 	@NotNull
 	public static String getTernary(final int length)
 	{
-		return StringRand.getPersonal(length, TernarySystem.DIGITS);
+		return StringRand.generate(length, TernarySystem.DIGITS);
 	}
 
 	/**
@@ -98,7 +98,7 @@ public final class StringRand
 	@NotNull
 	public static String getQuaternary(final int length)
 	{
-		return StringRand.getPersonal(length, QuaternarySystem.DIGITS);
+		return StringRand.generate(length, QuaternarySystem.DIGITS);
 	}
 
 	/**
@@ -110,7 +110,7 @@ public final class StringRand
 	@NotNull
 	public static String getOctal(final int length)
 	{
-		return StringRand.getPersonal(length, OctalSystem.DIGITS);
+		return StringRand.generate(length, OctalSystem.DIGITS);
 	}
 
 	/**
@@ -122,7 +122,7 @@ public final class StringRand
 	@NotNull
 	public static String getDecimal(final int length)
 	{
-		return StringRand.getPersonal(length, DecimalSystem.DIGITS);
+		return StringRand.generate(length, DecimalSystem.DIGITS);
 	}
 
 	/**
@@ -134,7 +134,7 @@ public final class StringRand
 	@NotNull
 	public static String getDuodecimal(final int length)
 	{
-		return StringRand.getPersonal(length, DuodecimalSystem.DIGITS);
+		return StringRand.generate(length, DuodecimalSystem.DIGITS);
 	}
 
 	/**
@@ -146,7 +146,7 @@ public final class StringRand
 	@NotNull
 	public static String getHexadecimal(final int length)
 	{
-		return StringRand.getPersonal(length, HexadecimalSystem.DIGITS);
+		return StringRand.generate(length, HexadecimalSystem.DIGITS);
 	}
 
 	/**
@@ -158,7 +158,7 @@ public final class StringRand
 	@NotNull
 	public static String getAlpha(final int length)
 	{
-		return StringRand.getPersonal(length, new EnglishAlphabet().toList());
+		return StringRand.generate(length, new EnglishAlphabet().toList());
 	}
 
 	/**
@@ -170,7 +170,7 @@ public final class StringRand
 	@NotNull
 	public static String getDigit(final int length)
 	{
-		return StringRand.getPersonal(length, new DecimalSystem().toList());
+		return StringRand.generate(length, new DecimalSystem().toList());
 	}
 
 	/**
@@ -182,11 +182,11 @@ public final class StringRand
 	@NotNull
 	public static String getSpecial(final int length)
 	{
-		return StringRand.getPersonal(length, List.copyOf(SPECIAL));
+		return StringRand.generate(length, List.copyOf(SPECIAL));
 	}
 
 	/**
-	 * Возвращает строку из указанных наборов символов.
+	 * Возвращает строку из указанных символов.
 	 *
 	 * @param length количество символов в возвращаемой строке.
 	 * @param symbols символы из которых должна состоять строка.
@@ -195,6 +195,22 @@ public final class StringRand
 	 */
 	@NotNull
 	public static String getPersonal(final int length, @NotNull final List<@NotNull Character> symbols)
+	{
+		Objects.requireNonNull(symbols);
+
+		return StringRand.generate(length, symbols);
+	}
+
+	/**
+	 * Генерирует строку из указанных символов.
+	 *
+	 * @param length количество символов в возвращаемой строке.
+	 * @param symbols символы из которых должна состоять строка.
+	 * @return строку со случайным порядком символов.
+	 * @throws NullPointerException если в качестве {@code symbols} передан {@code null}.
+	 */
+	@NotNull
+	private static String generate(final int length, @NotNull final List<@NotNull Character> symbols)
 	{
 		Objects.requireNonNull(symbols);
 
@@ -423,7 +439,7 @@ public final class StringRand
 		@NotNull
 		public String build(final int length)
 		{
-			return StringRand.getPersonal(length, List.copyOf(this.symbols));
+			return StringRand.generate(length, List.copyOf(this.symbols));
 		}
 	}
 }
