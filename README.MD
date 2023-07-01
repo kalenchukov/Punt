@@ -21,6 +21,10 @@ new StringRand.Builder().personal(List.of('0', '2', '4', '6', '8')).build(10);
 ```java
 StringRand.getBinary(10);
 ```
+или
+```java
+new StringRand.Builder().digit(new BinarySystem()).build(10);
+```
 
 Результат выполнения:
 ```

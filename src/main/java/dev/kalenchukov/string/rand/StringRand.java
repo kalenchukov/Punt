@@ -589,6 +589,23 @@ public final class StringRand
 		}
 
 		/**
+		 * Устанавливает цифры системы счисления.
+		 *
+		 * @param numeralSystem система счисления.
+		 * @return текущий объект.
+		 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
+		 */
+		@NotNull
+		public StringRand.Builder digit(@NotNull final Numerable numeralSystem)
+		{
+			Objects.requireNonNull(numeralSystem);
+
+			this.symbols.addAll(numeralSystem.toList());
+
+			return this;
+		}
+
+		/**
 		 * Устанавливает буквы английского алфавита.
 		 *
 		 * @return текущий объект.

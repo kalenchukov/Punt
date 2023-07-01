@@ -500,6 +500,19 @@ public class StringRandTest
 		}
 
 		/**
+		 * Проверка метода {@link StringRand.Builder#digit(Numerable)}.
+		 */
+		@Test
+		public void digitNumeralSystem()
+		{
+			String actualString = new StringRand.Builder()
+					.digit(new BinarySystem())
+					.build(8);
+
+			assertThat(actualString).containsPattern("[01]{8}");
+		}
+
+		/**
 		 * Проверка метода {@link StringRand.Builder#alpha()}.
 		 */
 		@Test
