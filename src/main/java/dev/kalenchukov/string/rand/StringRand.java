@@ -576,6 +576,19 @@ public final class StringRand
 		}
 
 		/**
+		 * Устанавливает цифры двоичной системы счисления.
+		 *
+		 * @return текущий объект.
+		 */
+		@NotNull
+		public StringRand.Builder binary()
+		{
+			this.symbols.addAll(new BinarySystem().toList());
+
+			return this;
+		}
+
+		/**
 		 * Устанавливает цифры десятичной системы счисления.
 		 *
 		 * @return текущий объект.

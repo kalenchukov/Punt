@@ -23,6 +23,10 @@ StringRand.getBinary(10);
 ```
 или
 ```java
+new StringRand.Builder().binary().build(10);
+```
+или
+```java
 new StringRand.Builder().digit(new BinarySystem()).build(10);
 ```
 
