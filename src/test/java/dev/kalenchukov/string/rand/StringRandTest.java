@@ -539,6 +539,19 @@ public class StringRandTest
 		}
 
 		/**
+		 * Проверка метода {@link StringRand.Builder#decimal()}.
+		 */
+		@Test
+		public void decimal()
+		{
+			String actualString = new StringRand.Builder()
+					.decimal()
+					.build(10);
+
+			assertThat(actualString).containsPattern("[0123456789]{10}");
+		}
+
+		/**
 		 * Проверка метода {@link StringRand.Builder#digit()}.
 		 */
 		@Test

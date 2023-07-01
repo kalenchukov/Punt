@@ -84,6 +84,10 @@ StringRand.getDecimal(10);
 ```
 или
 ```java
+new StringRand.Builder().decimal().build(10);
+```
+или
+```java
 new StringRand.Builder().digit().build(10);
 ```
 

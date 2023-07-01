@@ -628,6 +628,19 @@ public final class StringRand
 		}
 
 		/**
+		 * Устанавливает цифры десятеричной системы счисления.
+		 *
+		 * @return текущий объект.
+		 */
+		@NotNull
+		public StringRand.Builder decimal()
+		{
+			this.symbols.addAll(new DecimalSystem().toList());
+
+			return this;
+		}
+
+		/**
 		 * Устанавливает цифры десятичной системы счисления.
 		 *
 		 * @return текущий объект.
