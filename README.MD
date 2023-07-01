@@ -61,6 +61,10 @@ StringRand.getOctal(10);
 ```java
 StringRand.getDecimal(10);
 ```
+или
+```java
+new StringRand.Builder().digit().build(10);
+```
 
 Результат выполнения:
 ```

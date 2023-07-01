@@ -485,5 +485,18 @@ public class StringRandTest
 
 			assertThat(actualString).containsPattern("[02468]{10}");
 		}
+
+		/**
+		 * Проверка метода {@link StringRand.Builder#digit()}.
+		 */
+		@Test
+		public void digit()
+		{
+			String actualString = new StringRand.Builder()
+					.digit()
+					.build(13);
+
+			assertThat(actualString).containsPattern("[0123456789]{13}");
+		}
 	}
 }

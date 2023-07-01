@@ -3,7 +3,6 @@
 * Метод StringRand.Builder.personal(char[]).
 * Метод StringRand.Builder.personal(char...).
 
-* Метод StringRand.Builder.digit().
 * Метод StringRand.Builder.digit(Numerable).
 
 * Метод StringRand.Builder.binary().

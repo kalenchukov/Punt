@@ -576,6 +576,19 @@ public final class StringRand
 		}
 
 		/**
+		 * Устанавливает цифры десятичной системы счисления.
+		 *
+		 * @return текущий объект.
+		 */
+		@NotNull
+		public StringRand.Builder digit()
+		{
+			this.symbols.addAll(new DecimalSystem().toList());
+
+			return this;
+		}
+
+		/**
 		 * Возвращает сгенерированную строку из указанных наборов символов.
 		 *
 		 * @param length количество символов в возвращаемой строке.
