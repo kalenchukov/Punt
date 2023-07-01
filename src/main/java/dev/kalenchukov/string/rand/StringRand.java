@@ -162,6 +162,18 @@ public final class StringRand
 	}
 
 	/**
+	 * Возвращает строку из цифр десятеричной системы счисления.
+	 *
+	 * @param length количество символов в возвращаемой строке.
+	 * @return строку со случайным порядком символов.
+	 */
+	@NotNull
+	public static String getDigit(final int length)
+	{
+		return StringRand.getPersonal(length, new DecimalSystem().toList());
+	}
+
+	/**
 	 * Возвращает строку из специальных символов.
 	 *
 	 * @param length количество символов в возвращаемой строке.

@@ -97,6 +97,19 @@ public class StringRandTest
 	}
 
 	/**
+	 * Проверка метода {@link StringRand#getDigit(int)}.
+	 */
+	@Test
+	public void getDigit()
+	{
+		String string = StringRand.getDigit(10);
+
+		boolean actual = string.matches("[0-9]{10}");
+
+		assertThat(actual).isTrue();
+	}
+
+	/**
 	 * Проверка метода {@link StringRand#getBinary(int)}.
 	 */
 	@Test

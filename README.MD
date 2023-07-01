@@ -17,6 +17,20 @@ new StringRand.Builder().personal(List.of('0', '2', '4', '6', '8')).build(10);
 8206484266
 ```
 
+#### Возвращает строку из специальных символов
+```java
+StringRand.getSpecial(10);
+```
+или
+```java
+new StringRand.Builder().special().build(10);
+```
+
+Результат выполнения:
+```
+)"#{]=//&~
+```
+
 #### Возвращает строку из цифр двоичной системы счисления
 ```java
 StringRand.getBinary(10);
@@ -24,10 +38,6 @@ StringRand.getBinary(10);
 или
 ```java
 new StringRand.Builder().binary().build(10);
-```
-или
-```java
-new StringRand.Builder().digit(new BinarySystem()).build(10);
 ```
 
 Результат выполнения:
@@ -86,10 +96,6 @@ StringRand.getDecimal(10);
 ```java
 new StringRand.Builder().decimal().build(10);
 ```
-или
-```java
-new StringRand.Builder().digit().build(10);
-```
 
 Результат выполнения:
 ```
@@ -124,6 +130,20 @@ new StringRand.Builder().hexadecimal().build(10);
 BFB76A59D4
 ```
 
+#### Возвращает строку из цифр десятеричной системы счисления
+```java
+StringRand.getDigit(10);
+```
+или
+```java
+new StringRand.Builder().digit().build(10);
+```
+
+Результат выполнения:
+```
+1680320347
+```
+
 #### Возвращает строку из букв английского алфавита
 ```java
 StringRand.getAlpha(10);
@@ -148,16 +168,12 @@ new StringRand.Builder().alpha(new RussianAlphabet()).build(10);
 ёъЧПЁПыФоХ
 ```
 
-#### Возвращает строку из специальных символов
+#### Возвращает строку из цифр системы счисления
 ```java
-StringRand.getSpecial(10);
-```
-или
-```java
-new StringRand.Builder().special().build(10);
+new StringRand.Builder().digit(new BinarySystem()).build(10);
 ```
 
 Результат выполнения:
 ```
-)"#{]=//&~
+0110101001
 ```
