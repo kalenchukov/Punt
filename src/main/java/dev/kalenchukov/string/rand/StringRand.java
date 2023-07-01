@@ -160,23 +160,7 @@ public final class StringRand
 	@NotNull
 	public static String getAlpha(final int length)
 	{
-		return StringRand.getAlpha(new EnglishAlphabet(), length);
-	}
-
-	/**
-	 * Возвращает строку из букв алфавита.
-	 *
-	 * @param alphabet алфавит.
-	 * @param length количество символов в возвращаемой строке.
-	 * @return строку со случайным порядком символов.
-	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
-	 */
-	@NotNull
-	public static String getAlpha(@NotNull final Alphabetical alphabet, final int length)
-	{
-		Objects.requireNonNull(alphabet);
-
-		return StringRand.get(length, alphabet.toList());
+		return StringRand.get(length, new EnglishAlphabet().toList());
 	}
 
 	/**
