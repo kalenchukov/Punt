@@ -231,19 +231,6 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getSpecial(NumeralSystem, int)}.
-	 */
-	@Test
-	public void getSpecialNumeralSystem()
-	{
-		String string = StringRand.getSpecial(NumeralSystem.QUATERNARY, 10);
-
-		boolean actual = string.matches("[\\\\0-3!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
 	 * Проверка метода {@link StringRand#getSpecial(Numerable, int)}.
 	 */
 	@Test

@@ -161,13 +161,3 @@ new StringRand.Builder().special().build(10);
 ```
 )"#{]=//&~
 ```
-
-#### Возвращает строку из специальных символов и цифр системы счисления
-```java
-StringRand.getSpecial(NumeralSystem.QUATERNARY, 10);
-```
-
-Результат выполнения:
-```
-2031023012
-```

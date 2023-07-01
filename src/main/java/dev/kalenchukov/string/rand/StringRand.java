@@ -206,22 +206,6 @@ public final class StringRand
 	 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
 	 */
 	@NotNull
-	public static String getSpecial(@NotNull final NumeralSystem numeralSystem, final int length)
-	{
-		Objects.requireNonNull(numeralSystem);
-
-		return StringRand.getSpecial(numeralSystem.getNumeralSystem(), length);
-	}
-
-	/**
-	 * Возвращает строку из специальных символов и цифр системы счисления.
-	 *
-	 * @param numeralSystem система счисления.
-	 * @param length количество символов в возвращаемой строке.
-	 * @return строку со случайным порядком символов.
-	 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
-	 */
-	@NotNull
 	public static String getSpecial(@NotNull final Numerable numeralSystem, final int length)
 	{
 		Objects.requireNonNull(numeralSystem);
