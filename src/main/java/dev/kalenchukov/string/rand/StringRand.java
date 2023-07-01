@@ -589,6 +589,19 @@ public final class StringRand
 		}
 
 		/**
+		 * Устанавливает цифры троичной системы счисления.
+		 *
+		 * @return текущий объект.
+		 */
+		@NotNull
+		public StringRand.Builder ternary()
+		{
+			this.symbols.addAll(new TernarySystem().toList());
+
+			return this;
+		}
+
+		/**
 		 * Устанавливает цифры десятичной системы счисления.
 		 *
 		 * @return текущий объект.

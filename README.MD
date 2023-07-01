@@ -39,6 +39,10 @@ new StringRand.Builder().digit(new BinarySystem()).build(10);
 ```java
 StringRand.getTernary(10);
 ```
+или
+```java
+new StringRand.Builder().ternary().build(10);
+```
 
 Результат выполнения:
 ```

@@ -493,10 +493,23 @@ public class StringRandTest
 		public void binary()
 		{
 			String actualString = new StringRand.Builder()
-					.digit(new BinarySystem())
+					.binary()
 					.build(8);
 
 			assertThat(actualString).containsPattern("[01]{8}");
+		}
+
+		/**
+		 * Проверка метода {@link StringRand.Builder#ternary()}.
+		 */
+		@Test
+		public void ternary()
+		{
+			String actualString = new StringRand.Builder()
+					.ternary()
+					.build(11);
+
+			assertThat(actualString).containsPattern("[012]{11}");
 		}
 
 		/**
