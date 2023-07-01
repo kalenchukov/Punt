@@ -19,6 +19,7 @@
 * Удалён метод StringRand.getAlpha(Alphabet, int).
 * Удалён метод StringRand.getAlpha(Alphabetical, int).
 * Удалён метод StringRand.getAlnum(*).
+* Удалён метод StringRand.getSpecial(Alphabet, *).
 
 ## v1.12.0 - 15.05.2023
 ### Добавлено

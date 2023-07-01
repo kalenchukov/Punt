@@ -162,16 +162,6 @@ new StringRand.Builder().special().build(10);
 )"#{]=//&~
 ```
 
-#### Возвращает строку из специальных символов и букв алфавита
-```java
-StringRand.getSpecial(Alphabet.RUSSIAN, 10);
-```
-
-Результат выполнения:
-```
-:Дщд_Н-|(ч
-```
-
 #### Возвращает строку из специальных символов и цифр системы счисления
 ```java
 StringRand.getSpecial(NumeralSystem.QUATERNARY, 10);
@@ -180,14 +170,4 @@ StringRand.getSpecial(NumeralSystem.QUATERNARY, 10);
 Результат выполнения:
 ```
 2031023012
-```
-
-#### Возвращает строку из специальных символов, букв алфавита и цифр системы счисления
-```java
-StringRand.getSpecial(Alphabet.RUSSIAN, NumeralSystem.QUATERNARY, 10);
-```
-
-Результат выполнения:
-```
-1яид-ъТ)ДА
 ```

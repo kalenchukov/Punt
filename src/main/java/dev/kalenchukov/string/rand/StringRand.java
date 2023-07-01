@@ -184,22 +184,6 @@ public final class StringRand
 	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
 	 */
 	@NotNull
-	public static String getSpecial(@NotNull final Alphabet alphabet, final int length)
-	{
-		Objects.requireNonNull(alphabet);
-
-		return StringRand.getSpecial(alphabet.getAlphabet(), length);
-	}
-
-	/**
-	 * Возвращает строку из специальных символов и букв алфавита.
-	 *
-	 * @param alphabet алфавит.
-	 * @param length количество символов в возвращаемой строке.
-	 * @return строку со случайным порядком символов.
-	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
-	 */
-	@NotNull
 	public static String getSpecial(@NotNull final Alphabetical alphabet, final int length)
 	{
 		Objects.requireNonNull(alphabet);
@@ -249,27 +233,6 @@ public final class StringRand
 		symbols.addAll(SPECIAL);
 
 		return StringRand.get(length, symbols);
-	}
-
-	/**
-	 * Возвращает строку из специальных символов, букв алфавита и цифр системы счисления.
-	 *
-	 * @param alphabet алфавит.
-	 * @param numeralSystem система счисления.
-	 * @param length количество символов в возвращаемой строке.
-	 * @return строку со случайным порядком символов.
-	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
-	 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
-	 */
-	@NotNull
-	public static String getSpecial(@NotNull final Alphabet alphabet,
-									@NotNull final NumeralSystem numeralSystem,
-									final int length)
-	{
-		Objects.requireNonNull(alphabet);
-		Objects.requireNonNull(numeralSystem);
-
-		return StringRand.getSpecial(alphabet.getAlphabet(), numeralSystem.getNumeralSystem(), length);
 	}
 
 	/**
