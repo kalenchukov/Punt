@@ -218,19 +218,6 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getAlphaUpper(AlphabeticalUpperCase, int)}.
-	 */
-	@Test
-	public void getAlphaUpperAlphabet()
-	{
-		String string = StringRand.getAlphaUpper(new RussianAlphabet.UpperCase(), 10);
-
-		boolean actual = string.matches("[А-ЯЁ]{10}");
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
 	 * Проверка метода {@link StringRand#getAlpha(int)}.
 	 */
 	@Test

@@ -176,22 +176,6 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из прописных букв алфавита.
-	 *
-	 * @param alphabet алфавит строчных букв.
-	 * @param length количество символов в возвращаемой строке.
-	 * @return строку со случайным порядком символов.
-	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
-	 */
-	@NotNull
-	public static String getAlphaUpper(@NotNull final AlphabeticalUpperCase alphabet, final int length)
-	{
-		Objects.requireNonNull(alphabet);
-
-		return StringRand.get(length, alphabet.toList());
-	}
-
-	/**
 	 * Возвращает строку из букв английского алфавита.
 	 *
 	 * @param length количество символов в возвращаемой строке.

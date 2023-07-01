@@ -144,16 +144,6 @@ StringRand.getAlphaUpper(10);
 SDHSKGOLZD
 ```
 
-#### Возвращает строку из прописных букв алфавита
-```java
-StringRand.getAlphaUpper(new RussianAlphabet.UpperCase(), 10);
-```
-
-Результат выполнения:
-```
-ЛЫУВЖХРУЧТ
-```
-
 #### Возвращает строку из букв английского алфавита
 ```java
 StringRand.getAlpha(10);
