@@ -9,6 +9,7 @@
 * Переименован метод StringRand.getHex(int) -> StringRand.getHexadecimal(int).
 * Переименован метод StringRand.get(int, List) -> StringRand.getPersonal(int, List).
 * Изменён метод StringRand.getPersonal(int, List) -> StringRand.getPersonal(int, Collection).
+* Изменена версия требуемого модуля annotations до 24.0.1.
 
 ### Исправлено
 *
