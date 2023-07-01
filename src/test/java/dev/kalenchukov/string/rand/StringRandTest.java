@@ -50,11 +50,9 @@ public class StringRandTest
 	@Test
 	public void getDigit()
 	{
-		String string = StringRand.getDigit(10);
+		String actualString = StringRand.getDigit(10);
 
-		boolean actual = string.matches("[0-9]{10}");
-
-		assertThat(actual).isTrue();
+		assertThat(actualString).containsPattern("[0-9]{10}");
 	}
 
 	/**
@@ -63,11 +61,9 @@ public class StringRandTest
 	@Test
 	public void getBinary()
 	{
-		String string = StringRand.getBinary(10);
+		String actualString = StringRand.getBinary(10);
 
-		boolean actual = string.matches("[0-1]{10}");
-
-		assertThat(actual).isTrue();
+		assertThat(actualString).containsPattern("[0-1]{10}");
 	}
 
 	/**
@@ -76,11 +72,9 @@ public class StringRandTest
 	@Test
 	public void getTernary()
 	{
-		String string = StringRand.getTernary(10);
+		String actualString = StringRand.getTernary(10);
 
-		boolean actual = string.matches("[0-2]{10}");
-
-		assertThat(actual).isTrue();
+		assertThat(actualString).containsPattern("[0-2]{10}");
 	}
 
 	/**
@@ -89,11 +83,9 @@ public class StringRandTest
 	@Test
 	public void getQuaternary()
 	{
-		String string = StringRand.getQuaternary(10);
+		String actualString = StringRand.getQuaternary(10);
 
-		boolean actual = string.matches("[0-3]{10}");
-
-		assertThat(actual).isTrue();
+		assertThat(actualString).containsPattern("[0-3]{10}");
 	}
 
 	/**
@@ -102,11 +94,9 @@ public class StringRandTest
 	@Test
 	public void getOctal()
 	{
-		String string = StringRand.getOctal(10);
+		String actualString = StringRand.getOctal(10);
 
-		boolean actual = string.matches("[0-7]{10}");
-
-		assertThat(actual).isTrue();
+		assertThat(actualString).containsPattern("[0-7]{10}");
 	}
 
 	/**
@@ -115,11 +105,9 @@ public class StringRandTest
 	@Test
 	public void getDecimal()
 	{
-		String string = StringRand.getDecimal(10);
+		String actualString = StringRand.getDecimal(10);
 
-		boolean actual = string.matches("[0-9]{10}");
-
-		assertThat(actual).isTrue();
+		assertThat(actualString).containsPattern("[0-9]{10}");
 	}
 
 	/**
@@ -128,11 +116,9 @@ public class StringRandTest
 	@Test
 	public void getDuodecimal()
 	{
-		String string = StringRand.getDuodecimal(10);
+		String actualString = StringRand.getDuodecimal(10);
 
-		boolean actual = string.matches("[0-9A-B]{10}");
-
-		assertThat(actual).isTrue();
+		assertThat(actualString).containsPattern("[0-9A-B]{10}");
 	}
 
 	/**
@@ -141,11 +127,9 @@ public class StringRandTest
 	@Test
 	public void getHexadecimal()
 	{
-		String string = StringRand.getHexadecimal(10);
+		String actualString = StringRand.getHexadecimal(10);
 
-		boolean actual = string.matches("[0-9A-F]{10}");
-
-		assertThat(actual).isTrue();
+		assertThat(actualString).containsPattern("[0-9A-F]{10}");
 	}
 
 	/**
@@ -154,11 +138,9 @@ public class StringRandTest
 	@Test
 	public void getAlpha()
 	{
-		String string = StringRand.getAlpha(10);
+		String actualString = StringRand.getAlpha(10);
 
-		boolean actual = string.matches("[a-zA-Z]{10}");
-
-		assertThat(actual).isTrue();
+		assertThat(actualString).containsPattern("[a-zA-Z]{10}");
 	}
 
 	/**
@@ -167,11 +149,9 @@ public class StringRandTest
 	@Test
 	public void getSpecial()
 	{
-		String string = StringRand.getSpecial(10);
+		String actualString = StringRand.getSpecial(10);
 
-		boolean actual = string.matches("[\\\\!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
-
-		assertThat(actual).isTrue();
+		assertThat(actualString).containsPattern("[\\\\!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 	}
 
 	/**
@@ -188,11 +168,9 @@ public class StringRandTest
 		@Test
 		public void getPersonal()
 		{
-			String string = StringRand.getPersonal(10, List.of('0', '2', '4', '6', '8'));
+			String actualString = StringRand.getPersonal(10, List.of('0', '2', '4', '6', '8'));
 
-			boolean actual = string.matches("[02468]{10}");
-
-			assertThat(actual).isTrue();
+			assertThat(actualString).containsPattern("[02468]{10}");
 		}
 
 		/**
@@ -201,11 +179,9 @@ public class StringRandTest
 		@Test
 		public void getPersonalWhitespace()
 		{
-			String string = StringRand.getPersonal(10, List.of('\t', '\n', '\r', ' '));
+			String actualString = StringRand.getPersonal(10, List.of('\t', '\n', '\r', ' '));
 
-			boolean actual = string.matches("[\\t\\n\\f\\r\\s]{10}");
-
-			assertThat(actual).isTrue();
+			assertThat(actualString).containsPattern("[\\t\\n\\f\\r\\s]{10}");
 		}
 
 		/**
@@ -214,11 +190,9 @@ public class StringRandTest
 		@Test
 		public void getPersonalEmpty()
 		{
-			String string = StringRand.getPersonal(10, List.of());
+			String actualString = StringRand.getPersonal(10, List.of());
 
-			boolean actual = string.isEmpty();
-
-			assertThat(actual).isTrue();
+			assertThat(actualString).isEmpty();
 		}
 
 		/**
@@ -227,11 +201,9 @@ public class StringRandTest
 		@Test
 		public void getPersonalOneSymbol()
 		{
-			String string = StringRand.getPersonal(10, List.of('.'));
+			String actualString = StringRand.getPersonal(10, List.of('.'));
 
-			boolean actual = string.matches("\\.{10}");
-
-			assertThat(actual).isTrue();
+			assertThat(actualString).containsPattern("\\.{10}");
 		}
 
 		/**
