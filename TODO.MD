@@ -3,7 +3,6 @@
 * Метод StringRand.Builder.personal(char[]).
 * Метод StringRand.Builder.personal(char...).
 
-* Метод StringRand.Builder.quaternary().
 * Метод StringRand.Builder.octal().
 * Метод StringRand.Builder.decimal().
 * Метод StringRand.Builder.duodecimal().

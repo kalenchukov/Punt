@@ -53,6 +53,10 @@ new StringRand.Builder().ternary().build(10);
 ```java
 StringRand.getQuaternary(10);
 ```
+или
+```java
+new StringRand.Builder().quaternary().build(10);
+```
 
 Результат выполнения:
 ```

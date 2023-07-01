@@ -602,6 +602,19 @@ public final class StringRand
 		}
 
 		/**
+		 * Устанавливает цифры четвертичной системы счисления.
+		 *
+		 * @return текущий объект.
+		 */
+		@NotNull
+		public StringRand.Builder quaternary()
+		{
+			this.symbols.addAll(new QuaternarySystem().toList());
+
+			return this;
+		}
+
+		/**
 		 * Устанавливает цифры десятичной системы счисления.
 		 *
 		 * @return текущий объект.

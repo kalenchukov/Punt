@@ -513,6 +513,19 @@ public class StringRandTest
 		}
 
 		/**
+		 * Проверка метода {@link StringRand.Builder#quaternary()}.
+		 */
+		@Test
+		public void quaternary()
+		{
+			String actualString = new StringRand.Builder()
+					.quaternary()
+					.build(14);
+
+			assertThat(actualString).containsPattern("[0123]{14}");
+		}
+
+		/**
 		 * Проверка метода {@link StringRand.Builder#digit()}.
 		 */
 		@Test
