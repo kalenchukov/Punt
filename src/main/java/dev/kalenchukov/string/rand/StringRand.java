@@ -228,7 +228,7 @@ public final class StringRand
 	}
 
 	/**
-	 * Класс строителя {@code StringRand}.
+	 * Класс генерирования строк случайных символов.
 	 *
 	 * @author Алексей Каленчуков
 	 */
