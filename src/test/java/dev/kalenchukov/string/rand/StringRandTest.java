@@ -526,6 +526,19 @@ public class StringRandTest
 		}
 
 		/**
+		 * Проверка метода {@link StringRand.Builder#alpha(Alphabetical)}.
+		 */
+		@Test
+		public void alphaAlphabet()
+		{
+			String actualString = new StringRand.Builder()
+					.alpha(new RussianAlphabet())
+					.build(7);
+
+			assertThat(actualString).containsPattern("[а-яёА-ЯЁ]{7}");
+		}
+
+		/**
 		 * Проверка метода {@link StringRand.Builder#special()}.
 		 */
 		@Test

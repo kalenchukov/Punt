@@ -619,6 +619,23 @@ public final class StringRand
 		}
 
 		/**
+		 * Устанавливает буквы алфавита.
+		 *
+		 * @param alphabet алфавит.
+		 * @return текущий объект.
+		 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
+		 */
+		@NotNull
+		public StringRand.Builder alpha(@NotNull final Alphabetical alphabet)
+		{
+			Objects.requireNonNull(alphabet);
+
+			this.symbols.addAll(alphabet.toList());
+
+			return this;
+		}
+
+		/**
 		 * Устанавливает специальные символы.
 		 *
 		 * @return текущий объект.

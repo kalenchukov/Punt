@@ -11,8 +11,6 @@
 * Метод StringRand.Builder.duodecimal().
 * Метод StringRand.Builder.hex().
 
-* Метод StringRand.Builder.alpha(Alphabetical).
-
 ## Можно сделать
 * Добавить метод StringRand.get(Integer, Character[]).
 * Добавить метод StringRand.get(Integer, Character...).
