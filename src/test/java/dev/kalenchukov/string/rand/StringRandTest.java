@@ -205,19 +205,6 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getAlpha(Alphabet, int)}.
-	 */
-	@Test
-	public void getAlphaAlphabet()
-	{
-		String string = StringRand.getAlpha(Alphabet.RUSSIAN, 10);
-
-		boolean actual = string.matches("[а-яёА-ЯЁ]{10}");
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
 	 * Проверка метода {@link StringRand#getAlpha(Alphabetical, int)}.
 	 */
 	@Test

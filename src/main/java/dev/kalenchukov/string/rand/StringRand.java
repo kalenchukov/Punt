@@ -172,22 +172,6 @@ public final class StringRand
 	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
 	 */
 	@NotNull
-	public static String getAlpha(@NotNull final Alphabet alphabet, final int length)
-	{
-		Objects.requireNonNull(alphabet);
-
-		return StringRand.getAlpha(alphabet.getAlphabet(), length);
-	}
-
-	/**
-	 * Возвращает строку из букв алфавита.
-	 *
-	 * @param alphabet алфавит.
-	 * @param length количество символов в возвращаемой строке.
-	 * @return строку со случайным порядком символов.
-	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
-	 */
-	@NotNull
 	public static String getAlpha(@NotNull final Alphabetical alphabet, final int length)
 	{
 		Objects.requireNonNull(alphabet);

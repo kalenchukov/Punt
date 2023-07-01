@@ -140,10 +140,6 @@ meOnjOUUQw
 
 #### Возвращает строку из букв алфавита
 ```java
-StringRand.getAlpha(Alphabet.RUSSIAN, 10);
-```
-или
-```java
 new StringRand.Builder().alpha(new RussianAlphabet()).build(10);
 ```
 
