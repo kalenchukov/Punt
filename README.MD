@@ -199,6 +199,10 @@ StringRand.getAlnum(Alphabet.RUSSIAN, NumeralSystem.BINARY, 10);
 ```java
 StringRand.getSpecial(10);
 ```
+или
+```java
+new StringRand.Builder().special().build(10);
+```
 
 Результат выполнения:
 ```

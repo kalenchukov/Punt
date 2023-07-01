@@ -602,6 +602,20 @@ public final class StringRand
 		}
 
 		/**
+		 * Устанавливает специальные символы.
+		 *
+		 * @return текущий объект.
+		 * @see StringRand#SPECIAL
+		 */
+		@NotNull
+		public StringRand.Builder special()
+		{
+			this.symbols.addAll(StringRand.SPECIAL);
+
+			return this;
+		}
+
+		/**
 		 * Возвращает сгенерированную строку из указанных наборов символов.
 		 *
 		 * @param length количество символов в возвращаемой строке.

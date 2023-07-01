@@ -15,8 +15,6 @@
 
 * Метод StringRand.Builder.alpha(Alphabetical).
 
-* Метод StringRand.Builder.special().
-
 ## Можно сделать
 * Добавить метод StringRand.get(Integer, Character[]).
 * Добавить метод StringRand.get(Integer, Character...).

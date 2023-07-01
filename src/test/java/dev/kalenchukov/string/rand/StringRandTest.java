@@ -511,5 +511,18 @@ public class StringRandTest
 
 			assertThat(actualString).containsPattern("[a-zA-Z]{13}");
 		}
+
+		/**
+		 * Проверка метода {@link StringRand.Builder#special()}.
+		 */
+		@Test
+		public void special()
+		{
+			String actualString = new StringRand.Builder()
+					.special()
+					.build(15);
+
+			assertThat(actualString).containsPattern("[\\\\!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{15}");
+		}
 	}
 }
