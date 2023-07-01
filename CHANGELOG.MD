@@ -4,11 +4,11 @@
 * Добавлен модуль assertj-core версии 3.24.2.
 * Добавлен класс StringRand.Builder.
 * Добавлен метод StringRand.getDigit(int).
-
+  
 ### Изменено
 * Переименован метод StringRand.getHex(int) -> StringRand.getHexadecimal(int).
 * Переименован метод StringRand.get(int, List) -> StringRand.getPersonal(int, List).
-*
+* Изменён метод StringRand.getPersonal(int, List) -> StringRand.getPersonal(int, Collection).
 
 ### Исправлено
 *

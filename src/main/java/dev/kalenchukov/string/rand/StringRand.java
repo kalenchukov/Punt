@@ -194,11 +194,11 @@ public final class StringRand
 	 * @throws NullPointerException если в качестве {@code symbols} передан {@code null}.
 	 */
 	@NotNull
-	public static String getPersonal(final int length, @NotNull final List<@NotNull Character> symbols)
+	public static String getPersonal(final int length, @NotNull final Collection<@NotNull Character> symbols)
 	{
 		Objects.requireNonNull(symbols);
 
-		return StringRand.generate(length, symbols);
+		return StringRand.generate(length, List.copyOf(symbols));
 	}
 
 	/**
