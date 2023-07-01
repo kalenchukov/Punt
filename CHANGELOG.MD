@@ -12,12 +12,13 @@
 *
 
 ### Удалено
-* Удалён метод метод StringRand.getAlphaLower(AlphabeticalLowerCase, int).
-* Удалён метод метод StringRand.getAlphaUpper(AlphabeticalUpperCase, int).
-* Удалён метод метод StringRand.getAlphaLower(int).
-* Удалён метод метод StringRand.getAlphaUpper(int).
-* Удалён метод метод StringRand.getAlpha(Alphabet, int).
-* Удалён метод метод StringRand.getAlpha(Alphabetical, int).
+* Удалён метод StringRand.getAlphaLower(AlphabeticalLowerCase, int).
+* Удалён метод StringRand.getAlphaUpper(AlphabeticalUpperCase, int).
+* Удалён метод StringRand.getAlphaLower(int).
+* Удалён метод StringRand.getAlphaUpper(int).
+* Удалён метод StringRand.getAlpha(Alphabet, int).
+* Удалён метод StringRand.getAlpha(Alphabetical, int).
+* Удалён метод StringRand.getAlnum(*).
 
 ## v1.12.0 - 15.05.2023
 ### Добавлено
