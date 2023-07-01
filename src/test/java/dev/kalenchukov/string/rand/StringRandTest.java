@@ -218,19 +218,6 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, int)}.
-	 */
-	@Test
-	public void getSpecialAlphabetical()
-	{
-		String string = StringRand.getSpecial(new RussianAlphabet(), 10);
-
-		boolean actual = string.matches("[\\\\а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
 	 * Проверка метода {@link StringRand#getSpecial(Numerable, int)}.
 	 */
 	@Test
@@ -239,19 +226,6 @@ public class StringRandTest
 		String string = StringRand.getSpecial(new BinarySystem(), 10);
 
 		boolean actual = string.matches("[\\\\0-1!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link StringRand#getSpecial(Alphabetical, Numerable, int)}.
-	 */
-	@Test
-	public void getSpecialAlphabeticalAndNumerable()
-	{
-		String string = StringRand.getSpecial(new RussianAlphabet(), new QuaternarySystem(), 10);
-
-		boolean actual = string.matches("[\\\\0-3а-яёА-ЯЁ!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 
 		assertThat(actual).isTrue();
 	}

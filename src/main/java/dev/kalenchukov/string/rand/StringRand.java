@@ -176,28 +176,6 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из специальных символов и букв алфавита.
-	 *
-	 * @param alphabet алфавит.
-	 * @param length количество символов в возвращаемой строке.
-	 * @return строку со случайным порядком символов.
-	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
-	 */
-	@NotNull
-	public static String getSpecial(@NotNull final Alphabetical alphabet, final int length)
-	{
-		Objects.requireNonNull(alphabet);
-
-		List<Character> symbols = new ArrayList<>(
-			alphabet.toList().size() + SPECIAL.size()
-		);
-		symbols.addAll(alphabet.toList());
-		symbols.addAll(SPECIAL);
-
-		return StringRand.get(length, symbols);
-	}
-
-	/**
 	 * Возвращает строку из специальных символов и цифр системы счисления.
 	 *
 	 * @param numeralSystem система счисления.
@@ -213,34 +191,6 @@ public final class StringRand
 		List<Character> symbols = new ArrayList<>(
 				numeralSystem.toList().size() + SPECIAL.size()
 		);
-		symbols.addAll(numeralSystem.toList());
-		symbols.addAll(SPECIAL);
-
-		return StringRand.get(length, symbols);
-	}
-
-	/**
-	 * Возвращает строку из специальных символов, букв алфавита и цифр системы счисления.
-	 *
-	 * @param alphabet алфавит.
-	 * @param numeralSystem система счисления.
-	 * @param length количество символов в возвращаемой строке.
-	 * @return строку со случайным порядком символов.
-	 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
-	 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
-	 */
-	@NotNull
-	public static String getSpecial(@NotNull final Alphabetical alphabet,
-									@NotNull final Numerable numeralSystem,
-									final int length)
-	{
-		Objects.requireNonNull(alphabet);
-		Objects.requireNonNull(numeralSystem);
-
-		List<Character> symbols = new ArrayList<>(
-			alphabet.toList().size() + numeralSystem.toList().size() + SPECIAL.size()
-		);
-		symbols.addAll(alphabet.toList());
 		symbols.addAll(numeralSystem.toList());
 		symbols.addAll(SPECIAL);
 
