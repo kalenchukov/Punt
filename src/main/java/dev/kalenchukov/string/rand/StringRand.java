@@ -158,7 +158,7 @@ public final class StringRand
 	@NotNull
 	public static String getAlpha(final int length)
 	{
-		return StringRand.generate(length, new EnglishAlphabet().toList());
+		return StringRand.generate(length, EnglishAlphabet.LETTERS);
 	}
 
 	/**
@@ -170,7 +170,7 @@ public final class StringRand
 	@NotNull
 	public static String getDigit(final int length)
 	{
-		return StringRand.generate(length, new DecimalSystem().toList());
+		return StringRand.generate(length, DecimalSystem.DIGITS);
 	}
 
 	/**
@@ -182,7 +182,7 @@ public final class StringRand
 	@NotNull
 	public static String getSpecial(final int length)
 	{
-		return StringRand.generate(length, List.copyOf(SPECIAL));
+		return StringRand.generate(length, List.copyOf(StringRand.SPECIAL));
 	}
 
 	/**
@@ -273,7 +273,7 @@ public final class StringRand
 		@NotNull
 		public StringRand.Builder binary()
 		{
-			this.symbols.addAll(new BinarySystem().toList());
+			this.symbols.addAll(BinarySystem.DIGITS);
 
 			return this;
 		}
@@ -286,7 +286,7 @@ public final class StringRand
 		@NotNull
 		public StringRand.Builder ternary()
 		{
-			this.symbols.addAll(new TernarySystem().toList());
+			this.symbols.addAll(TernarySystem.DIGITS);
 
 			return this;
 		}
@@ -299,7 +299,7 @@ public final class StringRand
 		@NotNull
 		public StringRand.Builder quaternary()
 		{
-			this.symbols.addAll(new QuaternarySystem().toList());
+			this.symbols.addAll(QuaternarySystem.DIGITS);
 
 			return this;
 		}
@@ -312,7 +312,7 @@ public final class StringRand
 		@NotNull
 		public StringRand.Builder octal()
 		{
-			this.symbols.addAll(new OctalSystem().toList());
+			this.symbols.addAll(OctalSystem.DIGITS);
 
 			return this;
 		}
@@ -325,7 +325,7 @@ public final class StringRand
 		@NotNull
 		public StringRand.Builder decimal()
 		{
-			this.symbols.addAll(new DecimalSystem().toList());
+			this.symbols.addAll(DecimalSystem.DIGITS);
 
 			return this;
 		}
@@ -338,7 +338,7 @@ public final class StringRand
 		@NotNull
 		public StringRand.Builder duodecimal()
 		{
-			this.symbols.addAll(new DuodecimalSystem().toList());
+			this.symbols.addAll(DuodecimalSystem.DIGITS);
 
 			return this;
 		}
@@ -351,7 +351,7 @@ public final class StringRand
 		@NotNull
 		public StringRand.Builder hexadecimal()
 		{
-			this.symbols.addAll(new HexadecimalSystem().toList());
+			this.symbols.addAll(HexadecimalSystem.DIGITS);
 
 			return this;
 		}
@@ -364,7 +364,7 @@ public final class StringRand
 		@NotNull
 		public StringRand.Builder digit()
 		{
-			this.symbols.addAll(new DecimalSystem().toList());
+			this.symbols.addAll(DecimalSystem.DIGITS);
 
 			return this;
 		}
@@ -394,7 +394,7 @@ public final class StringRand
 		@NotNull
 		public StringRand.Builder alpha()
 		{
-			this.symbols.addAll(new EnglishAlphabet().toList());
+			this.symbols.addAll(EnglishAlphabet.LETTERS);
 
 			return this;
 		}
