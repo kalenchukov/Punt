@@ -3,13 +3,10 @@
 Генератор строк случайных символов.
 
 ## Использование
+### Простые наборы символов
 #### Возвращает строку из указанных символов
 ```java
 StringRand.getPersonal(10, List.of('0', '2', '4', '6', '8'));
-```
-или
-```java
-new StringRand.Builder().personal(List.of('0', '2', '4', '6', '8')).build(10);
 ```
 
 Результат выполнения:
@@ -21,10 +18,6 @@ new StringRand.Builder().personal(List.of('0', '2', '4', '6', '8')).build(10);
 ```java
 StringRand.getSpecial(10);
 ```
-или
-```java
-new StringRand.Builder().special().build(10);
-```
 
 Результат выполнения:
 ```
@@ -34,10 +27,6 @@ new StringRand.Builder().special().build(10);
 #### Возвращает строку из цифр двоичной системы счисления
 ```java
 StringRand.getBinary(10);
-```
-или
-```java
-new StringRand.Builder().binary().build(10);
 ```
 
 Результат выполнения:
@@ -49,10 +38,6 @@ new StringRand.Builder().binary().build(10);
 ```java
 StringRand.getTernary(10);
 ```
-или
-```java
-new StringRand.Builder().ternary().build(10);
-```
 
 Результат выполнения:
 ```
@@ -62,10 +47,6 @@ new StringRand.Builder().ternary().build(10);
 #### Возвращает строку из цифр четвертичной системы счисления
 ```java
 StringRand.getQuaternary(10);
-```
-или
-```java
-new StringRand.Builder().quaternary().build(10);
 ```
 
 Результат выполнения:
@@ -78,10 +59,6 @@ new StringRand.Builder().quaternary().build(10);
 ```java
 StringRand.getOctal(10);
 ```
-или
-```java
-new StringRand.Builder().octal().build(10);
-```
 
 Результат выполнения:
 ```
@@ -91,10 +68,6 @@ new StringRand.Builder().octal().build(10);
 #### Возвращает строку из цифр десятеричной системы счисления
 ```java
 StringRand.getDecimal(10);
-```
-или
-```java
-new StringRand.Builder().decimal().build(10);
 ```
 
 Результат выполнения:
@@ -106,10 +79,6 @@ new StringRand.Builder().decimal().build(10);
 ```java
 StringRand.getDuodecimal(10);
 ```
-или
-```java
-new StringRand.Builder().duodecimal().build(10);
-```
 
 Результат выполнения:
 ```
@@ -119,10 +88,6 @@ new StringRand.Builder().duodecimal().build(10);
 #### Возвращает строку из цифр шестнадцатеричной системы счисления
 ```java
 StringRand.getHexadecimal(10);
-```
-или
-```java
-new StringRand.Builder().hexadecimal().build(10);
 ```
 
 Результат выполнения:
@@ -134,10 +99,6 @@ BFB76A59D4
 ```java
 StringRand.getDigit(10);
 ```
-или
-```java
-new StringRand.Builder().digit().build(10);
-```
 
 Результат выполнения:
 ```
@@ -148,32 +109,35 @@ new StringRand.Builder().digit().build(10);
 ```java
 StringRand.getAlpha(10);
 ```
-или
-```java
-new StringRand.Builder().alpha().build(10);
-```
 
 Результат выполнения:
 ```
 meOnjOUUQw
 ```
 
-#### Возвращает строку из букв алфавита
+### Составные наборы символов
+#### Возвращает строку из букв алфавита и цифр системы счисления
 ```java
-new StringRand.Builder().alpha(new RussianAlphabet()).build(10);
+new StringRand.Builder()
+        .alpha(new RussianAlphabet())
+        .digit(new BinarySystem())
+        .build(30);
 ```
 
 Результат выполнения:
 ```
-ёъЧПЁПыФоХ
+ё10ъ0ЧПЁ0101ПыФЧПЁ01101оХ0101П
 ```
 
-#### Возвращает строку из цифр системы счисления
+#### Возвращает строку из цифр двоичной системы счисления и специальных символов
 ```java
-new StringRand.Builder().digit(new BinarySystem()).build(10);
+new StringRand.Builder()
+        .digit(new BinarySystem())
+        .special()
+        .build(30);
 ```
 
 Результат выполнения:
 ```
-0110101001
+`@%1&$@.:<:+~_<1{^#>:&@]1`)@#@
 ```
