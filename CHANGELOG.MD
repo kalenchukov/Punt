@@ -22,6 +22,7 @@
 * Удалён метод StringRand.getSpecial(Alphabet, *).
 * Удалён метод StringRand.getSpecial(NumeralSystem, *).
 * Удалён метод StringRand.getSpecial(Alphabetical, *).
+* Удалён метод StringRand.getSpecial(Numerable, *).
 
 ## v1.12.0 - 15.05.2023
 ### Добавлено

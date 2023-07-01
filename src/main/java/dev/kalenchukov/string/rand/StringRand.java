@@ -176,28 +176,6 @@ public final class StringRand
 	}
 
 	/**
-	 * Возвращает строку из специальных символов и цифр системы счисления.
-	 *
-	 * @param numeralSystem система счисления.
-	 * @param length количество символов в возвращаемой строке.
-	 * @return строку со случайным порядком символов.
-	 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
-	 */
-	@NotNull
-	public static String getSpecial(@NotNull final Numerable numeralSystem, final int length)
-	{
-		Objects.requireNonNull(numeralSystem);
-
-		List<Character> symbols = new ArrayList<>(
-				numeralSystem.toList().size() + SPECIAL.size()
-		);
-		symbols.addAll(numeralSystem.toList());
-		symbols.addAll(SPECIAL);
-
-		return StringRand.get(length, symbols);
-	}
-
-	/**
 	 * Возвращает строку из указанных наборов символов.
 	 *
 	 * @param length количество символов в возвращаемой строке.

@@ -218,19 +218,6 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getSpecial(Numerable, int)}.
-	 */
-	@Test
-	public void getSpecialNumerable()
-	{
-		String string = StringRand.getSpecial(new BinarySystem(), 10);
-
-		boolean actual = string.matches("[\\\\0-1!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
 	 * Класс проверки методов класса {@link StringRand.Builder}.
 	 *
 	 * @author Алексей Каленчуков
