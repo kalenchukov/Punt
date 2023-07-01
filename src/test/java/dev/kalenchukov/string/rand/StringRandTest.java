@@ -496,7 +496,7 @@ public class StringRandTest
 					.binary()
 					.build(8);
 
-			assertThat(actualString).containsPattern("[01]{8}");
+			assertThat(actualString).containsPattern("[0-1]{8}");
 		}
 
 		/**
@@ -509,7 +509,7 @@ public class StringRandTest
 					.ternary()
 					.build(11);
 
-			assertThat(actualString).containsPattern("[012]{11}");
+			assertThat(actualString).containsPattern("[0-2]{11}");
 		}
 
 		/**
@@ -522,7 +522,7 @@ public class StringRandTest
 					.quaternary()
 					.build(14);
 
-			assertThat(actualString).containsPattern("[0123]{14}");
+			assertThat(actualString).containsPattern("[0-3]{14}");
 		}
 
 		/**
@@ -535,7 +535,7 @@ public class StringRandTest
 					.octal()
 					.build(12);
 
-			assertThat(actualString).containsPattern("[01234567]{12}");
+			assertThat(actualString).containsPattern("[0-7]{12}");
 		}
 
 		/**
@@ -548,7 +548,7 @@ public class StringRandTest
 					.decimal()
 					.build(10);
 
-			assertThat(actualString).containsPattern("[0123456789]{10}");
+			assertThat(actualString).containsPattern("[0-9]{10}");
 		}
 
 		/**
@@ -561,7 +561,20 @@ public class StringRandTest
 					.duodecimal()
 					.build(12);
 
-			assertThat(actualString).containsPattern("[0123456789AB]{12}");
+			assertThat(actualString).containsPattern("[0-9A-B]{12}");
+		}
+
+		/**
+		 * Проверка метода {@link StringRand.Builder#hexadecimal()}.
+		 */
+		@Test
+		public void hexadecimal()
+		{
+			String actualString = new StringRand.Builder()
+					.hexadecimal()
+					.build(16);
+
+			assertThat(actualString).containsPattern("[0-9A-F]{16}");
 		}
 
 		/**

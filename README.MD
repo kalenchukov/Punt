@@ -114,6 +114,10 @@ new StringRand.Builder().duodecimal().build(10);
 ```java
 StringRand.getHex(10);
 ```
+или
+```java
+new StringRand.Builder().hexadecimal().build(10);
+```
 
 Результат выполнения:
 ```

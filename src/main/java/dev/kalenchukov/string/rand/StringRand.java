@@ -654,6 +654,19 @@ public final class StringRand
 		}
 
 		/**
+		 * Устанавливает цифры шестнадцатеричной системы счисления.
+		 *
+		 * @return текущий объект.
+		 */
+		@NotNull
+		public StringRand.Builder hexadecimal()
+		{
+			this.symbols.addAll(new HexadecimalSystem().toList());
+
+			return this;
+		}
+
+		/**
 		 * Устанавливает цифры десятичной системы счисления.
 		 *
 		 * @return текущий объект.
