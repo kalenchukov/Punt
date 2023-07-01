@@ -124,16 +124,6 @@ new StringRand.Builder().hexadecimal().build(10);
 BFB76A59D4
 ```
 
-#### Возвращает строку из строчных букв английского алфавита
-```java
-StringRand.getAlphaLower(10);
-```
-
-Результат выполнения:
-```
-wpcejmhmos
-```
-
 #### Возвращает строку из прописных букв английского алфавита
 ```java
 StringRand.getAlphaUpper(10);

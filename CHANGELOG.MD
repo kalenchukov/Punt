@@ -14,6 +14,7 @@
 ### Удалено
 * Удалён метод метод StringRand.getAlphaLower(AlphabeticalLowerCase, int).
 * Удалён метод метод StringRand.getAlphaUpper(AlphabeticalUpperCase, int).
+* Удалён метод метод StringRand.getAlphaLower(int).
 
 ## v1.12.0 - 15.05.2023
 ### Добавлено

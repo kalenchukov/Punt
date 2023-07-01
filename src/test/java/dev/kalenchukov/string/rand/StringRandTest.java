@@ -192,19 +192,6 @@ public class StringRandTest
 	}
 
 	/**
-	 * Проверка метода {@link StringRand#getAlphaLower(int)}.
-	 */
-	@Test
-	public void getAlphaLower()
-	{
-		String string = StringRand.getAlphaLower(10);
-
-		boolean actual = string.matches("[a-z]{10}");
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
 	 * Проверка метода {@link StringRand#getAlphaUpper(int)}.
 	 */
 	@Test
