@@ -229,6 +229,18 @@ public class StringRandTest
 	public class Builder
 	{
 		/**
+		 * Проверка метода {@link StringRand.Builder#build(int)}.
+		 */
+		@Test
+		public void build()
+		{
+			String actualString = new StringRand.Builder()
+					.build(10);
+
+			assertThat(actualString).isEmpty();
+		}
+
+		/**
 		 * Проверка метода {@link StringRand.Builder#personal(Collection)}.
 		 */
 		@Test
