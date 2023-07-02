@@ -212,8 +212,10 @@ public class StringRandTest
 		@Test
 		public void getPersonalNull()
 		{
+			Set<Character> symbols = null;
+
 			assertThatExceptionOfType(NullPointerException.class).isThrownBy(() -> {
-				StringRand.getPersonal(10, null);
+				StringRand.getPersonal(10, symbols);
 			});
 		}
 	}
