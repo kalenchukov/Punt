@@ -45,165 +45,174 @@ import static org.assertj.core.api.Assertions.*;
 public class StringRandTest
 {
 	/**
-	 * Проверка метода {@link StringRand#getDigit(int)}.
-	 */
-	@Test
-	public void getDigit()
-	{
-		String actualString = StringRand.getDigit(10);
-
-		assertThat(actualString).containsPattern("[0-9]{10}");
-	}
-
-	/**
-	 * Проверка метода {@link StringRand#getBinary(int)}.
-	 */
-	@Test
-	public void getBinary()
-	{
-		String actualString = StringRand.getBinary(10);
-
-		assertThat(actualString).containsPattern("[0-1]{10}");
-	}
-
-	/**
-	 * Проверка метода {@link StringRand#getTernary(int)}.
-	 */
-	@Test
-	public void getTernary()
-	{
-		String actualString = StringRand.getTernary(10);
-
-		assertThat(actualString).containsPattern("[0-2]{10}");
-	}
-
-	/**
-	 * Проверка метода {@link StringRand#getQuaternary(int)}.
-	 */
-	@Test
-	public void getQuaternary()
-	{
-		String actualString = StringRand.getQuaternary(10);
-
-		assertThat(actualString).containsPattern("[0-3]{10}");
-	}
-
-	/**
-	 * Проверка метода {@link StringRand#getOctal(int)}.
-	 */
-	@Test
-	public void getOctal()
-	{
-		String actualString = StringRand.getOctal(10);
-
-		assertThat(actualString).containsPattern("[0-7]{10}");
-	}
-
-	/**
-	 * Проверка метода {@link StringRand#getDecimal(int)}.
-	 */
-	@Test
-	public void getDecimal()
-	{
-		String actualString = StringRand.getDecimal(10);
-
-		assertThat(actualString).containsPattern("[0-9]{10}");
-	}
-
-	/**
-	 * Проверка метода {@link StringRand#getDuodecimal(int)}.
-	 */
-	@Test
-	public void getDuodecimal()
-	{
-		String actualString = StringRand.getDuodecimal(10);
-
-		assertThat(actualString).containsPattern("[0-9A-B]{10}");
-	}
-
-	/**
-	 * Проверка метода {@link StringRand#getHexadecimal(int)}.
-	 */
-	@Test
-	public void getHexadecimal()
-	{
-		String actualString = StringRand.getHexadecimal(10);
-
-		assertThat(actualString).containsPattern("[0-9A-F]{10}");
-	}
-
-	/**
-	 * Проверка метода {@link StringRand#getAlpha(int)}.
-	 */
-	@Test
-	public void getAlpha()
-	{
-		String actualString = StringRand.getAlpha(10);
-
-		assertThat(actualString).containsPattern("[a-zA-Z]{10}");
-	}
-
-	/**
-	 * Проверка метода {@link StringRand#getSpecial(int)}.
-	 */
-	@Test
-	public void getSpecial()
-	{
-		String actualString = StringRand.getSpecial(10);
-
-		assertThat(actualString).containsPattern("[\\\\!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
-	}
-
-	/**
-	 * Класс проверки метода {@link StringRand#getPersonal(int, Collection)}.
+	 * Класс проверки статических методов.
 	 *
 	 * @author Алексей Каленчуков
 	 */
 	@Nested
-	public class GetPersonal
+	public class Static
 	{
 		/**
-		 * Проверка метода {@link StringRand#getPersonal(int, Collection)}.
+		 * Проверка метода {@link StringRand#getDigit(int)}.
 		 */
 		@Test
-		public void getPersonal()
+		public void getDigit()
 		{
-			String actualString = StringRand.getPersonal(10, List.of('0', '2', '4', '6', '8'));
+			String actualString = StringRand.getDigit(10);
 
-			assertThat(actualString).containsPattern("[02468]{10}");
+			assertThat(actualString).containsPattern("[0-9]{10}");
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getPersonal(int, Collection)} с указанием белых символов.
+		 * Проверка метода {@link StringRand#getBinary(int)}.
 		 */
 		@Test
-		public void getPersonalWhitespace()
+		public void getBinary()
 		{
-			String actualString = StringRand.getPersonal(10, List.of('\t', '\n', '\r', ' '));
+			String actualString = StringRand.getBinary(10);
 
-			assertThat(actualString).containsPattern("[\\t\\n\\f\\r\\s]{10}");
+			assertThat(actualString).containsPattern("[0-1]{10}");
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getPersonal(int, Collection)} без указания символов.
+		 * Проверка метода {@link StringRand#getTernary(int)}.
 		 */
 		@Test
-		public void getPersonalEmpty()
+		public void getTernary()
 		{
-			String actualString = StringRand.getPersonal(10, List.of());
+			String actualString = StringRand.getTernary(10);
 
-			assertThat(actualString).isEmpty();
+			assertThat(actualString).containsPattern("[0-2]{10}");
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getPersonal(int, Collection)} с указанием одного символа.
+		 * Проверка метода {@link StringRand#getQuaternary(int)}.
 		 */
 		@Test
-		public void getPersonalOneSymbol()
+		public void getQuaternary()
 		{
-			String actualString = StringRand.getPersonal(10, List.of('.'));
+			String actualString = StringRand.getQuaternary(10);
 
-			assertThat(actualString).containsPattern("\\.{10}");
+			assertThat(actualString).containsPattern("[0-3]{10}");
+		}
+
+		/**
+		 * Проверка метода {@link StringRand#getOctal(int)}.
+		 */
+		@Test
+		public void getOctal()
+		{
+			String actualString = StringRand.getOctal(10);
+
+			assertThat(actualString).containsPattern("[0-7]{10}");
+		}
+
+		/**
+		 * Проверка метода {@link StringRand#getDecimal(int)}.
+		 */
+		@Test
+		public void getDecimal()
+		{
+			String actualString = StringRand.getDecimal(10);
+
+			assertThat(actualString).containsPattern("[0-9]{10}");
+		}
+
+		/**
+		 * Проверка метода {@link StringRand#getDuodecimal(int)}.
+		 */
+		@Test
+		public void getDuodecimal()
+		{
+			String actualString = StringRand.getDuodecimal(10);
+
+			assertThat(actualString).containsPattern("[0-9A-B]{10}");
+		}
+
+		/**
+		 * Проверка метода {@link StringRand#getHexadecimal(int)}.
+		 */
+		@Test
+		public void getHexadecimal()
+		{
+			String actualString = StringRand.getHexadecimal(10);
+
+			assertThat(actualString).containsPattern("[0-9A-F]{10}");
+		}
+
+		/**
+		 * Проверка метода {@link StringRand#getAlpha(int)}.
+		 */
+		@Test
+		public void getAlpha()
+		{
+			String actualString = StringRand.getAlpha(10);
+
+			assertThat(actualString).containsPattern("[a-zA-Z]{10}");
+		}
+
+		/**
+		 * Проверка метода {@link StringRand#getSpecial(int)}.
+		 */
+		@Test
+		public void getSpecial()
+		{
+			String actualString = StringRand.getSpecial(10);
+
+			assertThat(actualString).containsPattern("[\\\\!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
+		}
+
+		/**
+		 * Класс проверки метода {@link StringRand#getPersonal(int, Collection)}.
+		 *
+		 * @author Алексей Каленчуков
+		 */
+		@Nested
+		public class GetPersonal
+		{
+			/**
+			 * Проверка метода {@link StringRand#getPersonal(int, Collection)}.
+			 */
+			@Test
+			public void getPersonal()
+			{
+				String actualString = StringRand.getPersonal(10, List.of('0', '2', '4', '6', '8'));
+
+				assertThat(actualString).containsPattern("[02468]{10}");
+			}
+
+			/**
+			 * Проверка метода {@link StringRand#getPersonal(int, Collection)} с указанием белых символов.
+			 */
+			@Test
+			public void getPersonalWhitespace()
+			{
+				String actualString = StringRand.getPersonal(10, List.of('\t', '\n', '\r', ' '));
+
+				assertThat(actualString).containsPattern("[\\t\\n\\f\\r\\s]{10}");
+			}
+
+			/**
+			 * Проверка метода {@link StringRand#getPersonal(int, Collection)} без указания символов.
+			 */
+			@Test
+			public void getPersonalEmpty()
+			{
+				String actualString = StringRand.getPersonal(10, List.of());
+
+				assertThat(actualString).isEmpty();
+			}
+
+			/**
+			 * Проверка метода {@link StringRand#getPersonal(int, Collection)} с указанием одного символа.
+			 */
+			@Test
+			public void getPersonalOneSymbol()
+			{
+				String actualString = StringRand.getPersonal(10, List.of('.'));
+
+				assertThat(actualString).containsPattern("\\.{10}");
+			}
 		}
 	}
 
