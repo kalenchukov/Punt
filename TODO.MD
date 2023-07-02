@@ -4,8 +4,8 @@
 * Метод StringRand.Builder.personal(char...).
 
 ## Можно сделать
-* Добавить метод StringRand.getPersonal(Integer, Character[]).
-* Добавить метод StringRand.getPersonal(Integer, Character...).
+* Добавить метод StringRand.getPersonal(Integer, char[]).
+* Добавить метод StringRand.getPersonal(Integer, char...).
 
 ## Не делать
 *
