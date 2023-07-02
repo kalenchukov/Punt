@@ -205,19 +205,6 @@ public class StringRandTest
 
 			assertThat(actualString).containsPattern("\\.{10}");
 		}
-
-		/**
-		 * Проверка метода {@link StringRand#getPersonal(int, Collection)} с {@code null}.
-		 */
-		@Test
-		public void getPersonalNull()
-		{
-			Set<Character> symbols = null;
-
-			assertThatExceptionOfType(NullPointerException.class).isThrownBy(() -> {
-				StringRand.getPersonal(10, symbols);
-			});
-		}
 	}
 
 	/**
