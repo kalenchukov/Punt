@@ -1,7 +1,6 @@
 # Журнал изменений
 ## vX.X.X - XX.XX.XXXX
 ### Добавлено
-* Добавлен модуль assertj-core версии 3.24.2.
 * Добавлен класс StringRand.Builder.
 * Добавлен метод StringRand.getDigit(int).
   
@@ -9,7 +8,6 @@
 * Переименован метод StringRand.getHex(int) -> StringRand.getHexadecimal(int).
 * Переименован метод StringRand.get(int, List) -> StringRand.getPersonal(int, List).
 * Изменён метод StringRand.getPersonal(int, List) -> StringRand.getPersonal(int, Collection).
-* Изменена версия требуемого модуля annotations до 24.0.1.
 * Изменена версия Java на 17.
 
 ### Исправлено
@@ -52,12 +50,7 @@
 * Добавлен метод StringRand.getQuaternary().
 
 ### Изменено
-* Изменена версия требуемого модуля alphabet до 2.7.0.
-* Изменена версия требуемого модуля numeral-system до 1.6.0.
 * Сделан public и переименован метод StringRand.generate(Integer, List) -> StringRand.get(Integer, List).
-
-### Удалено
-* Удалён требуемый модуль commons-lang3.
 
 ## v1.10.0 - 03.12.2022
 ### Добавлено
@@ -95,22 +88,19 @@
 * Добавлен плагин maven-source в pom.xml.
 
 ### Изменено
-* Изменена версия требуемого модуля alphabet.
-* Изменена версия требуемого модуля numeral-system до v1.4.0.
+*
 
 ## v1.8.0 - 31.08.2022
 ### Изменено
 * Переименован метод StringRand.graph() -> StringRand.special().
-* Изменена версия требуемого модуля alphabet.
-* Изменена версия требуемого модуля numeral-system до v1.3.0.
+*
 
 ## v1.7.0 - 07.08.2022
 ### Добавлено
 * Добавлен метод StringRand.ternary().
 
 ### Изменено
-* Повышено требование версии модуля alphabet до v2.2.0.
-* Повышено требование версии модуля numeral-system до v1.2.0.
+*
 
 ## v1.6.0 - 03.08.2022
 ### Добавлено
