@@ -1,5 +1,5 @@
 # Журнал изменений
-## vX.X.X - XX.XX.XXXX
+## v1.13.0 - 08.07.2023
 ### Добавлено
 * Добавлен класс StringRand.Builder.
 * Добавлен метод StringRand.getDigit(int).
@@ -9,9 +9,6 @@
 * Переименован метод StringRand.get(int, List) -> StringRand.getPersonal(int, List).
 * Изменён метод StringRand.getPersonal(int, List) -> StringRand.getPersonal(int, Collection).
 * Изменена версия Java на 17.
-
-### Исправлено
-*
 
 ### Удалено
 * Удалён метод StringRand.getAlphaLower(AlphabeticalLowerCase, int).
@@ -87,20 +84,13 @@
 * Добавлен плагин maven-javadoc в pom.xml.
 * Добавлен плагин maven-source в pom.xml.
 
-### Изменено
-*
-
 ## v1.8.0 - 31.08.2022
 ### Изменено
 * Переименован метод StringRand.graph() -> StringRand.special().
-*
 
 ## v1.7.0 - 07.08.2022
 ### Добавлено
 * Добавлен метод StringRand.ternary().
-
-### Изменено
-*
 
 ## v1.6.0 - 03.08.2022
 ### Добавлено
