@@ -343,26 +343,26 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#digit()}.
+		 * Проверка метода {@link StringRand.Builder#withDigit()}.
 		 */
 		@Test
 		public void digit()
 		{
 			String actualString = new StringRand.Builder()
-					.digit()
+					.withDigit()
 					.build(13);
 
 			assertThat(actualString).containsPattern("[0123456789]{13}");
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#digit(Numerable)}.
+		 * Проверка метода {@link StringRand.Builder#withDigit(Numerable)}.
 		 */
 		@Test
 		public void digitNumeralSystem()
 		{
 			String actualString = new StringRand.Builder()
-					.digit(new BinarySystem())
+					.withDigit(new BinarySystem())
 					.build(8);
 
 			assertThat(actualString).containsPattern("[01]{8}");

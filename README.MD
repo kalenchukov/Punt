@@ -120,7 +120,7 @@ BFB76A59D4
 ```java
 new StringRand.Builder()
         .alpha(new RussianAlphabet())
-        .digit(new BinarySystem())
+        .withDigit(new BinarySystem())
         .build(30);
 ```
 
@@ -132,7 +132,7 @@ new StringRand.Builder()
 #### Возвращает строку из цифр системы счисления и специальных символов
 ```java
 new StringRand.Builder()
-        .digit(new BinarySystem())
+        .withDigit(new BinarySystem())
         .special()
         .build(30);
 ```

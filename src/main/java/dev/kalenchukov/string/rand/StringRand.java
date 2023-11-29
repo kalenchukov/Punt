@@ -362,7 +362,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder digit()
+		public StringRand.Builder withDigit()
 		{
 			this.symbols.addAll(DecimalSystem.DIGITS);
 
@@ -377,7 +377,7 @@ public final class StringRand
 		 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
 		 */
 		@NotNull
-		public StringRand.Builder digit(@NotNull final Numerable numeralSystem)
+		public StringRand.Builder withDigit(@NotNull final Numerable numeralSystem)
 		{
 			Objects.requireNonNull(numeralSystem);
 
