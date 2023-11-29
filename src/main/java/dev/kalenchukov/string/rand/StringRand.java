@@ -392,7 +392,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder alpha()
+		public StringRand.Builder withAlpha()
 		{
 			this.symbols.addAll(EnglishAlphabet.LETTERS);
 
@@ -407,7 +407,7 @@ public final class StringRand
 		 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
 		 */
 		@NotNull
-		public StringRand.Builder alpha(@NotNull final Alphabetical alphabet)
+		public StringRand.Builder withAlpha(@NotNull final Alphabetical alphabet)
 		{
 			Objects.requireNonNull(alphabet);
 

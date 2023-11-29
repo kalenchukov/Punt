@@ -119,7 +119,7 @@ BFB76A59D4
 #### Возвращает строку из букв алфавита и цифр системы счисления
 ```java
 new StringRand.Builder()
-        .alpha(new RussianAlphabet())
+        .withAlpha(new RussianAlphabet())
         .withDigit(new BinarySystem())
         .build(30);
 ```

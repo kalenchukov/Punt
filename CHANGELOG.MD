@@ -10,6 +10,7 @@
 * Переименован метод класса StringRand.Builder.duodecimal(*) -> .withDuodecimal(*).
 * Переименован метод класса StringRand.Builder.hexadecimal(*) -> .withHexadecimal(*).
 * Переименован метод класса StringRand.Builder.digit(*) -> .withDigit(*).
+* Переименован метод класса StringRand.Builder.alpha(*) -> .withAlpha(*).
 
 ## v1.13.0 - 08.07.2023
 ### Добавлено

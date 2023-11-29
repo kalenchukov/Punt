@@ -369,26 +369,26 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#alpha()}.
+		 * Проверка метода {@link StringRand.Builder#withAlpha()}.
 		 */
 		@Test
 		public void alpha()
 		{
 			String actualString = new StringRand.Builder()
-					.alpha()
+					.withAlpha()
 					.build(13);
 
 			assertThat(actualString).containsPattern("[a-zA-Z]{13}");
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#alpha(Alphabetical)}.
+		 * Проверка метода {@link StringRand.Builder#withAlpha(Alphabetical)}.
 		 */
 		@Test
 		public void alphaAlphabet()
 		{
 			String actualString = new StringRand.Builder()
-					.alpha(new RussianAlphabet())
+					.withAlpha(new RussianAlphabet())
 					.build(7);
 
 			assertThat(actualString).containsPattern("[а-яёА-ЯЁ]{7}");
