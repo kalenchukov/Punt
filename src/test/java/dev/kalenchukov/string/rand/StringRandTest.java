@@ -304,13 +304,13 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#decimal()}.
+		 * Проверка метода {@link StringRand.Builder#withDecimal()}.
 		 */
 		@Test
 		public void decimal()
 		{
 			String actualString = new StringRand.Builder()
-					.decimal()
+					.withDecimal()
 					.build(10);
 
 			assertThat(actualString).containsPattern("[0-9]{10}");

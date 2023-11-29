@@ -323,7 +323,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder decimal()
+		public StringRand.Builder withDecimal()
 		{
 			this.symbols.addAll(DecimalSystem.DIGITS);
 
