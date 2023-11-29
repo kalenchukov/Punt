@@ -297,7 +297,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder quaternary()
+		public StringRand.Builder withQuaternary()
 		{
 			this.symbols.addAll(QuaternarySystem.DIGITS);
 

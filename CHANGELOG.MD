@@ -4,6 +4,7 @@
 * Переименован метод класса StringRand.Builder.personal(*) -> .withPersonal(*).
 * Переименован метод класса StringRand.Builder.binary(*) -> .withBinary(*).
 * Переименован метод класса StringRand.Builder.ternary(*) -> .withTernary(*).
+* Переименован метод класса StringRand.Builder.quaternary(*) -> .withQuaternary(*).
 
 ## v1.13.0 - 08.07.2023
 ### Добавлено

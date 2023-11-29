@@ -278,13 +278,13 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#quaternary()}.
+		 * Проверка метода {@link StringRand.Builder#withQuaternary()}.
 		 */
 		@Test
 		public void quaternary()
 		{
 			String actualString = new StringRand.Builder()
-					.quaternary()
+					.withQuaternary()
 					.build(14);
 
 			assertThat(actualString).containsPattern("[0-3]{14}");
