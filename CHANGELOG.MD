@@ -2,6 +2,7 @@
 ## vX.X.X - XX.XX.XXXX
 ### Изменено
 * Переименован метод класса StringRand.Builder.personal(*) -> .withPersonal(*).
+* Переименован метод класса StringRand.Builder.binary(*) -> .withBinary(*).
 
 ## v1.13.0 - 08.07.2023
 ### Добавлено

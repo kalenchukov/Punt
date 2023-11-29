@@ -271,7 +271,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder binary()
+		public StringRand.Builder withBinary()
 		{
 			this.symbols.addAll(BinarySystem.DIGITS);
 

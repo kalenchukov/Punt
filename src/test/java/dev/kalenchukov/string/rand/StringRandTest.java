@@ -252,13 +252,13 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#binary()}.
+		 * Проверка метода {@link StringRand.Builder#withBinary()}.
 		 */
 		@Test
 		public void binary()
 		{
 			String actualString = new StringRand.Builder()
-					.binary()
+					.withBinary()
 					.build(8);
 
 			assertThat(actualString).containsPattern("[0-1]{8}");
