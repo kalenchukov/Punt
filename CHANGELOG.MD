@@ -8,6 +8,7 @@
 * Переименован метод класса StringRand.Builder.octal(*) -> .withOctal(*).
 * Переименован метод класса StringRand.Builder.decimal(*) -> .withDecimal(*).
 * Переименован метод класса StringRand.Builder.duodecimal(*) -> .withDuodecimal(*).
+* Переименован метод класса StringRand.Builder.hexadecimal(*) -> .withHexadecimal(*).
 
 ## v1.13.0 - 08.07.2023
 ### Добавлено

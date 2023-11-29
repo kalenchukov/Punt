@@ -349,7 +349,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder hexadecimal()
+		public StringRand.Builder withHexadecimal()
 		{
 			this.symbols.addAll(HexadecimalSystem.DIGITS);
 

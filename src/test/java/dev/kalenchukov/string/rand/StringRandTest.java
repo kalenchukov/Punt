@@ -330,13 +330,13 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#hexadecimal()}.
+		 * Проверка метода {@link StringRand.Builder#withHexadecimal()}.
 		 */
 		@Test
 		public void hexadecimal()
 		{
 			String actualString = new StringRand.Builder()
-					.hexadecimal()
+					.withHexadecimal()
 					.build(16);
 
 			assertThat(actualString).containsPattern("[0-9A-F]{16}");
