@@ -284,7 +284,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder ternary()
+		public StringRand.Builder withTernary()
 		{
 			this.symbols.addAll(TernarySystem.DIGITS);
 

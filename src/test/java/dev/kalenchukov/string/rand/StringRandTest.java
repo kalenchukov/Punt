@@ -265,13 +265,13 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#ternary()}.
+		 * Проверка метода {@link StringRand.Builder#withTernary()}.
 		 */
 		@Test
 		public void ternary()
 		{
 			String actualString = new StringRand.Builder()
-					.ternary()
+					.withTernary()
 					.build(11);
 
 			assertThat(actualString).containsPattern("[0-2]{11}");
