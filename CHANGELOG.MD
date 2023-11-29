@@ -1,9 +1,13 @@
 # Журнал изменений
+## vX.X.X - XX.XX.XXXX
+### Изменено
+* Переименован метод класса StringRand.Builder.personal(*) -> .withPersonal(*).
+
 ## v1.13.0 - 08.07.2023
 ### Добавлено
 * Добавлен класс StringRand.Builder.
 * Добавлен метод StringRand.getDigit(int).
-  
+
 ### Изменено
 * Переименован метод StringRand.getHex(int) -> StringRand.getHexadecimal(int).
 * Переименован метод StringRand.get(int, List) -> StringRand.getPersonal(int, List).

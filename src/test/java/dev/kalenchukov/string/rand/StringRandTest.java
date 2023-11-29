@@ -237,7 +237,7 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#personal(Collection)}.
+		 * Проверка метода {@link StringRand.Builder#withPersonal(Collection)}.
 		 */
 		@Test
 		public void personal()
@@ -245,7 +245,7 @@ public class StringRandTest
 			Set<Character> symbols = Set.of('0', '2', '4', '6', '8');
 
 			String actualString = new StringRand.Builder()
-				.personal(symbols)
+				.withPersonal(symbols)
 				.build(10);
 
 			assertThat(actualString).containsPattern("[02468]{10}");

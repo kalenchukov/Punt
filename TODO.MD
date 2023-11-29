@@ -1,7 +1,7 @@
 # Список задач
 ## Сделать
-* Метод StringRand.Builder.personal(char[]).
-* Метод StringRand.Builder.personal(char...).
+* Метод StringRand.Builder.withPersonal(char[]).
+* Метод StringRand.Builder.withPersonal(char...).
 
 ## Можно сделать
 * Добавить метод StringRand.getPersonal(Integer, char[]).

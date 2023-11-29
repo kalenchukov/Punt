@@ -256,7 +256,7 @@ public final class StringRand
 		 * @throws NullPointerException если в качестве {@code symbols} передан {@code null}.
 		 */
 		@NotNull
-		public StringRand.Builder personal(@NotNull final Collection<@NotNull Character> symbols)
+		public StringRand.Builder withPersonal(@NotNull final Collection<@NotNull Character> symbols)
 		{
 			Objects.requireNonNull(symbols);
 
