@@ -317,13 +317,13 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#duodecimal()}.
+		 * Проверка метода {@link StringRand.Builder#withDuodecimal()}.
 		 */
 		@Test
 		public void duodecimal()
 		{
 			String actualString = new StringRand.Builder()
-					.duodecimal()
+					.withDuodecimal()
 					.build(12);
 
 			assertThat(actualString).containsPattern("[0-9A-B]{12}");

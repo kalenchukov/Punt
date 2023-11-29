@@ -336,7 +336,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder duodecimal()
+		public StringRand.Builder withDuodecimal()
 		{
 			this.symbols.addAll(DuodecimalSystem.DIGITS);
 
