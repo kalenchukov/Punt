@@ -49,6 +49,12 @@
 			<name>Алексей Каленчуков</name>
 			<email>aleksey.kalenchukov@yandex.ru</email>
 			<url>https://github.com/kalenchukov</url>
+			<timezone>Europe/Moscow</timezone>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+				<role>tester</role>
+			</roles>
 		</developer>
 	</developers>
 
