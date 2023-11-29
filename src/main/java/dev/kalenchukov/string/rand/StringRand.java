@@ -423,7 +423,7 @@ public final class StringRand
 		 * @see StringRand#SPECIAL
 		 */
 		@NotNull
-		public StringRand.Builder special()
+		public StringRand.Builder withSpecial()
 		{
 			this.symbols.addAll(StringRand.SPECIAL);
 

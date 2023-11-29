@@ -133,7 +133,7 @@ new StringRand.Builder()
 ```java
 new StringRand.Builder()
         .withDigit(new BinarySystem())
-        .special()
+        .withSpecial()
         .build(30);
 ```
 

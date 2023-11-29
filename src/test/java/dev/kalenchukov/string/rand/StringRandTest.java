@@ -395,13 +395,13 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#special()}.
+		 * Проверка метода {@link StringRand.Builder#withSpecial()}.
 		 */
 		@Test
 		public void special()
 		{
 			String actualString = new StringRand.Builder()
-					.special()
+					.withSpecial()
 					.build(15);
 
 			assertThat(actualString).containsPattern("[\\\\!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{15}");
