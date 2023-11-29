@@ -5,6 +5,7 @@
 * Переименован метод класса StringRand.Builder.binary(*) -> .withBinary(*).
 * Переименован метод класса StringRand.Builder.ternary(*) -> .withTernary(*).
 * Переименован метод класса StringRand.Builder.quaternary(*) -> .withQuaternary(*).
+* Переименован метод класса StringRand.Builder.octal(*) -> .withOctal(*).
 
 ## v1.13.0 - 08.07.2023
 ### Добавлено

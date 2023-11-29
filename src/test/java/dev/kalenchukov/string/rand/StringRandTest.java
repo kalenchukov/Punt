@@ -291,13 +291,13 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#octal()}.
+		 * Проверка метода {@link StringRand.Builder#withOctal()}.
 		 */
 		@Test
 		public void octal()
 		{
 			String actualString = new StringRand.Builder()
-					.octal()
+					.withOctal()
 					.build(12);
 
 			assertThat(actualString).containsPattern("[0-7]{12}");

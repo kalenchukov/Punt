@@ -310,7 +310,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder octal()
+		public StringRand.Builder withOctal()
 		{
 			this.symbols.addAll(OctalSystem.DIGITS);
 
