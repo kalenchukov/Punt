@@ -185,7 +185,7 @@ public class StringRandTest
 			 * Проверка метода {@link StringRand#getPersonal(int, Collection)} с указанием белых символов.
 			 */
 			@Test
-			public void getPersonalWhitespace()
+			public void getPersonalWithValueWhitespace()
 			{
 				String actualString = StringRand.getPersonal(10, List.of('\t', '\n', '\r', ' '));
 
@@ -196,7 +196,7 @@ public class StringRandTest
 			 * Проверка метода {@link StringRand#getPersonal(int, Collection)} без указания символов.
 			 */
 			@Test
-			public void getPersonalEmpty()
+			public void getPersonalWithValueEmpty()
 			{
 				String actualString = StringRand.getPersonal(10, List.of());
 
@@ -207,7 +207,7 @@ public class StringRandTest
 			 * Проверка метода {@link StringRand#getPersonal(int, Collection)} с указанием одного символа.
 			 */
 			@Test
-			public void getPersonalOneSymbol()
+			public void getPersonalWithOneSymbol()
 			{
 				String actualString = StringRand.getPersonal(10, List.of('.'));
 
@@ -240,7 +240,7 @@ public class StringRandTest
 		 * Проверка метода {@link StringRand.Builder#withPersonal(Collection)}.
 		 */
 		@Test
-		public void personal()
+		public void withPersonal()
 		{
 			Set<Character> symbols = Set.of('0', '2', '4', '6', '8');
 
@@ -255,7 +255,7 @@ public class StringRandTest
 		 * Проверка метода {@link StringRand.Builder#withBinary()}.
 		 */
 		@Test
-		public void binary()
+		public void withBinary()
 		{
 			String actualString = new StringRand.Builder()
 					.withBinary()
@@ -268,7 +268,7 @@ public class StringRandTest
 		 * Проверка метода {@link StringRand.Builder#withTernary()}.
 		 */
 		@Test
-		public void ternary()
+		public void withTernary()
 		{
 			String actualString = new StringRand.Builder()
 					.withTernary()
@@ -281,7 +281,7 @@ public class StringRandTest
 		 * Проверка метода {@link StringRand.Builder#withQuaternary()}.
 		 */
 		@Test
-		public void quaternary()
+		public void withQuaternary()
 		{
 			String actualString = new StringRand.Builder()
 					.withQuaternary()
@@ -294,7 +294,7 @@ public class StringRandTest
 		 * Проверка метода {@link StringRand.Builder#withOctal()}.
 		 */
 		@Test
-		public void octal()
+		public void withOctal()
 		{
 			String actualString = new StringRand.Builder()
 					.withOctal()
@@ -307,7 +307,7 @@ public class StringRandTest
 		 * Проверка метода {@link StringRand.Builder#withDecimal()}.
 		 */
 		@Test
-		public void decimal()
+		public void withDecimal()
 		{
 			String actualString = new StringRand.Builder()
 					.withDecimal()
@@ -320,7 +320,7 @@ public class StringRandTest
 		 * Проверка метода {@link StringRand.Builder#withDuodecimal()}.
 		 */
 		@Test
-		public void duodecimal()
+		public void withDuodecimal()
 		{
 			String actualString = new StringRand.Builder()
 					.withDuodecimal()
@@ -333,7 +333,7 @@ public class StringRandTest
 		 * Проверка метода {@link StringRand.Builder#withHexadecimal()}.
 		 */
 		@Test
-		public void hexadecimal()
+		public void withHexadecimal()
 		{
 			String actualString = new StringRand.Builder()
 					.withHexadecimal()
@@ -346,7 +346,7 @@ public class StringRandTest
 		 * Проверка метода {@link StringRand.Builder#withDigit()}.
 		 */
 		@Test
-		public void digit()
+		public void withDigit()
 		{
 			String actualString = new StringRand.Builder()
 					.withDigit()
@@ -359,7 +359,7 @@ public class StringRandTest
 		 * Проверка метода {@link StringRand.Builder#withDigit(Numerable)}.
 		 */
 		@Test
-		public void digitNumeralSystem()
+		public void withDigitWithNumeralSystem()
 		{
 			String actualString = new StringRand.Builder()
 					.withDigit(new BinarySystem())
@@ -372,7 +372,7 @@ public class StringRandTest
 		 * Проверка метода {@link StringRand.Builder#withAlpha()}.
 		 */
 		@Test
-		public void alpha()
+		public void withAlpha()
 		{
 			String actualString = new StringRand.Builder()
 					.withAlpha()
@@ -385,7 +385,7 @@ public class StringRandTest
 		 * Проверка метода {@link StringRand.Builder#withAlpha(Alphabetical)}.
 		 */
 		@Test
-		public void alphaAlphabet()
+		public void withAlphaWithAlphabet()
 		{
 			String actualString = new StringRand.Builder()
 					.withAlpha(new RussianAlphabet())
@@ -398,7 +398,7 @@ public class StringRandTest
 		 * Проверка метода {@link StringRand.Builder#withSpecial()}.
 		 */
 		@Test
-		public void special()
+		public void withSpecial()
 		{
 			String actualString = new StringRand.Builder()
 					.withSpecial()

@@ -119,9 +119,9 @@ BFB76A59D4
 #### Возвращает строку из букв алфавита и цифр системы счисления
 ```java
 new StringRand.Builder()
-        .withAlpha(new RussianAlphabet())
-        .withDigit(new BinarySystem())
-        .build(30);
+	.withAlpha(new RussianAlphabet())
+	.withDigit(new BinarySystem())
+	.build(30);
 ```
 
 Результат выполнения:
@@ -132,9 +132,9 @@ new StringRand.Builder()
 #### Возвращает строку из цифр системы счисления и специальных символов
 ```java
 new StringRand.Builder()
-        .withDigit(new BinarySystem())
-        .withSpecial()
-        .build(30);
+	.withDigit(new BinarySystem())
+	.withSpecial()
+	.build(30);
 ```
 
 Результат выполнения:
