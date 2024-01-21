@@ -29,12 +29,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>dev.kalenchukov</groupId>
-	<artifactId>string-rand</artifactId>
+	<artifactId>punt</artifactId>
 	<version>1.13.0</version>
 
-	<name>StringRand</name>
+	<name>Punt</name>
 	<description>Генератор строк случайных символов</description>
-	<url>https://github.com/kalenchukov/StringRand</url>
+	<url>https://github.com/kalenchukov/Punt</url>
 
 	<licenses>
 		<license>

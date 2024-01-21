@@ -1,12 +1,12 @@
 # Справка
-## StringRand
+## Punt
 Генератор строк случайных символов.
 
 ## Использование
 ### Простые наборы символов
 #### Возвращает строку из указанных символов
 ```java
-StringRand.getPersonal(10, List.of('0', '2', '4', '6', '8'));
+Punt.getPersonal(10, List.of('0', '2', '4', '6', '8'));
 ```
 
 Результат выполнения:
@@ -16,7 +16,7 @@ StringRand.getPersonal(10, List.of('0', '2', '4', '6', '8'));
 
 #### Возвращает строку из цифр десятеричной системы счисления
 ```java
-StringRand.getDigit(10);
+Punt.getDigit(10);
 ```
 
 Результат выполнения:
@@ -26,7 +26,7 @@ StringRand.getDigit(10);
 
 #### Возвращает строку из букв английского алфавита
 ```java
-StringRand.getAlpha(10);
+Punt.getAlpha(10);
 ```
 
 Результат выполнения:
@@ -36,7 +36,7 @@ meOnjOUUQw
 
 #### Возвращает строку из специальных символов
 ```java
-StringRand.getSpecial(10);
+Punt.getSpecial(10);
 ```
 
 Результат выполнения:
@@ -46,7 +46,7 @@ StringRand.getSpecial(10);
 
 #### Возвращает строку из цифр двоичной системы счисления
 ```java
-StringRand.getBinary(10);
+Punt.getBinary(10);
 ```
 
 Результат выполнения:
@@ -56,7 +56,7 @@ StringRand.getBinary(10);
 
 #### Возвращает строку из цифр троичной системы счисления
 ```java
-StringRand.getTernary(10);
+Punt.getTernary(10);
 ```
 
 Результат выполнения:
@@ -66,7 +66,7 @@ StringRand.getTernary(10);
 
 #### Возвращает строку из цифр четвертичной системы счисления
 ```java
-StringRand.getQuaternary(10);
+Punt.getQuaternary(10);
 ```
 
 Результат выполнения:
@@ -77,7 +77,7 @@ StringRand.getQuaternary(10);
 
 #### Возвращает строку из цифр восьмеричной системы счисления
 ```java
-StringRand.getOctal(10);
+Punt.getOctal(10);
 ```
 
 Результат выполнения:
@@ -87,7 +87,7 @@ StringRand.getOctal(10);
 
 #### Возвращает строку из цифр десятеричной системы счисления
 ```java
-StringRand.getDecimal(10);
+Punt.getDecimal(10);
 ```
 
 Результат выполнения:
@@ -97,7 +97,7 @@ StringRand.getDecimal(10);
 
 #### Возвращает строку из цифр двенадцатеричной системы счисления
 ```java
-StringRand.getDuodecimal(10);
+Punt.getDuodecimal(10);
 ```
 
 Результат выполнения:
@@ -107,7 +107,7 @@ StringRand.getDuodecimal(10);
 
 #### Возвращает строку из цифр шестнадцатеричной системы счисления
 ```java
-StringRand.getHexadecimal(10);
+Punt.getHexadecimal(10);
 ```
 
 Результат выполнения:
@@ -118,7 +118,7 @@ BFB76A59D4
 ### Составные наборы символов
 #### Возвращает строку из букв алфавита и цифр системы счисления
 ```java
-new StringRand.Builder()
+new Punt.Builder()
 	.withAlpha(new RussianAlphabet())
 	.withDigit(new BinarySystem())
 	.build(30);
@@ -131,7 +131,7 @@ new StringRand.Builder()
 
 #### Возвращает строку из цифр системы счисления и специальных символов
 ```java
-new StringRand.Builder()
+new Punt.Builder()
 	.withDigit(new BinarySystem())
 	.withSpecial()
 	.build(30);

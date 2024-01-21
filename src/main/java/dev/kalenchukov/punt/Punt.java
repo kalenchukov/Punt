@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package dev.kalenchukov.string.rand;
+package dev.kalenchukov.punt;
 
 import dev.kalenchukov.alphabet.*;
 import dev.kalenchukov.numeralsystem.*;
@@ -37,7 +37,7 @@ import java.util.concurrent.ThreadLocalRandom;
  *
  * @author Алексей Каленчуков
  */
-public final class StringRand
+public final class Punt
 {
 	/**
 	 * Коллекция специальных символов.
@@ -61,9 +61,9 @@ public final class StringRand
 	);
 
 	/**
-	 * Конструктор для {@code StringRand}.
+	 * Конструктор для {@code Punt}.
 	 */
-	private StringRand() {}
+	private Punt() {}
 
 	/**
 	 * Возвращает строку из цифр двоичной системы счисления.
@@ -74,7 +74,7 @@ public final class StringRand
 	@NotNull
 	public static String getBinary(final int length)
 	{
-		return StringRand.generate(length, BinarySystem.DIGITS);
+		return Punt.generate(length, BinarySystem.DIGITS);
 	}
 
 	/**
@@ -86,7 +86,7 @@ public final class StringRand
 	@NotNull
 	public static String getTernary(final int length)
 	{
-		return StringRand.generate(length, TernarySystem.DIGITS);
+		return Punt.generate(length, TernarySystem.DIGITS);
 	}
 
 	/**
@@ -98,7 +98,7 @@ public final class StringRand
 	@NotNull
 	public static String getQuaternary(final int length)
 	{
-		return StringRand.generate(length, QuaternarySystem.DIGITS);
+		return Punt.generate(length, QuaternarySystem.DIGITS);
 	}
 
 	/**
@@ -110,7 +110,7 @@ public final class StringRand
 	@NotNull
 	public static String getOctal(final int length)
 	{
-		return StringRand.generate(length, OctalSystem.DIGITS);
+		return Punt.generate(length, OctalSystem.DIGITS);
 	}
 
 	/**
@@ -122,7 +122,7 @@ public final class StringRand
 	@NotNull
 	public static String getDecimal(final int length)
 	{
-		return StringRand.generate(length, DecimalSystem.DIGITS);
+		return Punt.generate(length, DecimalSystem.DIGITS);
 	}
 
 	/**
@@ -134,7 +134,7 @@ public final class StringRand
 	@NotNull
 	public static String getDuodecimal(final int length)
 	{
-		return StringRand.generate(length, DuodecimalSystem.DIGITS);
+		return Punt.generate(length, DuodecimalSystem.DIGITS);
 	}
 
 	/**
@@ -146,7 +146,7 @@ public final class StringRand
 	@NotNull
 	public static String getHexadecimal(final int length)
 	{
-		return StringRand.generate(length, HexadecimalSystem.DIGITS);
+		return Punt.generate(length, HexadecimalSystem.DIGITS);
 	}
 
 	/**
@@ -158,7 +158,7 @@ public final class StringRand
 	@NotNull
 	public static String getAlpha(final int length)
 	{
-		return StringRand.generate(length, EnglishAlphabet.LETTERS);
+		return Punt.generate(length, EnglishAlphabet.LETTERS);
 	}
 
 	/**
@@ -170,7 +170,7 @@ public final class StringRand
 	@NotNull
 	public static String getDigit(final int length)
 	{
-		return StringRand.generate(length, DecimalSystem.DIGITS);
+		return Punt.generate(length, DecimalSystem.DIGITS);
 	}
 
 	/**
@@ -182,7 +182,7 @@ public final class StringRand
 	@NotNull
 	public static String getSpecial(final int length)
 	{
-		return StringRand.generate(length, List.copyOf(StringRand.SPECIAL));
+		return Punt.generate(length, List.copyOf(Punt.SPECIAL));
 	}
 
 	/**
@@ -198,7 +198,7 @@ public final class StringRand
 	{
 		Objects.requireNonNull(symbols);
 
-		return StringRand.generate(length, List.copyOf(symbols));
+		return Punt.generate(length, List.copyOf(symbols));
 	}
 
 	/**
@@ -256,7 +256,7 @@ public final class StringRand
 		 * @throws NullPointerException если в качестве {@code symbols} передан {@code null}.
 		 */
 		@NotNull
-		public StringRand.Builder withPersonal(@NotNull final Collection<@NotNull Character> symbols)
+		public Punt.Builder withPersonal(@NotNull final Collection<@NotNull Character> symbols)
 		{
 			Objects.requireNonNull(symbols);
 
@@ -271,7 +271,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder withBinary()
+		public Punt.Builder withBinary()
 		{
 			this.symbols.addAll(BinarySystem.DIGITS);
 
@@ -284,7 +284,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder withTernary()
+		public Punt.Builder withTernary()
 		{
 			this.symbols.addAll(TernarySystem.DIGITS);
 
@@ -297,7 +297,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder withQuaternary()
+		public Punt.Builder withQuaternary()
 		{
 			this.symbols.addAll(QuaternarySystem.DIGITS);
 
@@ -310,7 +310,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder withOctal()
+		public Punt.Builder withOctal()
 		{
 			this.symbols.addAll(OctalSystem.DIGITS);
 
@@ -323,7 +323,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder withDecimal()
+		public Punt.Builder withDecimal()
 		{
 			this.symbols.addAll(DecimalSystem.DIGITS);
 
@@ -336,7 +336,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder withDuodecimal()
+		public Punt.Builder withDuodecimal()
 		{
 			this.symbols.addAll(DuodecimalSystem.DIGITS);
 
@@ -349,7 +349,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder withHexadecimal()
+		public Punt.Builder withHexadecimal()
 		{
 			this.symbols.addAll(HexadecimalSystem.DIGITS);
 
@@ -362,7 +362,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder withDigit()
+		public Punt.Builder withDigit()
 		{
 			this.symbols.addAll(DecimalSystem.DIGITS);
 
@@ -377,7 +377,7 @@ public final class StringRand
 		 * @throws NullPointerException если в качестве {@code numeralSystem} передан {@code null}.
 		 */
 		@NotNull
-		public StringRand.Builder withDigit(@NotNull final Numerable numeralSystem)
+		public Punt.Builder withDigit(@NotNull final Numerable numeralSystem)
 		{
 			Objects.requireNonNull(numeralSystem);
 
@@ -392,7 +392,7 @@ public final class StringRand
 		 * @return текущий объект.
 		 */
 		@NotNull
-		public StringRand.Builder withAlpha()
+		public Punt.Builder withAlpha()
 		{
 			this.symbols.addAll(EnglishAlphabet.LETTERS);
 
@@ -407,7 +407,7 @@ public final class StringRand
 		 * @throws NullPointerException если в качестве {@code alphabet} передан {@code null}.
 		 */
 		@NotNull
-		public StringRand.Builder withAlpha(@NotNull final Alphabetical alphabet)
+		public Punt.Builder withAlpha(@NotNull final Alphabetical alphabet)
 		{
 			Objects.requireNonNull(alphabet);
 
@@ -420,12 +420,12 @@ public final class StringRand
 		 * Устанавливает специальные символы.
 		 *
 		 * @return текущий объект.
-		 * @see StringRand#SPECIAL
+		 * @see Punt#SPECIAL
 		 */
 		@NotNull
-		public StringRand.Builder withSpecial()
+		public Punt.Builder withSpecial()
 		{
-			this.symbols.addAll(StringRand.SPECIAL);
+			this.symbols.addAll(Punt.SPECIAL);
 
 			return this;
 		}
@@ -439,7 +439,7 @@ public final class StringRand
 		@NotNull
 		public String build(final int length)
 		{
-			return StringRand.generate(length, List.copyOf(this.symbols));
+			return Punt.generate(length, List.copyOf(this.symbols));
 		}
 	}
 }

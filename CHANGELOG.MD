@@ -1,6 +1,7 @@
 # Журнал изменений
 ## vX.X.X - XX.XX.XXXX
 ### Изменено
+* Переименован проект StringRand -> Punt.
 * Переименован метод класса StringRand.Builder.personal(*) -> .withPersonal(*).
 * Переименован метод класса StringRand.Builder.binary(*) -> .withBinary(*).
 * Переименован метод класса StringRand.Builder.ternary(*) -> .withTernary(*).

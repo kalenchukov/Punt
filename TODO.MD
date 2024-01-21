@@ -1,11 +1,11 @@
 # Список задач
 ## Сделать
-* Метод StringRand.Builder.withPersonal(char[]).
-* Метод StringRand.Builder.withPersonal(char...).
+* Метод Punt.Builder.withPersonal(char[]).
+* Метод Punt.Builder.withPersonal(char...).
 
 ## Можно сделать
-* Добавить метод StringRand.getPersonal(Integer, char[]).
-* Добавить метод StringRand.getPersonal(Integer, char...).
+* Добавить метод Punt.getPersonal(Integer, char[]).
+* Добавить метод Punt.getPersonal(Integer, char...).
 
 ## Не делать
 *

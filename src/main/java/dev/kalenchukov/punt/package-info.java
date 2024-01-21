@@ -25,4 +25,4 @@
 /**
  * Предоставляет классы, необходимые для исполнения цели модуля.
  */
-package dev.kalenchukov.string.rand;
+package dev.kalenchukov.punt;

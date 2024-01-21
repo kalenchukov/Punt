@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package dev.kalenchukov.string.rand;
+package dev.kalenchukov.punt;
 
 import dev.kalenchukov.alphabet.Alphabetical;
 import dev.kalenchukov.alphabet.RussianAlphabet;
@@ -38,11 +38,11 @@ import java.util.Set;
 import static org.assertj.core.api.Assertions.*;
 
 /**
- * Класс проверки методов класса {@link StringRand}.
+ * Класс проверки методов класса {@link Punt}.
  *
  * @author Алексей Каленчуков
  */
-public class StringRandTest
+public class PuntTest
 {
 	/**
 	 * Класс проверки статических методов.
@@ -53,117 +53,117 @@ public class StringRandTest
 	public class Static
 	{
 		/**
-		 * Проверка метода {@link StringRand#getDigit(int)}.
+		 * Проверка метода {@link Punt#getDigit(int)}.
 		 */
 		@Test
 		public void getDigit()
 		{
-			String actualString = StringRand.getDigit(10);
+			String actualString = Punt.getDigit(10);
 
 			assertThat(actualString).containsPattern("[0-9]{10}");
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getBinary(int)}.
+		 * Проверка метода {@link Punt#getBinary(int)}.
 		 */
 		@Test
 		public void getBinary()
 		{
-			String actualString = StringRand.getBinary(10);
+			String actualString = Punt.getBinary(10);
 
 			assertThat(actualString).containsPattern("[0-1]{10}");
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getTernary(int)}.
+		 * Проверка метода {@link Punt#getTernary(int)}.
 		 */
 		@Test
 		public void getTernary()
 		{
-			String actualString = StringRand.getTernary(10);
+			String actualString = Punt.getTernary(10);
 
 			assertThat(actualString).containsPattern("[0-2]{10}");
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getQuaternary(int)}.
+		 * Проверка метода {@link Punt#getQuaternary(int)}.
 		 */
 		@Test
 		public void getQuaternary()
 		{
-			String actualString = StringRand.getQuaternary(10);
+			String actualString = Punt.getQuaternary(10);
 
 			assertThat(actualString).containsPattern("[0-3]{10}");
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getOctal(int)}.
+		 * Проверка метода {@link Punt#getOctal(int)}.
 		 */
 		@Test
 		public void getOctal()
 		{
-			String actualString = StringRand.getOctal(10);
+			String actualString = Punt.getOctal(10);
 
 			assertThat(actualString).containsPattern("[0-7]{10}");
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getDecimal(int)}.
+		 * Проверка метода {@link Punt#getDecimal(int)}.
 		 */
 		@Test
 		public void getDecimal()
 		{
-			String actualString = StringRand.getDecimal(10);
+			String actualString = Punt.getDecimal(10);
 
 			assertThat(actualString).containsPattern("[0-9]{10}");
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getDuodecimal(int)}.
+		 * Проверка метода {@link Punt#getDuodecimal(int)}.
 		 */
 		@Test
 		public void getDuodecimal()
 		{
-			String actualString = StringRand.getDuodecimal(10);
+			String actualString = Punt.getDuodecimal(10);
 
 			assertThat(actualString).containsPattern("[0-9A-B]{10}");
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getHexadecimal(int)}.
+		 * Проверка метода {@link Punt#getHexadecimal(int)}.
 		 */
 		@Test
 		public void getHexadecimal()
 		{
-			String actualString = StringRand.getHexadecimal(10);
+			String actualString = Punt.getHexadecimal(10);
 
 			assertThat(actualString).containsPattern("[0-9A-F]{10}");
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getAlpha(int)}.
+		 * Проверка метода {@link Punt#getAlpha(int)}.
 		 */
 		@Test
 		public void getAlpha()
 		{
-			String actualString = StringRand.getAlpha(10);
+			String actualString = Punt.getAlpha(10);
 
 			assertThat(actualString).containsPattern("[a-zA-Z]{10}");
 		}
 
 		/**
-		 * Проверка метода {@link StringRand#getSpecial(int)}.
+		 * Проверка метода {@link Punt#getSpecial(int)}.
 		 */
 		@Test
 		public void getSpecial()
 		{
-			String actualString = StringRand.getSpecial(10);
+			String actualString = Punt.getSpecial(10);
 
 			assertThat(actualString).containsPattern("[\\\\!\"#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{10}");
 		}
 
 		/**
-		 * Класс проверки метода {@link StringRand#getPersonal(int, Collection)}.
+		 * Класс проверки метода {@link Punt#getPersonal(int, Collection)}.
 		 *
 		 * @author Алексей Каленчуков
 		 */
@@ -171,45 +171,45 @@ public class StringRandTest
 		public class GetPersonal
 		{
 			/**
-			 * Проверка метода {@link StringRand#getPersonal(int, Collection)}.
+			 * Проверка метода {@link Punt#getPersonal(int, Collection)}.
 			 */
 			@Test
 			public void getPersonal()
 			{
-				String actualString = StringRand.getPersonal(10, List.of('0', '2', '4', '6', '8'));
+				String actualString = Punt.getPersonal(10, List.of('0', '2', '4', '6', '8'));
 
 				assertThat(actualString).containsPattern("[02468]{10}");
 			}
 
 			/**
-			 * Проверка метода {@link StringRand#getPersonal(int, Collection)} с указанием белых символов.
+			 * Проверка метода {@link Punt#getPersonal(int, Collection)} с указанием белых символов.
 			 */
 			@Test
 			public void getPersonalWithValueWhitespace()
 			{
-				String actualString = StringRand.getPersonal(10, List.of('\t', '\n', '\r', ' '));
+				String actualString = Punt.getPersonal(10, List.of('\t', '\n', '\r', ' '));
 
 				assertThat(actualString).containsPattern("[\\t\\n\\f\\r\\s]{10}");
 			}
 
 			/**
-			 * Проверка метода {@link StringRand#getPersonal(int, Collection)} без указания символов.
+			 * Проверка метода {@link Punt#getPersonal(int, Collection)} без указания символов.
 			 */
 			@Test
 			public void getPersonalWithValueEmpty()
 			{
-				String actualString = StringRand.getPersonal(10, List.of());
+				String actualString = Punt.getPersonal(10, List.of());
 
 				assertThat(actualString).isEmpty();
 			}
 
 			/**
-			 * Проверка метода {@link StringRand#getPersonal(int, Collection)} с указанием одного символа.
+			 * Проверка метода {@link Punt#getPersonal(int, Collection)} с указанием одного символа.
 			 */
 			@Test
 			public void getPersonalWithOneSymbol()
 			{
-				String actualString = StringRand.getPersonal(10, List.of('.'));
+				String actualString = Punt.getPersonal(10, List.of('.'));
 
 				assertThat(actualString).containsPattern("\\.{10}");
 			}
@@ -217,7 +217,7 @@ public class StringRandTest
 	}
 
 	/**
-	 * Класс проверки методов класса {@link StringRand.Builder}.
+	 * Класс проверки методов класса {@link Punt.Builder}.
 	 *
 	 * @author Алексей Каленчуков
 	 */
@@ -225,26 +225,26 @@ public class StringRandTest
 	public class Builder
 	{
 		/**
-		 * Проверка метода {@link StringRand.Builder#build(int)}.
+		 * Проверка метода {@link Punt.Builder#build(int)}.
 		 */
 		@Test
 		public void build()
 		{
-			String actualString = new StringRand.Builder()
+			String actualString = new Punt.Builder()
 					.build(10);
 
 			assertThat(actualString).isEmpty();
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#withPersonal(Collection)}.
+		 * Проверка метода {@link Punt.Builder#withPersonal(Collection)}.
 		 */
 		@Test
 		public void withPersonal()
 		{
 			Set<Character> symbols = Set.of('0', '2', '4', '6', '8');
 
-			String actualString = new StringRand.Builder()
+			String actualString = new Punt.Builder()
 				.withPersonal(symbols)
 				.build(10);
 
@@ -252,12 +252,12 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#withBinary()}.
+		 * Проверка метода {@link Punt.Builder#withBinary()}.
 		 */
 		@Test
 		public void withBinary()
 		{
-			String actualString = new StringRand.Builder()
+			String actualString = new Punt.Builder()
 					.withBinary()
 					.build(8);
 
@@ -265,12 +265,12 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#withTernary()}.
+		 * Проверка метода {@link Punt.Builder#withTernary()}.
 		 */
 		@Test
 		public void withTernary()
 		{
-			String actualString = new StringRand.Builder()
+			String actualString = new Punt.Builder()
 					.withTernary()
 					.build(11);
 
@@ -278,12 +278,12 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#withQuaternary()}.
+		 * Проверка метода {@link Punt.Builder#withQuaternary()}.
 		 */
 		@Test
 		public void withQuaternary()
 		{
-			String actualString = new StringRand.Builder()
+			String actualString = new Punt.Builder()
 					.withQuaternary()
 					.build(14);
 
@@ -291,12 +291,12 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#withOctal()}.
+		 * Проверка метода {@link Punt.Builder#withOctal()}.
 		 */
 		@Test
 		public void withOctal()
 		{
-			String actualString = new StringRand.Builder()
+			String actualString = new Punt.Builder()
 					.withOctal()
 					.build(12);
 
@@ -304,12 +304,12 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#withDecimal()}.
+		 * Проверка метода {@link Punt.Builder#withDecimal()}.
 		 */
 		@Test
 		public void withDecimal()
 		{
-			String actualString = new StringRand.Builder()
+			String actualString = new Punt.Builder()
 					.withDecimal()
 					.build(10);
 
@@ -317,12 +317,12 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#withDuodecimal()}.
+		 * Проверка метода {@link Punt.Builder#withDuodecimal()}.
 		 */
 		@Test
 		public void withDuodecimal()
 		{
-			String actualString = new StringRand.Builder()
+			String actualString = new Punt.Builder()
 					.withDuodecimal()
 					.build(12);
 
@@ -330,12 +330,12 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#withHexadecimal()}.
+		 * Проверка метода {@link Punt.Builder#withHexadecimal()}.
 		 */
 		@Test
 		public void withHexadecimal()
 		{
-			String actualString = new StringRand.Builder()
+			String actualString = new Punt.Builder()
 					.withHexadecimal()
 					.build(16);
 
@@ -343,12 +343,12 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#withDigit()}.
+		 * Проверка метода {@link Punt.Builder#withDigit()}.
 		 */
 		@Test
 		public void withDigit()
 		{
-			String actualString = new StringRand.Builder()
+			String actualString = new Punt.Builder()
 					.withDigit()
 					.build(13);
 
@@ -356,12 +356,12 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#withDigit(Numerable)}.
+		 * Проверка метода {@link Punt.Builder#withDigit(Numerable)}.
 		 */
 		@Test
 		public void withDigitWithNumeralSystem()
 		{
-			String actualString = new StringRand.Builder()
+			String actualString = new Punt.Builder()
 					.withDigit(new BinarySystem())
 					.build(8);
 
@@ -369,12 +369,12 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#withAlpha()}.
+		 * Проверка метода {@link Punt.Builder#withAlpha()}.
 		 */
 		@Test
 		public void withAlpha()
 		{
-			String actualString = new StringRand.Builder()
+			String actualString = new Punt.Builder()
 					.withAlpha()
 					.build(13);
 
@@ -382,12 +382,12 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#withAlpha(Alphabetical)}.
+		 * Проверка метода {@link Punt.Builder#withAlpha(Alphabetical)}.
 		 */
 		@Test
 		public void withAlphaWithAlphabet()
 		{
-			String actualString = new StringRand.Builder()
+			String actualString = new Punt.Builder()
 					.withAlpha(new RussianAlphabet())
 					.build(7);
 
@@ -395,12 +395,12 @@ public class StringRandTest
 		}
 
 		/**
-		 * Проверка метода {@link StringRand.Builder#withSpecial()}.
+		 * Проверка метода {@link Punt.Builder#withSpecial()}.
 		 */
 		@Test
 		public void withSpecial()
 		{
-			String actualString = new StringRand.Builder()
+			String actualString = new Punt.Builder()
 					.withSpecial()
 					.build(15);
 
