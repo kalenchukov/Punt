@@ -1,5 +1,5 @@
 # Журнал изменений
-## vX.X.X - XX.XX.XXXX
+## v1.13.0 - 21.01.2024
 ### Изменено
 * Переименован проект StringRand -> Punt.
 * Переименован метод класса StringRand.Builder.personal(*) -> .withPersonal(*).

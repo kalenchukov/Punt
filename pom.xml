@@ -30,7 +30,7 @@
 
 	<groupId>dev.kalenchukov</groupId>
 	<artifactId>punt</artifactId>
-	<version>1.13.0</version>
+	<version>1.14.0</version>
 
 	<name>Punt</name>
 	<description>Генератор строк случайных символов</description>
